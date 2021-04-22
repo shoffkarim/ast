@@ -8,7 +8,7 @@
     @include dfr
     justify-content: center
     position: relative
-    padding: 50px 0px
+    padding: 35px 0px
     &::before, &::after
       content: ""
       width: 100%
@@ -30,6 +30,14 @@
         transition: height 0.4s
         visibility: visible
         opacity: 1
+      .products-item__lim
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35)
+      .products-item__hover
+        &::after
+          max-height: 100%
+      .products-parallax__item
+        opacity: 1
+        transition: all 0.4s
     &__href
       width: 100%
       @include dfr
@@ -39,12 +47,59 @@
       color: #000
       background-color: transparent
       z-index: 2
+      text-shadow: none
+    &__lim
+      border-bottom: 1px solid rgba(255, 255, 255, 0)
+      line-height: 70px
       position: relative
-
-      span
-        border-bottom: 1px solid rgba(255, 255, 255, 0)
-        line-height: 72px
-      &:hover
+      display: inline-block
+    &__hover
+      line-height: 102px
+      position: relative
+      z-index: 1
+      &::after
+        position: absolute
+        top: 0px
+        left: 0
+        overflow: hidden
+        padding: 0px 0px
+        max-height: 0
         color: #fff
-        span
-          border-bottom: 1px solid rgba(255, 255, 255, 0.35)
+        content: attr(data-hover)
+        -webkit-transition: max-height 0.5s
+        -moz-transition: max-height 0.5s
+        transition: max-height 0.5s
+  &-parallax
+    @include dfr
+    width: 100%
+    height: 100%
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    &__item
+      position: absolute
+      z-index: 0
+      opacity: 0
+      transition: all 0.4s
+      &--1
+        top: -40px
+        left: 140px
+      &--2
+        top: 50px
+        left: 280px
+      &--3
+        bottom: -25px
+        left: calc(50% + 145px)
+      &--4
+        bottom: 0px
+        left: calc(50% + 15px)
+      &--5
+        top: 15px
+        right: calc(50% - 330px)
+      &--6
+        bottom: 15px
+        right: calc(25% - 215px)
+      &--7
+        top: 35px
+        right: 160px
