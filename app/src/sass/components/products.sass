@@ -1,0 +1,50 @@
+.products
+  &-list
+    margin-top: 90px
+    width: 100%
+    @include dfc
+  &-item
+    width: 100%
+    @include dfr
+    justify-content: center
+    position: relative
+    padding: 50px 0px
+    &::before, &::after
+      content: ""
+      width: 100%
+      height: 0%
+      position: absolute
+      left: 0
+      background-color: $orange
+      transition: all 0.4s
+      z-index: 1
+      visibility: hidden
+      opacity: 0
+    &::after
+      bottom: 50%
+    &::before
+      top: 50%
+    &:hover
+      &::before, &::after
+        height: 50%
+        transition: height 0.4s
+        visibility: visible
+        opacity: 1
+    &__href
+      width: 100%
+      @include dfr
+      justify-content: center
+      font-size: 90px
+      line-height: 94px
+      color: #000
+      background-color: transparent
+      z-index: 2
+      position: relative
+
+      span
+        border-bottom: 1px solid rgba(255, 255, 255, 0)
+        line-height: 72px
+      &:hover
+        color: #fff
+        span
+          border-bottom: 1px solid rgba(255, 255, 255, 0.35)
