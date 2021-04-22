@@ -3,21 +3,33 @@
   position: absolute
   top: 0
   left: 0
-  video
+  .video-wrapper
     position: fixed
     top: 0
     left: 0
     width: 100%
-    z-index: 0
+    &::before
+      content: ""
+      width: 100%
+      height: 100%
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      background-color: rgba(0,0,0,0.65)
+    video
+      width: 100%
+      z-index: 0
   &__container
     position: relative
     z-index: 1
-    max-width: 985px
+    max-width: 1200px
     margin-top: 425px
     padding-left: 155px
   &__tagline
     color: #fff
     margin-bottom: 40px
+    max-width: 750px
   &__year
     font-size: 160px
     line-height: 164px
@@ -30,9 +42,10 @@
     max-width: 600px
   &__list
     margin-top: 335px
+    margin-bottom: 130px
 
 .achievements
-  &_list
+  &-list
     display: flex
     flex-direction: row
   &-item
@@ -52,6 +65,7 @@
       color: #fff
       padding-left: 23px
       position: relative
+      max-width: 290px
       // &::before
       //   content: ""
       //   width: 15px
