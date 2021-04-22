@@ -1,0 +1,5 @@
+node_modules/
+*.rar
+.cache
+.eslintcache
+makets/
