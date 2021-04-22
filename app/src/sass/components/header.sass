@@ -1,0 +1,27 @@
+.header
+  z-index: 1
+  position: relative
+  &-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding-top: 50px
+  &-menu
+    display: flex
+    flex-direction: row
+    &__item
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+      margin-left: 40px
+      &:first-child
+        margin-left: 0px
+      &:hover
+        a
+          color: $orangeText
+          transition: all 0.4s
+      a
+        color: #fff
+        transition: all 0.4s
+
