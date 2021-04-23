@@ -1,5 +1,6 @@
 .about
   background-color: #fcfcfc
+  position: relative
   &__text
     max-width: 920px
     margin: 0 auto
@@ -11,3 +12,30 @@
       margin-bottom: 0px
     p
       margin-bottom: 35px
+
+.about-building
+  position: absolute
+  display: block
+  .plane
+    width: 1068px
+    height: 650px
+    background-image: url(/app/build/img/plane.png)
+    background-repeat: no-repeat
+    background-size: cover
+    position: absolute
+    top: 0px
+    left: 0px
+  .building
+    width: 1068px
+    height: 650px
+    background-image: url(/app/build/img/building.png)
+    background-repeat: no-repeat
+    background-size: cover
+    position: absolute
+    top: 0px
+    left: 0px
+  .auto
+    width: 760px
+    height: 310px
+    background-image: url(/app/build/img/sprite_01.png)
+    background-position: 310px 0px
