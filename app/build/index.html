@@ -14,6 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6d5fab7d-dc18-48d8-9e33-9f1af57244f9&lang=ru_RU"
+    type="text/javascript">
+  </script>
 </head>
 
 <body>
@@ -262,7 +265,8 @@
     <section class="partners">
       <div class="container">
         <div class="partners-text">
-          <p class="section-text section-text--center">Мы сотрудничаем уже более чем с&nbsp;20&nbsp;компаниями как на территории РФ
+          <p class="section-text section-text--center">Мы сотрудничаем уже более чем с&nbsp;20&nbsp;компаниями как на
+            территории РФ
             так и за ее пределами</p>
         </div>
         <ul class="partners-list">
@@ -322,8 +326,82 @@
         </div>
       </div>
     </section>
+    <section class="map-section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Где купить</h1>
+          <a href="">Все элеваторы списком</a>
+        </div>
+        <div class="map-wrapper">
+          <div class="map" id="map" style="width:1785px;height:600px"></div>
+        </div>
+      </div>
+    </section>
   </main>
 
 </body>
+<script type="text/javascript">
+  ymaps.ready(init);
+
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [56.838011, 60.597465],
+      zoom: 4,
+      controls: []
+    },{
+        searchControlProvider: 'yandex#search'
+    });
+    const myPlacemark1 = new ymaps.Placemark(
+      [51.978495, 43.261499], {
+        balloonContentHeader: '<a href = "#">Рога и копыта</a><br>' +
+            '<span class="description">Сеть кинотеатров</span>',
+        // Зададим содержимое основной части балуна.
+        balloonContentBody: '<img src="img/cinema.jpg" height="150" width="200"> <br/> ' +
+            '<a href="tel:+7-123-456-78-90">+7 (123) 456-78-90</a><br/>' +
+            '<b>Ближайшие сеансы</b> <br/> Сеансов нет.',
+        // Зададим содержимое нижней части балуна.
+        balloonContentFooter: 'Информация предоставлена:<br/>OOO "Рога и копыта"',
+        // Зададим содержимое всплывающей подсказки.
+        hintContent: 'Рога и копыта'
+      },
+      // {
+      //   iconLayout: "default#imageWithContent",
+      //   iconImageHref: "img/map-pin.png",
+      //   iconImageSize: [22, 22],
+      //   iconContentOffset: [19, 15],
+      // },
+
+    );
+    const myPlacemark2 = new ymaps.Placemark(
+      [51.245106, 42.476964], {
+        hintContent: "",
+        iconContent: "",
+      }, {
+        iconLayout: "default#imageWithContent",
+        iconImageHref: "img/map-pin.png",
+        iconImageSize: [22, 22],
+      }
+    );
+    const myPlacemark3 = new ymaps.Placemark(
+      [53.114006, 46.579866], {
+        hintContent: "",
+        iconContent: "",
+      }, {
+        iconLayout: "default#imageWithContent",
+        iconImageHref: "img/map-pin.png",
+        iconImageSize: [22, 22],
+        iconContentOffset: [19, 15],
+      }
+    );
+    myMap.geoObjects.add(myPlacemark1);
+    myMap.balloon.open([51.85, 38.37], "Содержимое балуна", {
+        // Опция: не показываем кнопку закрытия.
+        closeButton: false
+    });
+    // myPlacemark1.balloon.open();
+    myMap.geoObjects.add(myPlacemark2);
+    myMap.geoObjects.add(myPlacemark3);
+  }
+</script>
 
 </html>
