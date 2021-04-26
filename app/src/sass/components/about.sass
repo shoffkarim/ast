@@ -1,6 +1,7 @@
 .about
   background-color: #fcfcfc
   position: relative
+  overflow-x: hidden
   &__text
     max-width: 920px
     margin: 0 auto
@@ -11,11 +12,18 @@
     &:last-child
       margin-bottom: 0px
     p
-      margin-bottom: 35px
-
+      margin-bottom: 40px
+    &-desc
+      max-width: 770px
+      text-align: center
+      margin: 0 auto
+  .circle-text
+    margin-left: 90px
 .about-building
   position: absolute
   display: block
+  top: 650px
+  right: calc(50% + 266px)
   .plane
     width: 1068px
     height: 650px
@@ -23,8 +31,19 @@
     background-repeat: no-repeat
     background-size: cover
     position: absolute
-    top: 0px
-    left: 0px
+    top: -2px
+    left: 12px
+    z-index: 2
+  .wheat
+    width: 858px
+    height: 510px
+    background-image: url(/app/build/img/wheat.png)
+    background-repeat: no-repeat
+    background-size: cover
+    position: absolute
+    top: -127px
+    left: 113px
+    z-index: 1
   .building
     width: 1068px
     height: 650px
@@ -34,136 +53,30 @@
     position: absolute
     top: 0px
     left: 0px
-  .auto-1
+    z-index: 3
+  .auto
     width: 760px
     height: 310px
-    background-image: url(/app/build/img/sprite_01.png)
+    position: absolute
+    z-index: 2
     background-position: 0px 0px
-    animation: autoDrive 4s forwards
-    animation-timing-function: steps(57, jump-none)
-// @keyframes autoDrive
-//   0%
-//     background-position: 0px 0px
-//   1.7%
-//     background-position: 0px 310px
-//   3.4%
-//     background-position: 0px 620px
-//   5.1%
-//     background-position: 0px 930px
-//   6.8%
-//     background-position: 0px 1240px
-//   8.5%
-//     background-position: 0px 1550px
-//   10.2%
-//     background-position: 0px 1860px
-//   11.9%
-//     background-position: 0px 2170px
-//   13.6%
-//     background-position: 0px 2480px
-//   15.3%
-//     background-position: 0px 2790px
-//   17%
-//     background-position: 0px 3100px
-//   18.7%
-//     background-position: 0px 3410px
-//   20.4%
-//     background-position: 0px 3720px
-//   22.1%
-//     background-position: 0px 4030px
-//   23.8%
-//     background-position: 0px 4650px
-//   25.5%
-//     background-position: 0px 4960px
-//   27.2%
-//     background-position: 0px 5270px
-//   28.9%
-//     background-position: 0px 5580px
-//   30.6%
-//     background-position: 0px 5890px
-//   32.3%
-//     background-position: 0px 6200px
-//   34%
-//     background-position: 0px 6510px
-//   35.7%
-//     background-position: 0px 6820px
-//   37.4%
-//     background-position: 0px 7130px
-//   39.1%
-//     background-position: 0px 7440px
-//   40.8%
-//     background-position: 0px 7750px
-//   42.5%
-//     background-position: 0px 8060px
-//   44.2%
-//     background-position: 0px 8370px
-//   45.9%
-//     background-position: 0px 8680px
-//   47.6%
-//     background-position: 0px 8990px
-//   49.3%
-//     background-position: 0px 9300px
-//   51%
-//     background-position: 0px 9610px
-//   52.7%
-//     background-position: 0px 9920px
-//   54.4%
-//     background-position: 0px 10230px
-//   56.1%
-//     background-position: 0px 10540px
-//   57.8%
-//     background-position: 0px 10850px
-//   59.5%
-//     background-position: 0px 11160px
-//   61.2%
-//     background-position: 0px 11470px
-//   62.9%
-//     background-position: 0px 11780px
-//   64.6%
-//     background-position: 0px 12090px
-//   66.3%
-//     background-position: 0px 13020px
-//   68%
-//     background-position: 0px 13330px
-//   69.7%
-//     background-position: 0px 13640px
-//   71.4%
-//     background-position: 0px 13950px
-//   73.1%
-//     background-position: 0px 14260px
-//   74.8%
-//     background-position: 0px 14570px
-//   76.5%
-//     background-position: 0px 14880px
-//   78.2%
-//     background-position: 0px 15190px
-//   79.9%
-//     background-position: 0px 15500px
-//   81.6%
-//     background-position: 0px 15810px
-//   83.3%
-//     background-position: 0px 16120px
-//   85%
-//     background-position: 0px 16430px
-//   86.7%
-//     background-position: 0px 16740px
-//   88.4%
-//     background-position: 0px 17050px
-//   90.1%
-//     background-position: 0px 17360px
-//   91.8%
-//     background-position: 0px 17610px
-//   93.5%
-//     background-position: 0px 17980px
-//   95.2%
-//     background-position: 0px 17980px
-//   96.9%
-//     background-position: 0px 17980px
-//   98.6%
-//     background-position: 0px 17980px
-//   100%
-//     background-position: 0px 17980px
+    animation: autoDrive 2.6s forwards steps(61)
+    &-1
+      background-image: url(/app/build/img/sprite_01.png)
+      top: 292px
+      right: -478px
+      z-index: 4
+    &-2
+      background-image: url(/app/build/img/sprite_02.png)
+      top: 21px
+      left: -274px
+    &-3
+      background-image: url(/app/build/img/sprite_03.png)
+      top: 118px
+      left: 553px
+
 @keyframes autoDrive
   0%
     background-position: 0px 0px
   100%
-    background-position: 0px -17670px
+    background-position: 0px -17690px
