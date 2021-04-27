@@ -1,0 +1,167 @@
+.footer
+  position: relative
+  overflow: hidden
+  &-background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      opacity: 0.65
+      position: relative
+      z-index: 2
+      display: block
+    &::before
+      content: ""
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,1)
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+  &-top
+    position: relative
+    z-index: 3
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    margin: 0 auto
+    padding-top: 95px
+  &-column
+    &--info
+      @include dfc()
+      align-items: center
+      justify-content: flex-start
+      width: calc(100% / 3 - 33px)
+      margin-top: 4px
+    &--nav
+      width: calc(100% / 3 * 2)
+      margin-left: 68px
+    &--contacts
+      width: calc(100% / 3)
+  &-wrapper
+    @include dfr()
+    flex-grow: 1
+    width: calc(100% / 3 * 2)
+    justify-content: space-between
+  &-logo
+    max-width: 170px
+    margin-left: 87px
+    img
+      width: 100%
+      height: auto
+      object-fit: cover
+  &-name
+    font-size: 20px
+    line-height: 26px
+    color: #fff
+    text-align: center
+    max-width: 255px
+    margin-top: 16px
+  &-copyright
+    font-size: 20px
+    line-height: 26px
+    color: #fff
+    text-align: center
+    max-width: 325px
+    margin-top: 29px
+  &-nav
+    @include dfr()
+    justify-content: space-between
+  &-list
+    @include dfc()
+    margin-right: 59px
+  &-item
+    margin-bottom: 28px
+    &__href
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+      transition: all 0.4s
+      &:hover
+        color: $orange
+  &-sublist
+    @include dfc()
+    margin-top: 22px
+  &-subitem
+    margin-bottom: 18px
+    max-width: 300px
+    a
+      font-size: 18px
+      line-height: 24px
+      color: rgba(255,255,255,0.5)
+      transition: all 0.4s
+      &:hover
+        color: $orange
+  &-tel
+    @include dfc()
+    margin-left: 50px
+    a
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+      transition: all 0.4s
+      &:hover
+        color: $orange
+  &-address
+    margin-top: 26px
+    margin-left: 50px
+    p
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+  &-email
+    margin-top: 26px
+    margin-left: 50px
+    a
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+      transition: all 0.4s
+      border-bottom: 1px solid rgba(255,255,255,0.1)
+      &:hover
+        color: $orange
+        border-color: rgba(255,255,255,0)
+  &-bottom
+    display: flex
+    position: relative
+    z-index: 3
+    justify-content: flex-end
+    margin-top: 17px
+    padding-bottom: 60px
+
+.developer
+  @include dfr()
+  span
+    &:first-child
+      background-color: $orange
+      font-family: "Helvetica"
+      font-size: 12px
+      line-height: 15px
+      font-weight: 800
+      color: #fff
+      text-transform: uppercase
+      text-decoration: none
+      letter-spacing: 2px
+      padding: 3px 4px 3px 6px
+      border-radius: 3px
+      transition: all 0.4s
+    &:last-child
+      margin-left: 7px
+      font-family: "Helvetica"
+      font-size: 9px
+      line-height: 11px
+      font-weight: 300
+      text-transform: uppercase
+      letter-spacing: 2px
+      color: rgba(255,255,255,0.5)
+  &:hover
+    span
+      &:first-child
+        background-color: #e27f00
