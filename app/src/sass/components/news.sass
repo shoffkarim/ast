@@ -1,0 +1,55 @@
+.news
+  &-section
+    padding-top: 120px
+    padding-bottom: 130px
+  &-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 1600px
+    margin: 40px auto 0px auto
+  &-item
+    width: calc(100% / 3 - 40px)
+    &__href
+      display: flex
+      flex-direction: column
+      color: #000
+    &__wrapper
+      padding: 0px 30px
+      margin-top: 30px
+      @include dfr()
+      align-items: flex-start
+    &__date
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-right: 30px
+      .day
+        font-size: 60px
+        color: #000
+      .month
+        font-size: 18px
+        line-height: 32px
+    &__name
+      font-size: 28px
+      line-height: 32px
+      color: #000
+      display: flex
+      &:hover
+        span
+          border-color: rgba(229,229, 229,0)
+      &-over
+        line-height: 32px
+        span
+          border-bottom: 1px solid rgba(229,229, 229,1)
+          transition: all 0.4s
+    &__img
+      position: relative
+      width: 100%
+      overflow: hidden
+      img
+        display: block
+        transition: transform 1s 0s ease
+        width: 100%
+        &:hover
+          transform: scale(1.05)

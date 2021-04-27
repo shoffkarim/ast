@@ -337,6 +337,88 @@
         </div>
       </div>
     </section>
+    <section class="news news-section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Что нового</h1>
+          <a href="">Все новости</a>
+        </div>
+        <ul class="news-list">
+          <li class="news-item">
+            <a href="" class="news-item__href">
+              <div class="news-item__img">
+                <img src="img/news/img-1.jpg" alt="">
+              </div>
+              <div class="news-item__wrapper">
+                <div class="news-item__date">
+                  <span class="day">
+                    01
+                  </span>
+                  <span class="month">
+                    12.20
+                  </span>
+                </div>
+                <p class="news-item__name">
+                  <span class="news-item__name-over">
+                    <span>
+                      ООО «АСТ» готовится к выпуску собственных премиксов
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="" class="news-item__href">
+              <div class="news-item__img">
+                <img src="img/news/img-2.jpg" alt="">
+              </div>
+              <div class="news-item__wrapper">
+                <div class="news-item__date">
+                  <span class="day">
+                    26
+                  </span>
+                  <span class="month">
+                    11.20
+                  </span>
+                </div>
+                <p class="news-item__name">
+                  <span class="news-item__name-over">
+                    <span>
+                      ООО «АСТ» завершила уборочную кампанию зерновых и технических культур
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="" class="news-item__href">
+              <div class="news-item__img">
+                <img src="img/news/img-3.jpg" alt="">
+              </div>
+              <div class="news-item__wrapper">
+                <div class="news-item__date">
+                  <span class="day">
+                    25
+                  </span>
+                  <span class="month">
+                    08.20
+                  </span>
+                </div>
+                <p class="news-item__name">
+                  <span class="news-item__name-over">
+                    <span>
+                      ООО «АСТ» начнет выпускать инновационное удобрение с содержанием йода
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
 </body>
@@ -350,23 +432,21 @@
       controls: []
     })
     const myPlacemark1 = new ymaps.Placemark([51.978495, 43.261499], {
-        // Зададим содержимое заголовка балуна.
-        balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский зерновой<br>терминал</a>',
-        // Зададим содержимое основной части балуна.
-        balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
-        // Зададим содержимое нижней части балуна.
-        balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
-        // Зададим содержимое всплывающей подсказки.
-        hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
-      },
-      {
-        iconLayout: "default#image",
-        iconImageHref: "img/blue-pin.png",
-        iconImageSize: [22, 22],
-        iconContentOffset: [19, 15],
-        hideIconOnBalloonOpen: false
-      },
-    );
+      // Зададим содержимое заголовка балуна.
+      balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский зерновой<br>терминал</a>',
+      // Зададим содержимое основной части балуна.
+      balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+      // Зададим содержимое нижней части балуна.
+      balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+      // Зададим содержимое всплывающей подсказки.
+      hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: "img/blue-pin.png",
+      iconImageSize: [22, 22],
+      iconContentOffset: [19, 15],
+      hideIconOnBalloonOpen: false
+    }, );
     const myPlacemark2 = new ymaps.Placemark(
       [51.245106, 42.476964], {
         balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский терминал</a>',
@@ -398,16 +478,16 @@
     // myMap.geoObjects.add(myPlacemark3);
 
     const placemarkArray = [myPlacemark1, myPlacemark2, myPlacemark3];
-    placemarkArray.forEach(function(i){
-    myMap.geoObjects.add(i);
-    i.events
+    placemarkArray.forEach(function (i) {
+      myMap.geoObjects.add(i);
+      i.events
         .add('mouseenter', function (e) {
-            e.get('target').options.set('iconImageHref', "img/map-pin.png");
+          e.get('target').options.set('iconImageHref', "img/map-pin.png");
         })
         .add('mouseleave', function (e) {
-            e.get('target').options.set('iconImageHref', "img/blue-pin.png");
+          e.get('target').options.set('iconImageHref', "img/blue-pin.png");
         });
-      });
+    });
   }
 </script>
 
