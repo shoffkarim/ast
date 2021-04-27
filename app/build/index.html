@@ -348,59 +348,49 @@
       center: [56.838011, 60.597465],
       zoom: 4,
       controls: []
-    },{
-        searchControlProvider: 'yandex#search'
-    });
-    const myPlacemark1 = new ymaps.Placemark(
-      [51.978495, 43.261499], {
-        balloonContentHeader: '<a href = "#">Рога и копыта</a><br>' +
-            '<span class="description">Сеть кинотеатров</span>',
+    })
+    const myPlacemark1 = new ymaps.Placemark([51.978495, 43.261499], {
+        // Зададим содержимое заголовка балуна.
+        balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский зерновой<br>терминал</a>',
         // Зададим содержимое основной части балуна.
-        balloonContentBody: '<img src="img/cinema.jpg" height="150" width="200"> <br/> ' +
-            '<a href="tel:+7-123-456-78-90">+7 (123) 456-78-90</a><br/>' +
-            '<b>Ближайшие сеансы</b> <br/> Сеансов нет.',
+        balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
         // Зададим содержимое нижней части балуна.
-        balloonContentFooter: 'Информация предоставлена:<br/>OOO "Рога и копыта"',
+        balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
         // Зададим содержимое всплывающей подсказки.
-        hintContent: 'Рога и копыта'
+        hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
       },
-      // {
-      //   iconLayout: "default#imageWithContent",
-      //   iconImageHref: "img/map-pin.png",
-      //   iconImageSize: [22, 22],
-      //   iconContentOffset: [19, 15],
-      // },
-
+      {
+        iconLayout: "default#image",
+        iconImageHref: "img/blue-pin.png",
+        iconImageSize: [22, 22],
+        iconContentOffset: [19, 15],
+      },
     );
     const myPlacemark2 = new ymaps.Placemark(
       [51.245106, 42.476964], {
-        hintContent: "",
-        iconContent: "",
+        balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский терминал</a>',
+        balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+        balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+        hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
       }, {
-        iconLayout: "default#imageWithContent",
-        iconImageHref: "img/map-pin.png",
+        iconLayout: "default#image",
+        iconImageHref: "img/blue-pin.png",
         iconImageSize: [22, 22],
-      }
-    );
-    const myPlacemark3 = new ymaps.Placemark(
-      [53.114006, 46.579866], {
-        hintContent: "",
-        iconContent: "",
-      }, {
-        iconLayout: "default#imageWithContent",
-        iconImageHref: "img/map-pin.png",
-        iconImageSize: [22, 22],
-        iconContentOffset: [19, 15],
       }
     );
     myMap.geoObjects.add(myPlacemark1);
-    myMap.balloon.open([51.85, 38.37], "Содержимое балуна", {
-        // Опция: не показываем кнопку закрытия.
-        closeButton: false
-    });
-    // myPlacemark1.balloon.open();
     myMap.geoObjects.add(myPlacemark2);
-    myMap.geoObjects.add(myPlacemark3);
+
+    const placemarkArray = [myPlacemark1, myPlacemark2];
+    placemarkArray.forEach(function(i){
+    i.events
+        .add('mouseenter', function (e) {
+            e.get('target').options.set('iconImageHref', "img/map-pin.png");
+        })
+        .add('mouseleave', function (e) {
+            e.get('target').options.set('iconImageHref', "img/blue-pin.png");
+        });
+      });
   }
 </script>
 

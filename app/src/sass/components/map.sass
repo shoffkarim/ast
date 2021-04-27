@@ -5,3 +5,75 @@
     padding-top: 120px
   &-wrapper
     margin-top: 50px
+  &-balloon
+    &__header
+      font-size: 28px
+      line-height: 32px
+      color: #000
+      font-family: 'Jost'
+      font-weight: 400
+      margin-bottom: 20px
+      display: inline-block
+    &__text
+      font-size: 20px
+      line-height: 30px
+      color: #000
+      font-family: 'Jost'
+      font-weight: 400
+    &__href
+      font-size: 20px
+      line-height: 30px
+      color: #000
+      font-family: 'Jost'
+      font-weight: 400
+      display: inline-block
+      margin-bottom: 26px
+
+.ymaps-2-1-78-balloon-pane
+  left: calc(100% - 360px - 90px) !important
+  top: 136px !important
+  .link--orange
+    font-size: 19px
+    line-height: 28px
+    padding: 7px 28px 7px
+    border-radius: 28px
+    font-family: 'Jost'
+    display: inline-block
+    margin-bottom: 10px
+.ymaps-2-1-78-balloon-overlay,
+.ymaps-2-1-78-balloon
+  top: 0px !important
+  left: 0px !important
+.ymaps-2-1-78-balloon
+  max-width: 360px !important
+  width: 360px !important
+  box-shadow: 3px 4px 20px 0px rgba(0, 0, 0, 0.1) !important
+  padding: 0px !important
+.ymaps-2-1-78-balloon__content
+  padding: 40px !important
+  margin-right: 0px !important
+  padding-top: 37px !important
+  padding-bottom: 29px !important
+.ymaps-2-1-78-balloon__tail
+  display: none !important
+.ymaps-2-1-78-balloon__close-button
+  width: 14px!important
+  height: 11px!important
+  opacity: 1!important
+  margin-right: 17px!important
+  margin-top: 21px!important
+  background-size: cover !important
+  transition: all 0.4s
+  &:hover
+    opacity: 0.5 !important
+    transition: all 0.4s
+.ymaps-2-1-78-placemark-overlay
+  &:hover
+    .ymaps-2-1-78-image
+      background-image: url(/app/build/img/map-pin.png) !important
+.placemark
+  width: 22px
+  height: 22px
+  background-color: $blue
+  border-radius: 50%
+  
