@@ -364,6 +364,7 @@
         iconImageHref: "img/blue-pin.png",
         iconImageSize: [22, 22],
         iconContentOffset: [19, 15],
+        hideIconOnBalloonOpen: false
       },
     );
     const myPlacemark2 = new ymaps.Placemark(
@@ -376,13 +377,29 @@
         iconLayout: "default#image",
         iconImageHref: "img/blue-pin.png",
         iconImageSize: [22, 22],
+        hideIconOnBalloonOpen: false
       }
     );
-    myMap.geoObjects.add(myPlacemark1);
-    myMap.geoObjects.add(myPlacemark2);
+    const myPlacemark3 = new ymaps.Placemark(
+      [53.114006, 46.579866], {
+        balloonContentHeader: '<a href="#" class="map-balloon__header">Кузнекц</a>',
+        balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+        balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+        hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+      }, {
+        iconLayout: "default#image",
+        iconImageHref: "img/blue-pin.png",
+        iconImageSize: [22, 22],
+        hideIconOnBalloonOpen: false
+      }
+    );
+    // myMap.geoObjects.add(myPlacemark1);
+    // myMap.geoObjects.add(myPlacemark2);
+    // myMap.geoObjects.add(myPlacemark3);
 
-    const placemarkArray = [myPlacemark1, myPlacemark2];
+    const placemarkArray = [myPlacemark1, myPlacemark2, myPlacemark3];
     placemarkArray.forEach(function(i){
+    myMap.geoObjects.add(i);
     i.events
         .add('mouseenter', function (e) {
             e.get('target').options.set('iconImageHref', "img/map-pin.png");
