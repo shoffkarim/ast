@@ -1,7 +1,7 @@
 .about
   background-color: #fcfcfc
   position: relative
-  overflow-x: hidden
+  overflow: hidden
   &__text
     max-width: 920px
     margin: 0 auto
@@ -24,6 +24,19 @@
   display: block
   top: 615px
   right: calc(50% + 266px)
+  &--fixed
+    position: fixed
+    top: calc(50% - 175px)
+  &--bottom
+    position: absolute
+    bottom: 0
+    top: auto
+  &.animation
+    .auto
+      animation: autoDrive 2.6s forwards steps(61)
+  &.animation-reverse
+    .auto
+      animation: autoDrive 2.6s reverse steps(61)
   .plane
     width: 1068px
     height: 650px
