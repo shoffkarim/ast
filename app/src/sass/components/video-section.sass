@@ -10,6 +10,9 @@
     height: 100%
     video
       width: 100%
+      position: relative
+      z-index: 1
+      opacity: 0.65
     &::before
       content: ""
       width: 100%
@@ -18,8 +21,8 @@
       position: absolute
       top: 0
       left: 0
-      background-color: rgba(0,0,0,0.65)
-      z-index: 1
+      background-color: rgba(0,0,0,1)
+      z-index: 0
   &--fixed
     .video-wrapper
       position: fixed
@@ -36,24 +39,27 @@
     position: relative
     z-index: 1
     max-width: 1200px
-    padding-top: 425px
+    padding-top: 415px
     padding-left: 155px
     padding-bottom: 130px
   &__tagline
     color: #fff
-    margin-bottom: 40px
+    margin-bottom: 32px
     max-width: 750px
     font-size: 60px
+    line-height: 64px
   &__year
     font-size: 160px
     line-height: 164px
     color: $orange
-    margin-bottom: 260px
+    margin-bottom: 244px
   &__text
     font-size: 22px
     line-height: 35px
     color: #fff
     max-width: 600px
+    + .back-video__text
+      margin-top: 27px
   &__list
     margin-top: 335px
 
@@ -72,21 +78,13 @@
     &__num
       font-size: 72px
       color: $orange
-      margin-bottom: 15px
+      margin-bottom: 6px
     &__text
       font-size: 22px
       line-height: 35px
       color: #fff
-      padding-left: 23px
+      padding-left: 3px
       position: relative
       max-width: 290px
-      // &::before
-      //   content: ""
-      //   width: 15px
-      //   height: 2px
-      //   background-color: #fff
-      //   display: block
-      //   position: absolute
-      //   top: 0
-      //   left: 0
+
 

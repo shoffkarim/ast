@@ -1,5 +1,5 @@
 .header
-  z-index: 1
+  z-index: 4
   position: absolute
   top: 0
   left: 0
@@ -8,7 +8,6 @@
     display: flex
     flex-direction: row
     justify-content: space-between
-    align-items: center
     padding-top: 50px
   &-menu
     display: flex
@@ -17,14 +16,51 @@
       font-size: 20px
       line-height: 28px
       color: #fff
-      margin-left: 40px
+      margin-left: 39px
+      position: relative
       &:first-child
         margin-left: 0px
       &:hover
-        a
+        .menu-item__href
           color: $orange
-          transition: all 0.4s
+        .header-submenu
+          top: 85px
+          opacity: 1
+          visibility: visible
+          transition: all 0.5s 0.2s
       a
         color: #fff
         transition: all 0.4s
-
+  &-nav
+    margin-top: 9px
+  &-submenu
+    position: absolute
+    top: 30px
+    background-color: #fff
+    padding: 35px 40px
+    display: block
+    width: auto
+    left: calc(50% - 92.5px)
+    opacity: 0
+    visibility: hidden
+    transition: all 0.5s 0.2s
+    &:hover
+      top: 85px
+      opacity: 1
+      visibility: visible
+      transition: all 0.5s 0.2s
+    &__item
+      font-size: 20px
+      line-height: 28px
+      color: #000
+      margin-bottom: 15px
+      display: block
+      white-space: nowrap
+      &:last-child
+        margin-bottom: 0px
+      &:hover
+        a
+          color: $orange
+      a
+        color: #000
+        transition: all 0.4s
