@@ -659,7 +659,65 @@
       </div>
     </footer>
   </main>
-
+  <div class="popup popup-callback js-popup" data-popup="callback">
+    <div class="popup-overlay"></div>
+    <div class="popup-container">
+      <p class="popup-title">Начать сотрудничество</p>
+      <p class="popup-text">Поля со звездочками <span class="star">*</span> &ndash; обязательны для заполнения</p>
+      <form class="popup-form">
+        <div class="popup-form__container">
+          <div class="popup-form__wrapper">
+            <div class="form-block">
+              <label class="label">Ваше имя <span class="star">*</span></label>
+              <input type="text">
+            </div>
+            <div class="form-block">
+              <label class="label">Номер телефона <span class="star">*</span></label>
+              <input type="text">
+            </div>
+            <div class="form-block">
+              <label class="label">Электронная почта</label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="popup-form__wrapper">
+            <div class="form-block form-block--textarea">
+              <label for="" class="label">Текст сообщения</label>
+              <textarea name="" id=""></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="popup-form__bottom">
+          <label class="fake-checkbox">
+            <input type="checkbox">
+            <div class="fake-checkbox__box"></div>
+            <p>Даю согласие на обработку <a href="">персональных данных</a></p>
+          </label>
+          <button class="btn btn--orange popup-form__btn">Отправить</button>
+        </div>
+      </form>
+      <div class="popup-close">
+        <button>
+          <img src="img/close.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup-thanks js-popup popup-open" data-popup="thanks">
+    <div class="popup-overlay"></div>
+    <div class="popup-container">
+      <p class="popup-title">Сообщение отправлено</p>
+      <p class="popup-text">Ваше сообщение отправлено. Мы вскоре свяжемся с вами по указанному номеру.</p>
+      <div class="popup-thanks__btn">
+        <button class="btn btn--orange popup-thanks__btn">Закрыть</button>
+      </div>
+      <div class="popup-close">
+        <button>
+          <img src="img/close.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 <script type="text/javascript">
   ymaps.ready(init);
