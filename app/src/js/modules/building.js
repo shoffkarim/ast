@@ -29,15 +29,17 @@ function classManager(wrap, clientHeight) {
   const controlTopScroll = control.getBoundingClientRect().top < clientHeight / 2 - 175;
   const container = document.querySelector(".about");
   const containerBottomScroll = container.getBoundingClientRect().bottom < clientHeight - 187;
-  console.log("контейнер", containerBottomScroll);
+  const containerTopScroll = container.getBoundingClientRect().bottom < clientHeight;
+  console.log("контейнер низ", containerBottomScroll);
+  console.log("контейнер верх", containerTopScroll);
   console.log("котрол", controlTopScroll);
-  if (controlTopScroll && !containerBottomScroll) {
+  if (controlTopScroll && !containerTopScroll) {
     wrap.classList.remove("about-building--bottom");
     wrap.classList.add("about-building--fixed");
-  } else if (containerBottomScroll && controlTopScroll) {
+  } else if (containerTopScroll && controlTopScroll) {
     wrap.classList.add("about-building--bottom");
     wrap.classList.remove("about-building--fixed");
-  } else if (!containerBottomScroll && !controlTopScroll) {
+  } else if (!containerBottomScroll && !controlTopScroll && !containerTopScroll) {
     wrap.classList.remove("about-building--bottom");
     wrap.classList.remove("about-building--fixed");
   }

@@ -7,6 +7,8 @@
     margin: 0 auto
     margin-bottom: 300px
     margin-top: 200px
+    position: relative
+    z-index: 2
     &:first-child
       margin-top: 0px
     &:last-child
@@ -19,17 +21,20 @@
       margin: 0 auto
   .circle-text
     margin-left: 90px
+    position: relative
+    z-index: 2
 .about-building
   position: absolute
   display: block
   top: 615px
   right: calc(50% + 266px)
+  z-index: 1
   &--fixed
     position: fixed
     top: calc(50% - 280px)
   &--bottom
     position: absolute
-    bottom: 650px
+    bottom: 765px
     top: auto
   &.animation
     .auto
