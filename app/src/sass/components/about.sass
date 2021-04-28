@@ -39,9 +39,11 @@
   &.animation
     .auto
       animation: autoDrive 2.6s forwards steps(61)
+      animation-fill-mode: forwards
   &.animation-reverse
     .auto
       animation: autoDrive 2.6s reverse steps(61)
+      animation-fill-mode: forwards
   .plane
     width: 1068px
     height: 650px
@@ -78,7 +80,7 @@
     position: absolute
     z-index: 2
     background-position: 0px 0px
-    animation: autoDrive 2.6s forwards steps(61)
+    //animation: autoDrive 2.6s forwards steps(61)
     &-1
       background-image: url(/app/build/img/sprite_01.png)
       top: 292px
