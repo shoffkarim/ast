@@ -48,6 +48,9 @@
       @media screen and ( max-width: 950px )
         width: 50%
         margin-bottom: 40px
+      @media screen and ( max-width: 767px )
+        width: 100%
+
     &--nav
       width: calc(100% / 3 * 2)
       margin-left: 77px
@@ -60,10 +63,19 @@
         margin-left: 0px
       @media screen and ( max-width: 767px )
         width: 60%
+      @media screen and ( max-width: 550px )
+        width: 100%
+
     &--contacts
       width: calc(100% / 3)
       @media screen and ( max-width: 767px )
         width: 40%
+      @media screen and ( max-width: 550px )
+        width: 100%
+        display: flex
+        flex-direction: column
+      @media screen and ( max-width: 400px )
+        align-items: center
   &-wrapper
     @include dfr()
     flex-grow: 1
@@ -71,6 +83,9 @@
     justify-content: space-between
     @media screen and ( max-width: 950px )
       width: 100%
+    @media screen and ( max-width: 400px )
+      flex-direction: column
+      align-items: center
   &-logo
     max-width: 170px
     margin-left: 87px
@@ -104,11 +119,17 @@
   &-nav
     @include dfr()
     justify-content: space-between
+    @media screen and ( max-width: 550px )
+      flex-direction: column
+      margin-bottom: 30px
+    @media screen and ( max-width: 400px )
+      align-items: center
   &-list
     @include dfc()
     margin-right: 66px
     @media screen and ( max-width: 1366px )
       margin-right: 0px
+
   &-item
     margin-bottom: 28px
     @media screen and ( max-width: 1366px )
@@ -126,6 +147,8 @@
   &-sublist
     @include dfc()
     margin-top: 22px
+    @media screen and ( max-width: 550px )
+      display: none
   &-subitem
     margin-bottom: 18px
     max-width: 300px
@@ -203,6 +226,9 @@
     padding-bottom: 60px
     @media screen and ( max-width: 1366px )
       margin-top: 5px
+    @media screen and ( max-width: 550px )
+      margin-top: 30px
+      justify-content: center
 
 .developer
   @include dfr()

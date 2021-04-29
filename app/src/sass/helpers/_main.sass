@@ -13,6 +13,8 @@ body
     padding: 0px 20px
 .section
   padding-top: 105px
+  @media screen and ( max-width: 550px )
+    padding-top: 60px
   &-text
     font-size: 60px
     line-height: 64px
@@ -23,6 +25,9 @@ body
     @media screen and ( max-width: 767px )
       font-size: 30px
       line-height: 38px
+    @media screen and ( max-width: 550px )
+      font-size: 24px
+      line-height: 30px
     &--head
       max-width: 460px
       @media screen and ( max-width: 1366px )
@@ -40,6 +45,10 @@ body
       padding: 0 58px
     @media screen and ( max-width: 950px )
       padding: 0px
+    @media screen and ( max-width: 550px )
+      display: flex
+      flex-direction: column
+      align-items: flex-start
     a
       font-size: 22px
       line-height: 20px
@@ -52,6 +61,10 @@ body
       @media screen and ( max-width: 767px )
         font-size: 18px
         line-height: 15px
+      @media screen and ( max-width: 550px )
+        font-size: 16px
+        line-height: 13px
+        margin-top: 10px
       &:hover
         border-bottom: 1px solid rgba(217,217,217,0)
         transition: all 0.4s
@@ -74,6 +87,14 @@ body
   @media screen and ( max-width: 767px )
     width: 115px
     height: 115px
+  @media screen and ( max-width: 550px )
+    width: 90px
+    min-width: 90px
+    height: 90px
+    min-height: 90px
+    margin: 0
+  @media screen and ( max-width: 400px )
+    margin: 20px auto 0px
   a
     font-size: 22px
     line-height: 26px
@@ -89,6 +110,11 @@ body
     @media screen and ( max-width: 767px )
       font-size: 16px
       line-height: 20px
+    @media screen and ( max-width: 550px )
+      font-size: 14px
+      line-height: 18px
+    @media screen and ( max-width: 400px )
+      margin-top: 0px
 
 .common
   &-text
@@ -101,6 +127,9 @@ body
     @media screen and ( max-width: 767px )
       font-size: 18px
       line-height: 24px
+    @media screen and ( max-width: 550px )
+      font-size: 16px
+      line-height: 20px
 .circle-text
   width: 400px
   height: 400px
@@ -113,6 +142,9 @@ body
   @media screen and ( max-width: 1366px )
     width: 340px
     height: 340px
+  @media screen and ( max-width: 400px )
+    width: 240px
+    height: 240px
   &__title
     font-size: 72px
     line-height: 64px
@@ -121,6 +153,9 @@ body
     @media screen and ( max-width: 1366px )
       font-size: 61px
       line-height: 62px
+    @media screen and ( max-width: 400px )
+      font-size: 38px
+      line-height: 48px
   &__desc
     font-size: 22px
     line-height: 32px
@@ -131,6 +166,10 @@ body
       font-size: 20px
       line-height: 32px
       max-width: 270px
+    @media screen and ( max-width: 400px )
+      font-size: 16px
+      line-height: 24px
+      max-width: 190px
 
 .link
   &--orange
@@ -143,6 +182,9 @@ body
     @media screen and ( max-width: 1366px )
       font-size: 20px
       line-height: 26px
+    @media screen and ( max-width: 550px )
+      font-size: 18px
+      line-height: 24px
 
 .btn
   &--orange
