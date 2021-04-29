@@ -2,6 +2,9 @@
 /* eslint-disable no-unused-vars */
 // STYLES=============================================================================
 import '../sass/style.sass';
+import Popup from './modules/popup';
+
+const popup = new Popup();
 
 if (document.documentElement.clientWidth > 767) {
   let controller = new ScrollMagic.Controller({
