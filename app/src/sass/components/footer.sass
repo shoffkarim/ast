@@ -58,8 +58,12 @@
         width: calc(100% / 3 * 2 - 15%)
       @media screen and ( max-width: 950px )
         margin-left: 0px
+      @media screen and ( max-width: 767px )
+        width: 60%
     &--contacts
       width: calc(100% / 3)
+      @media screen and ( max-width: 767px )
+        width: 40%
   &-wrapper
     @include dfr()
     flex-grow: 1
