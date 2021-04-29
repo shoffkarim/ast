@@ -50,27 +50,46 @@
     padding-top: 415px
     padding-left: 155px
     padding-bottom: 130px
+    @media screen and ( max-width: 1366px )
+      padding-top: 261px
+      padding-left: 110px
+      padding-bottom: 90px
+
   &__tagline
     color: #fff
     margin-bottom: 32px
     max-width: 750px
     font-size: 60px
     line-height: 64px
+    @media screen and ( max-width: 1366px )
+      font-size: 48px
+      line-height: 52px
+      max-width: 480px
+      margin-bottom: 17px
+
   &__year
     font-size: 160px
     line-height: 164px
     color: $orange
     margin-bottom: 244px
+    @media screen and ( max-width: 1366px )
+      font-size: 128px
+      line-height: 140px
+      margin-bottom: 165px
   &__text
     font-size: 22px
     line-height: 35px
     color: #fff
     max-width: 600px
+    @media screen and ( max-width: 1366px )
+      font-size: 20px
+      line-height: 30px
     + .back-video__text
       margin-top: 27px
   &__list
     margin-top: 335px
-
+    @media screen and ( max-width: 1366px )
+      margin-top: 182px
 
 .achievements
   &-list
@@ -81,12 +100,19 @@
     display: flex
     flex-direction: column
     align-items: flex-start
+    @media screen and ( max-width: 1366px )
+      margin-right: 97px
+      &:last-child
+        margin-right: 0px
     &:last-child
       margin-right: 0px
     &__num
       font-size: 72px
       color: $orange
       margin-bottom: 6px
+      @media screen and ( max-width: 1366px )
+        font-size: 60px
+        margin-bottom: 10px
     &__text
       font-size: 22px
       line-height: 35px
@@ -94,5 +120,6 @@
       padding-left: 3px
       position: relative
       max-width: 290px
-
-
+      @media screen and ( max-width: 1366px )
+        font-size: 20px
+        line-height: 30px

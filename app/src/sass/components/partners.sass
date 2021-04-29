@@ -4,9 +4,13 @@
   padding-bottom: 130px
   position: relative
   z-index: 2
+  @media screen and ( max-width: 1366px )
+    padding-bottom: 100px
   &-text
     max-width: 950px
     margin: 0 auto
+    @media screen and ( max-width: 1366px )
+      max-width: 820px
   &-list
     max-width: 1400px
     width: 100%
@@ -14,11 +18,16 @@
     @include dfr()
     flex-wrap: wrap
     justify-content: space-between
+    @media screen and ( max-width: 1366px )
+      margin: 83px auto 0
+      max-width: 1140px
   &-item
     width: calc(100% / 5)
     margin-bottom: 105px
     display: flex
     justify-content: center
+    @media screen and ( max-width: 1366px )
+      margin-bottom: 73px
     &__href
       display: flex
       justify-content: center
@@ -29,4 +38,6 @@
   &-link
     text-align: center
     margin-top: 8px
+    @media screen and ( max-width: 1366px )
+      margin-top: 19px
 

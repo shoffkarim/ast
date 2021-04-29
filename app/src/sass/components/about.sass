@@ -9,26 +9,36 @@
     margin-top: 200px
     position: relative
     z-index: 2
+    @media screen and ( max-width: 1366px )
+      max-width: 758px
     &:first-child
       margin-top: 0px
-    &:last-child
+    &:nth-child(2n)
       margin-bottom: 0px
     p
       margin-bottom: 40px
+      @media screen and ( max-width: 1366px )
+        margin-bottom: 45px
     &-desc
       max-width: 770px
       text-align: center
       margin: 0 auto
+      @media screen and ( max-width: 1366px )
+        max-width: 730px
   .circle-text
     margin-left: 90px
     position: relative
     z-index: 2
+    @media screen and ( max-width: 1366px )
+      margin-left: 63px
 .about-building
   position: absolute
   display: block
   top: 615px
   right: calc(50% + 266px)
   z-index: 1
+  @media screen and ( max-width: 1366px )
+    top: 573px
   &--fixed
     position: fixed
     top: calc(50% - 280px)
@@ -105,4 +115,6 @@
   position: absolute
   top: 680px
   height: 1px
+  @media screen and ( max-width: 1366px )
+    top: 590px
 

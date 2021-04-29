@@ -5,14 +5,22 @@
     position: relative
     z-index: 2
     background-color: #fff
+    @media screen and ( max-width: 1366px )
+      padding-top: 87px
+      padding-bottom: 93px
   &-list
     display: flex
     flex-wrap: wrap
     justify-content: space-between
     max-width: 1600px
     margin: 48px auto 0px auto
+    @media screen and ( max-width: 1366px )
+      max-width: 1140px
+      margin-top: 45px
   &-item
     width: calc(100% / 3 - 53px)
+    @media screen and ( max-width: 1366px )
+      width: calc(100% / 3 - 40px)
     &__href
       display: flex
       flex-direction: column
@@ -22,23 +30,35 @@
       margin-top: 33px
       @include dfr()
       align-items: flex-start
+      @media screen and ( max-width: 1366px )
+        padding: 0 11px
     &__date
       display: flex
       flex-direction: column
       align-items: center
       margin-right: 24px
+      @media screen and ( max-width: 1366px )
+        margin-right: 19px
       .day
         font-size: 60px
         color: #000
+        @media screen and ( max-width: 1366px )
+          font-size: 50px
       .month
         font-size: 18px
         line-height: 32px
+        @media screen and ( max-width: 1366px )
+          font-size: 16px
+          line-height: 30px
     &__name
       font-size: 28px
       line-height: 32px
       color: #000
       display: flex
       margin-top: 2px
+      @media screen and ( max-width: 1366px )
+        font-size: 24px
+        line-height: 28px
       &:hover
         span
           border-color: rgba(229,229, 229,0)
