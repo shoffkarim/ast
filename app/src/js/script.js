@@ -3,7 +3,7 @@
 // STYLES=============================================================================
 import '../sass/style.sass';
 
-if (document.documentElement.clientWidth > 1025) {
+if (document.documentElement.clientWidth > 766) {
   let controller = new ScrollMagic.Controller({
     loglevel: 0,
   });
