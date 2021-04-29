@@ -26,12 +26,40 @@
     background-color: #fff
     position: relative
     z-index: 102
+    @media screen and ( max-height: 870px )
+      padding: 50px 70px
+    @media screen and ( max-width: 950px )
+      padding: 50px 70px
+    @media screen and ( max-width: 767px )
+      padding: 50px 30px
+    @media screen and ( max-width: 400px )
+      padding: 50px 20px
   &-callback
     .popup-container
       width: 1366px
+      overflow: auto
+      @media screen and ( max-width: 1366px )
+        width: 950px
+      @media screen and ( max-height: 780px )
+        margin-top: 0px
+        height: 100%
+      @media screen and ( max-height: 700px )
+        width: 100%
+      @media screen and ( max-width: 950px )
+        width: 100%
+        margin: 0px
+        height: 100%
+
   &-thanks
     .popup-container
       width: 746px
+      overflow: auto
+      @media screen and ( max-width: 767px )
+        width: 500px
+      @media screen and ( max-width: 500px )
+        width: 100%
+        margin: 0px
+        height: 100%
     &__btn
       margin: 0 auto
       text-align: center
@@ -41,19 +69,35 @@
     color: #000
     text-align: center
     margin-bottom: 43px
+    @media screen and ( max-width: 767px )
+      font-size: 36px
+      line-height: 44px
+      margin-bottom: 30px
+    @media screen and ( max-width: 400px )
+      font-size: 28px
+      line-height: 34px
+
   &-text
     font-size: 20px
     line-height: 30px
     color: #000
     text-align: center
     margin-bottom: 47px
+    @media screen and ( max-width: 550px )
+      font-size: 18px
+      line-height: 26px
   &-form
     &__container
       @include dfr()
       width: 100%
+      @media screen and ( max-width: 600px )
+        flex-direction: column
     &__wrapper
       margin-right: 48px
       width: 100%
+      @media screen and ( max-width: 600px )
+        margin-right: 0px
+        margin-bottom: 21px
       &:last-child
         margin-right: 0px
     &__bottom
@@ -66,4 +110,6 @@
     position: absolute
     top: 40px
     right: 40px
-
+    @media screen and ( max-width: 767px )
+      top: 30px
+      right: 30px
