@@ -580,7 +580,7 @@
           <h1>Где купить</h1>
           <a href="">Все элеваторы списком</a>
         </div>
-        <div class="map-wrapper">
+        <div class="map-wrapper js-lazy-map">
           <div class="map" id="map" style="width:100%; height:100%"></div>
         </div>
       </div>
@@ -817,15 +817,32 @@
   </div>
   <div class="cookie cookie-open js-cookie">
     <p class="cookie-text">
-      Для повышения удобства сайта мы используем cookie. Оставаясь на сайте, вы соглашаетесь с <a href="">политикой их применения</a>.
+      Для повышения удобства сайта мы используем cookie. Оставаясь на сайте, вы соглашаетесь с <a href="">политикой их
+        применения</a>.
     </p>
     <div class="link link--orange js-btn-cookie">Принимаю</div>
   </div>
   <!-- /Footer -->
   <script type="text/javascript">
-    ymaps.ready(init);
+    const mapWrap = document.querySelector(".js-lazy-map")
+    mapWrap.addEventListener('click', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
+    mapWrap.addEventListener('mouseover', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
+    mapWrap.addEventListener('touchstart', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
+    mapWrap.addEventListener('touchmove', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
 
-    function init() {
+    function ymapsInit() {
       var myMap = new ymaps.Map("map", {
         center: [56.838011, 60.597465],
         zoom: 4,
