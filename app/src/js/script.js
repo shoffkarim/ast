@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 // STYLES=============================================================================
 import '../sass/style.sass';
+import Cookie from './modules/cookie';
 import InputMask from './modules/imask-init';
 import Popup from './modules/popup';
 import Validation from './modules/validation';
@@ -9,6 +10,7 @@ import Validation from './modules/validation';
 const popup = new Popup();
 const validation = new Validation();
 const imask = new InputMask();
+const cookie = new Cookie();
 
 if (document.documentElement.clientWidth > 767) {
   let controller = new ScrollMagic.Controller({

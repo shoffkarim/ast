@@ -118,3 +118,55 @@
   position: relative
   top: auto
   right: auto
+
+.cookie
+  width: 425px
+  height: auto
+  padding: 35px 37px 35px 39px
+  background-color: #fff
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  bottom: 70px
+  right: 70px
+  transition: all 0.4s
+  z-index: 100
+  @media screen and ( max-width: 767px )
+    padding: 25px
+    bottom: 35px
+    right: 35px
+  @media screen and ( max-width: 550px )
+    width: 100%
+    bottom: 0px
+    right: 0px
+  &-open
+    opacity: 1
+    visibility: visible
+    transition: all 0.4s
+  &-text
+    font-size: 20px
+    line-height: 30px
+    color: #000
+    margin-bottom: 30px
+    @media screen and ( max-width: 767px )
+      font-size: 18px
+      line-height: 26px
+      margin-bottom: 20px
+    a
+      font-size: 20px
+      line-height: 30px
+      color: #093a9e
+      border-bottom: 1px solid rgba(9, 58, 158, 0.15)
+      transition: all 0.4s
+      @media screen and ( max-width: 767px )
+        font-size: 18px
+        line-height: 26px
+      &:hover
+        border-bottom-color: rgba(9, 58, 158, 0)
+  .link--orange
+    font-size: 19px
+    line-height: 28px
+    padding: 7px 25px 7px
