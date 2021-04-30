@@ -3,8 +3,10 @@
 // STYLES=============================================================================
 import '../sass/style.sass';
 import Popup from './modules/popup';
+import Validation from './modules/validation';
 
 const popup = new Popup();
+const validation = new Validation();
 
 if (document.documentElement.clientWidth > 767) {
   let controller = new ScrollMagic.Controller({

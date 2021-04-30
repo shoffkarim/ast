@@ -764,32 +764,32 @@
         <div class="popup-form__container">
           <div class="popup-form__wrapper">
             <div class="form-block">
-              <label class="label">Ваше имя <span class="star">*</span></label>
-              <input type="text">
+              <label class="label" for="fio">Ваше имя <span class="star">*</span></label>
+              <input type="text" id="fio" class="js-valid">
             </div>
             <div class="form-block">
-              <label class="label">Номер телефона <span class="star">*</span></label>
-              <input type="text">
+              <label class="label" for="tel">Номер телефона <span class="star">*</span></label>
+              <input type="tel" id="tel" class="js-valid">
             </div>
             <div class="form-block">
-              <label class="label">Электронная почта</label>
-              <input type="text">
+              <label class="label" for="email">Электронная почта</label>
+              <input type="email" id="email">
             </div>
           </div>
           <div class="popup-form__wrapper">
             <div class="form-block form-block--textarea">
-              <label for="" class="label">Текст сообщения</label>
-              <textarea name="" id=""></textarea>
+              <label for="text" class="label">Текст сообщения</label>
+              <textarea name="" id="text"></textarea>
             </div>
           </div>
         </div>
         <div class="popup-form__bottom">
-          <label class="fake-checkbox">
-            <input type="checkbox">
+          <label class="fake-checkbox" for="check">
+            <input type="checkbox" class="js-valid" id="check">
             <div class="fake-checkbox__box"></div>
             <p>Даю согласие на обработку <a href="">персональных данных</a></p>
           </label>
-          <button class="btn btn--orange popup-form__btn">Отправить</button>
+          <button class="btn btn--orange popup-form__btn js-submit">Отправить</button>
         </div>
       </form>
       <div class="popup-close">

@@ -12,9 +12,13 @@
       line-height: 22px
       color: #000
       padding: 13px 20px
+      transition: all 0.4s
       @media screen and ( max-width: 550px )
         font-size: 16px
         line-height: 20px
+      &.error
+        border-color: $orange
+        transition: all 0.4s
     &--textarea
       height: 100%
       margin-bottom: 0px
@@ -37,6 +41,7 @@
   line-height: 22px
   color: #000
   margin-bottom: 5px
+  cursor: pointer
   @media screen and ( max-width: 550px )
     font-size: 16px
     line-height: 20px
@@ -49,8 +54,18 @@
 .fake-checkbox
   display: flex
   align-items: center
+  cursor: pointer
   input
     display: none
+    &.error
+      + .fake-checkbox__box
+        border-color: $orange
+        transition: all 0.4s
+    &:checked
+      + .fake-checkbox__box
+        &::before
+          opacity: 1
+          transition: all 0.4s
   &__box
     width: 30px
     height: 30px
@@ -59,6 +74,21 @@
     border: 1px solid #e5e5e5
     border-radius: 5px
     margin-right: 10px
+    transition: all 0.4s
+    position: relative
+    &::before
+      content: ""
+      width: 15px
+      height: 11px
+      display: block
+      background-image: url(/app/build/img/agree-arrow.png)
+      background-repeat: no-repeat
+      background-size: cover
+      position: absolute
+      top: 9px
+      left: 7px
+      opacity: 0
+      transition: all 0.4s
   p
     font-size: 18px
     line-height: 22px
