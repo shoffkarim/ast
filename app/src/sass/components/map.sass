@@ -29,6 +29,10 @@
         font-size: 24px
         line-height: 29px
         margin-bottom: 13px
+      @media screen and ( max-width: 550px )
+        font-size: 20px
+        line-height: 26px
+
     &__text
       font-size: 20px
       line-height: 30px
@@ -38,6 +42,10 @@
       @media screen and ( max-width: 1366px )
         font-size: 18px
         line-height: 28px
+      @media screen and ( max-width: 550px )
+        font-size: 16px
+        line-height: 20px
+
     &__href
       font-size: 20px
       line-height: 30px
@@ -50,12 +58,18 @@
         font-size: 18px
         line-height: 28px
         margin-bottom: 17px
+      @media screen and ( max-width: 550px )
+        font-size: 16px
+        line-height: 20px
 .ymaps-2-1-78-balloon-pane
   left: calc(100% - 360px - 90px) !important
   top: 136px !important
   @media screen and ( max-width: 1366px )
     left: calc(100% - 378px)!important
     top: 126px!important
+  @media screen and ( max-width: 550px )
+    left: calc(100% - 378px)!important
+    top: 30px!important
   .link--orange
     font-size: 19px
     line-height: 28px
@@ -68,6 +82,9 @@
       font-size: 17px
       line-height: 25px
       padding: 7px 25px
+    @media screen and ( max-width: 550px )
+      font-size: 16px
+      line-height: 20px
 .ymaps-2-1-78-balloon-overlay,
 .ymaps-2-1-78-balloon
   top: 0px !important
@@ -80,6 +97,13 @@
   @media screen and ( max-width: 1366px )
     max-width: 315px !important
     width: 315px !important
+  @media screen and ( max-width: 550px )
+    max-width: 250px !important
+    width: 250px !important
+  @media screen and ( max-width: 497px )
+    height: auto !important
+    background-color: transparent !important
+    box-shadow: none !important
 .ymaps-2-1-78-balloon__content
   padding: 40px !important
   margin-right: 0px !important
@@ -87,6 +111,12 @@
   padding-bottom: 29px !important
   @media screen and ( max-width: 1366px )
     padding-top: 33px !important
+  @media screen and ( max-width: 550px )
+    padding: 15px !important
+  @media screen and ( max-width: 497px )
+    height: auto !important
+    > ymaps
+      height: auto !important
 .ymaps-2-1-78-balloon__tail
   display: none !important
 .ymaps-2-1-78-balloon__close-button
@@ -109,3 +139,9 @@
   height: 22px
   background-color: $blue
   border-radius: 50%
+.ymaps-2-1-78-balloon-content__footer
+  @media screen and ( max-width: 497px )
+    margin-bottom: 10px !important
+.ymaps-2-1-78-balloon-panel
+  @media screen and ( max-width: 497px )
+    top: -300px !important
