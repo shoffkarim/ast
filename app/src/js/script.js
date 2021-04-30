@@ -2,11 +2,13 @@
 /* eslint-disable no-unused-vars */
 // STYLES=============================================================================
 import '../sass/style.sass';
+import InputMask from './modules/imask-init';
 import Popup from './modules/popup';
 import Validation from './modules/validation';
 
 const popup = new Popup();
 const validation = new Validation();
+const imask = new InputMask();
 
 if (document.documentElement.clientWidth > 767) {
   let controller = new ScrollMagic.Controller({
