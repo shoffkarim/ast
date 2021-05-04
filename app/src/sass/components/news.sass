@@ -8,6 +8,27 @@
     @media screen and ( max-width: 1366px )
       padding-top: 87px
       padding-bottom: 93px
+  &-page
+    padding-top: 0px
+    padding-bottom: 155px
+    position: relative
+    z-index: 2
+    background-color: #fff
+    margin-top: 76px
+    @media screen and ( max-width: 1366px )
+      margin-top: 73px
+      padding-bottom: 113px
+    .news-item
+      margin-bottom: 92px
+      @media screen and ( max-width: 1366px )
+        width: calc(100% / 3 - 40px)
+        margin-bottom: 84px
+      @media screen and ( max-width: 950px )
+        width: calc(50% - 20px)
+        margin-bottom: 30px
+      @media screen and ( max-width: 600px )
+        width: 100%
+
   &-list
     display: flex
     flex-wrap: wrap
@@ -98,3 +119,10 @@
         width: 100%
         &:hover
           transform: scale(1.05)
+  &-button
+    text-align: center
+    margin-top: 15px
+    @media screen and ( max-width: 1366px )
+      margin-top: 0px
+    @media screen and ( max-width: 950px )
+      margin-top: 15px
