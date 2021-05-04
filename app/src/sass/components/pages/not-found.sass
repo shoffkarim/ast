@@ -1,0 +1,49 @@
+.not-found
+  max-width: 700px
+  margin: 0 auto
+  margin-top: 65px
+  margin-bottom: 132px
+  text-align: center
+  @media screen and ( max-width: 1366px )
+    margin-top: 77px
+    margin-bottom: 143px
+    max-width: 550px
+  @media screen and ( max-width: 767px )
+    margin-top: 50px
+    margin-bottom: 100px
+  @media screen and ( max-width: 600px )
+    max-width: none
+    width: 100%
+    padding: 0 20px
+
+  &__code
+    color: $orange
+    font-size: 240px
+    margin-bottom: 3px
+    @media screen and ( max-width: 1366px )
+      font-size: 220px
+      margin-bottom: 8px
+    @media screen and ( max-width: 767px )
+      font-size: 180px
+    @media screen and ( max-width: 550px )
+      font-size: 150px
+  &__text
+    font-size: 22px
+    line-height: 32px
+    text-align: center
+    margin-top: 40px
+    @media screen and ( max-width: 1366px )
+      font-size: 20px
+      line-height: 30px
+    @media screen and ( max-width: 550px )
+      font-size: 18px
+      line-height: 26px
+    & + p
+      margin-top: 24px
+    a
+      color: $blue
+      border-bottom: 1px solid rgba(217,217,217,1)
+      transition: all 0.4s
+      &:hover
+        border-bottom: 1px solid rgba(217,217,217,0)
+        transition: all 0.4s

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ru">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title>AST</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6d5fab7d-dc18-48d8-9e33-9f1af57244f9&lang=ru_RU"
+    type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <a data-al="" class="header-logo header-logo--main">
+          <img src="img/logo.png" alt="">
+        </a>
+        <a data-al="" class="header-logo header-logo--inner">
+          <img src="img/inner-logo.png" alt="">
+        </a>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li class="header-menu__item menu-item">
+              <a data-al="" class="menu-item__href">Компания</a>
+              <ul class="header-submenu">
+                <li class="header-submenu__item">
+                  <a data-al="">О компании</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Вакансии</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-menu__item menu-item">
+              <a data-al="" class="menu-item__href">Партнеры</a>
+            </li>
+            <li class="header-menu__item menu-item">
+              <a data-al="" class="menu-item__href">Продукция</a>
+            </li>
+            <li class="header-menu__item menu-item">
+              <a data-al="" class="menu-item__href">Прайс-лист</a>
+            </li>
+            <li class="header-menu__item menu-item">
+              <a data-al="" class="menu-item__href">Где купить</a>
+            </li>
+            <li class="header-menu__item menu-item">
+              <a data-al="" class="menu-item__href">Новости</a>
+            </li>
+            <li class="header-menu__item menu-item">
+              <a data-al="" class="menu-item__href">Контакты</a>
+            </li>
+          </ul>
+          <div class="burger">
+            <button class="burger-btn js-popup-open" data-popup="burger">
+              <span></span>
+            </button>
+          </div>
+          <div class="burger-popup js-popup" data-popup="burger">
+            <div class="burger-container">
+              <a data-al="" class="header-logo">
+                <img src="img/inner-logo.png" alt="">
+              </a>
+              <div class="burger-wrapper">
+                <ul class="burger-menu">
+                  <li class="burger-item">
+                    <a data-al="">Компания</a>
+                    <ul class="burger-submenu">
+                      <li class="burger-submenu__item">
+                        <a data-al="">О компании</a>
+                      </li>
+                      <li class="burger-submenu__item">
+                        <a data-al="">Вакансии</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="burger-item">
+                    <a data-al="">Партнеры</a>
+                  </li>
+                  <li class="burger-item">
+                    <a data-al="">Продукция</a>
+                    <ul class="burger-submenu">
+                      <li class="burger-subitem">
+                        <a data-al="">Пщеница</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Кукуруза</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Мука</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Горох</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Лён</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Отруби пшеничные гранулированные</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Жом свеловчиный</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Рожь</a>
+                      </li>
+                      <li class="burger-subitem">
+                        <a data-al="">Ячмень</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="burger-item">
+                    <a data-al="">Прайс-лист</a>
+                  </li>
+                  <li class="burger-item">
+                    <a data-al="">Где купить</a>
+                  </li>
+                  <li class="burger-item">
+                    <a data-al="">Новости</a>
+                  </li>
+                  <li class="burger-item">
+                    <a data-al="">Контакты</a>
+                  </li>
+                </ul>
+                <div class="burger-column">
+                  <div class="burger-contacts">
+                    <div class="burger-tel">
+                      <a data-al="">+7 473 253-17-65</a>
+                      <a data-al="">+7 473 295-16-97</a>
+                    </div>
+                    <div class="burger-address">
+                      <p>394043, Воронеж, улица<br>Ленина, 73</p>
+                    </div>
+                    <div class="burger-email">
+                      <a data-al="">voronezh02@ast-export.ru</a>
+                    </div>
+                  </div>
+                  <div class="burger-link">
+                    <a href="" class="link link--orange js-popup-open" data-popup="callback">Связаться</a>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-close">
+                <button>
+                  <img src="img/close.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- /HEADER -->
+  <main>
+    <section class="not-found">
+      <p class="not-found__code">404</p>
+      <h2>Страница не найдена</h2>
+      <p class="not-found__text">Вы неправильно набрали адрес. Возможно такой страницы больше не существует. Воспользуйтесь главным меню, чтобы перейти на другую страницу.</p>
+      <p class="not-found__text">Вы также можете вернуться на <a href="" target="_blank">главную страницу</a> сайта.</p>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-background">
+      <img src="img/footer.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column footer-column--info">
+          <a data-al="" class="footer-logo">
+            <img src="img/logo.png" alt="">
+          </a>
+          <p class="footer-name">
+            © «Агропропромышленная компания АСТ», 2021
+          </p>
+          <p class="footer-copyright">
+            Вся информация на сайте носит справочный характер и не является публичной офертой, определяемой статьей
+            437 ГК РФ
+          </p>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-column footer-column--nav">
+            <nav class="footer-nav">
+              <ul class="footer-list">
+                <li class="footer-item">
+                  <a data-al="" class="footer-item__href">Компания</a>
+                </li>
+                <li class="footer-item">
+                  <a data-al="" class="footer-item__href">Партнеры</a>
+                </li>
+                <li class="footer-item">
+                  <a data-al="" class="footer-item__href">Прайс-лист</a>
+                </li>
+                <li class="footer-item">
+                  <a data-al="" class="footer-item__href">Где купить</a>
+                </li>
+                <li class="footer-item">
+                  <a data-al="" class="footer-item__href">Новости</a>
+                </li>
+                <li class="footer-item">
+                  <a data-al="" class="footer-item__href">Контакты</a>
+                </li>
+              </ul>
+              <ul class="footer-list">
+                <li class="footer-item">
+                  <a data-al="" class="footer-item__href">Продукция</a>
+                  <ul class="footer-sublist">
+                    <li class="footer-subitem">
+                      <a data-al="">Пщеница</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Кукуруза</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Мука</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Горох</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Лён</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Отруби пшеничные гранулированные</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Жом свеловчиный</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Рожь</a>
+                    </li>
+                    <li class="footer-subitem">
+                      <a data-al="">Ячмень</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-column footer-column--contacts">
+            <div class="footer-tel">
+              <a data-al="">+7 473 253-17-65</a>
+              <a data-al="">+7 473 295-16-97</a>
+            </div>
+            <div class="footer-address">
+              <p>394043, Воронеж, улица<br>Ленина, 73</p>
+            </div>
+            <div class="footer-email">
+              <a data-al="">voronezh02@ast-export.ru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a data-al="" class="developer">
+          <span>DEXTRA</span>
+          <span>Разработка<br>сайта</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup popup-callback js-popup" data-popup="callback">
+    <div class="popup-overlay"></div>
+    <div class="popup-container">
+      <p class="popup-title">Начать сотрудничество</p>
+      <p class="popup-text">Поля со звездочками <span class="star">*</span> &ndash; обязательны для заполнения</p>
+      <form class="popup-form">
+        <div class="popup-form__container">
+          <div class="popup-form__wrapper">
+            <div class="form-block">
+              <label class="label" for="fio">Ваше имя <span class="star">*</span></label>
+              <input type="text" id="fio" class="js-valid">
+            </div>
+            <div class="form-block">
+              <label class="label" for="tel">Номер телефона <span class="star">*</span></label>
+              <input type="tel" id="tel" class="js-valid tel-mask">
+            </div>
+            <div class="form-block">
+              <label class="label" for="email">Электронная почта</label>
+              <input type="email" id="email">
+            </div>
+          </div>
+          <div class="popup-form__wrapper">
+            <div class="form-block form-block--textarea">
+              <label for="text" class="label">Текст сообщения</label>
+              <textarea name="" id="text"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="popup-form__bottom">
+          <label class="fake-checkbox" for="check">
+            <input type="checkbox" class="js-valid" id="check">
+            <div class="fake-checkbox__box"></div>
+            <p>Даю согласие на обработку <a data-al="">персональных данных</a></p>
+          </label>
+          <button class="btn btn--orange popup-form__btn js-submit">Отправить</button>
+        </div>
+      </form>
+      <div class="popup-close">
+        <button>
+          <img src="img/close.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup-thanks js-popup " data-popup="thanks">
+    <div class="popup-overlay"></div>
+    <div class="popup-container">
+      <p class="popup-title">Сообщение отправлено</p>
+      <p class="popup-text">Ваше сообщение отправлено. Мы вскоре свяжемся с вами по указанному номеру.</p>
+      <div class="popup-thanks__btn popup-close">
+        <button class="btn btn--orange popup-thanks__btn">Закрыть</button>
+      </div>
+      <div class="popup-close">
+        <button>
+          <img src="img/close.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="cookie cookie-open js-cookie">
+    <p class="cookie-text">
+      Для повышения удобства сайта мы используем cookie. Оставаясь на сайте, вы соглашаетесь с <a data-al="">политикой
+        их
+        применения</a>.
+    </p>
+    <div class="link link--orange js-btn-cookie">Принимаю</div>
+  </div>
+  <!-- /Footer -->
+  <script type="text/javascript">
+    const mapWrap = document.querySelector(".js-lazy-map")
+    mapWrap.addEventListener('click', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
+    mapWrap.addEventListener('mouseover', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
+    mapWrap.addEventListener('touchstart', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
+    mapWrap.addEventListener('touchmove', function () {
+      ymaps.ready(ymapsInit);
+      mapWrap.classList.remove("js-lazy-map")
+    });
+
+    function ymapsInit() {
+      var myMap = new ymaps.Map("map", {
+        center: [56.838011, 60.597465],
+        zoom: 4,
+        controls: []
+      })
+      const myPlacemark1 = new ymaps.Placemark([51.978495, 43.261499], {
+        // Зададим содержимое заголовка балуна.
+        balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский зерновой<br>терминал</a>',
+        // Зададим содержимое основной части балуна.
+        balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+        // Зададим содержимое нижней части балуна.
+        balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+        // Зададим содержимое всплывающей подсказки.
+        hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+      }, {
+        iconLayout: "default#image",
+        iconImageHref: "img/blue-pin.png",
+        iconImageSize: [22, 22],
+        iconContentOffset: [19, 15],
+        hideIconOnBalloonOpen: false
+      }, );
+      const myPlacemark2 = new ymaps.Placemark(
+        [51.245106, 42.476964], {
+          balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский терминал</a>',
+          balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+          balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+          hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+        }, {
+          iconLayout: "default#image",
+          iconImageHref: "img/blue-pin.png",
+          iconImageSize: [22, 22],
+          hideIconOnBalloonOpen: false
+        }
+      );
+      const myPlacemark3 = new ymaps.Placemark(
+        [53.114006, 46.579866], {
+          balloonContentHeader: '<a href="#" class="map-balloon__header">Кузнекц</a>',
+          balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+          balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+          hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+        }, {
+          iconLayout: "default#image",
+          iconImageHref: "img/blue-pin.png",
+          iconImageSize: [22, 22],
+          hideIconOnBalloonOpen: false
+        }
+      );
+      // myMap.geoObjects.add(myPlacemark1);
+      // myMap.geoObjects.add(myPlacemark2);
+      // myMap.geoObjects.add(myPlacemark3);
+
+      const placemarkArray = [myPlacemark1, myPlacemark2, myPlacemark3];
+      placemarkArray.forEach(function (i) {
+        myMap.geoObjects.add(i);
+        i.events
+          .add('mouseenter', function (e) {
+            e.get('target').options.set('iconImageHref', "img/map-pin.png");
+          })
+          .add('mouseleave', function (e) {
+            e.get('target').options.set('iconImageHref', "img/blue-pin.png");
+          });
+      });
+    }
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <script src="js/imask.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
