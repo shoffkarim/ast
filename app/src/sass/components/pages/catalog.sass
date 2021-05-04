@@ -1,0 +1,204 @@
+.catalog
+  padding: 0 20px
+  @media screen and ( max-width: 1366px )
+    padding: 0px
+    overflow: hidden
+  @media screen and ( max-width: 1000px )
+    padding: 0 20px
+  &-list
+    margin-bottom: 140px
+    @media screen and ( max-width: 1366px )
+      margin-bottom: 100px
+  &-item
+    position: relative
+    padding-top: 48px
+    margin-bottom: 82px
+    z-index: 2
+    @media screen and ( max-width: 1366px )
+      padding-top: 6px
+      margin-bottom: 94px
+    @media screen and ( max-width: 550px )
+      margin-bottom: 50px
+      padding-top: 0px
+    &__container
+      @include dfr()
+      justify-content: space-between
+      max-width: 1200px
+      margin: 0 auto
+      @media screen and ( max-width: 1366px )
+        max-width: 960px
+      @media screen and ( max-width: 550px )
+        flex-direction: column
+
+    &__name
+      font-size: 60px
+      color: #000
+      display: inline-block
+      line-height: 45px
+      margin-bottom: 46px
+      border-bottom: 1px solid rgba(217,217,217,1)
+      transition: all 0.4s
+      @media screen and ( max-width: 1366px )
+        font-size: 47px
+        line-height: 37px
+        margin-bottom: 30px
+      @media screen and ( max-width: 1000px )
+        margin-right: 20px
+      @media screen and ( max-width: 767px )
+        font-size: 35px
+        line-height: 28px
+        margin-bottom: 20px
+      @media screen and ( max-width: 550px )
+        margin-right: 0px
+      &:hover
+        border-bottom-color: rgba(217,217,217,0)
+    &__number
+      font-size: 28px
+      line-height: 42px
+      color: #000
+      margin-bottom: 41px
+      @media screen and ( max-width: 1366px )
+        font-size: 24px
+        line-height: 30px
+        margin-bottom: 45px
+      @media screen and ( max-width: 767px )
+        font-size: 20px
+        line-height: 26px
+        margin-bottom: 25px
+    &__text
+      font-size: 22px
+      line-height: 32px
+      max-width: 700px
+      @media screen and ( max-width: 1366px )
+        font-size: 20px
+        line-height: 30px
+        max-width: 550px
+      @media screen and ( max-width: 1000px )
+        padding-right: 20px
+      @media screen and ( max-width: 767px )
+        font-size: 18px
+        line-height: 22px
+      @media screen and ( max-width: 550px )
+        padding-right: 0px
+
+    &__img
+      min-width: 380px
+      min-height: 380px
+      max-width: 380px
+      max-height: 380px
+      overflow: hidden
+      @media screen and ( max-width: 1366px )
+        min-width: 310px
+        min-height: 310px
+        max-width: 310px
+        max-height: 310px
+      @media screen and ( max-width: 950px )
+        min-width: 250px
+        min-height: 250px
+        max-width: 250px
+        max-height: 250px
+      @media screen and ( max-width: 550px )
+        margin-top: 15px
+      &:hover
+        img
+          transform: scale(1.05)
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        display: block
+        transition: transform 1s 0s ease
+  &-parallax-elem
+    position: absolute
+    z-index: 10
+    @media screen and ( max-width: 1000px )
+      display: none
+    &--1
+      bottom: 65px
+      left: 50px
+      @media screen and ( max-width: 1100px )
+        bottom: -25px
+    &--2
+      top: 72px
+      left: 242px
+      @media screen and ( max-width: 1366px )
+        top: 40px
+        left: -15px
+    &--3
+      top: -47px
+      left: 510px
+      @media screen and ( max-width: 1366px )
+        top: -79px
+        left: 253px
+    &--4
+      top: calc(50% - 103px)
+      left: calc(50% - 50px)
+      @media screen and ( max-width: 1366px )
+        top: calc(50% - 80px)
+        left: calc(50% - 50px)
+    &--5
+      top: -21px
+      right: 292px
+      @media screen and ( max-width: 1366px )
+        top: -53px
+        right: 34px
+    &--6
+      bottom: 120px
+      right: 85px
+      @media screen and ( max-width: 1366px )
+        bottom: 41px
+        right: 75px
+    &--7
+      top: calc(50% - 20px)
+      left: 107px
+      @media screen and ( max-width: 1366px )
+        top: calc(50% - -98px)
+        left: 62px
+    &--8
+      bottom: 26px
+      left: calc(50% - -82px)
+      @media screen and ( max-width: 1366px )
+        bottom: 78px
+        left: calc(50% - -136px)
+    &--9
+      top: 10px
+      right: 324px
+      @media screen and ( max-width: 1366px )
+        top: -17px
+        right: 172px
+    &--10
+      top: calc(50% - -19px)
+      right: 75px
+      @media screen and ( max-width: 1366px )
+        top: calc(50% - -32px)
+        right: -13px
+    &--11
+      top: 105px
+      left: 77px
+      @media screen and ( max-width: 1366px )
+        top: 64px
+        left: 33px
+    &--12
+      bottom: 110px
+      left: 203px
+      @media screen and ( max-width: 1366px )
+        bottom: 44px
+        left: 78px
+    &--13
+      top: 113px
+      left: calc(50% - 64px)
+      @media screen and ( max-width: 1366px )
+        top: 70px
+        left: calc(50% - 64px)
+    &--14
+      bottom: -34px
+      right: 231px
+      @media screen and ( max-width: 1366px )
+        bottom: 52px
+        right: 173px
+    &--15
+      top: 91px
+      right: 189px
+      @media screen and ( max-width: 1366px )
+        top: -34px
+        right: 30px
