@@ -10,7 +10,7 @@
   span
     width: 30px
     height: 1px
-    background-color: #fff
+    background-color: #000
     display: block
     &::before, &::after
       content: ""
@@ -18,7 +18,7 @@
       transition: all .4s
       width: 30px
       height: 1px
-      background-color: #fff
+      background-color: #000
       display: block
     &::before
       top: 0
@@ -110,3 +110,10 @@
       &:hover
         color: $orange
         border-color: rgba(255,255,255,0)
+
+.index
+  .burger
+    span
+      background-color: #fff
+      &::before, &::after
+        background-color: #fff

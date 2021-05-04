@@ -11,6 +11,18 @@ body
     padding: 0px 50px
   @media screen and ( max-width: 767px )
     padding: 0px 20px
+  &--inner
+    max-width: 962px
+    margin-bottom: 132px
+    @media screen and ( max-width: 1885px )
+      max-width: 962px
+      padding: 0px
+    @media screen and ( max-width: 1366px )
+      max-width: 800px
+      margin-bottom: 92px
+    @media screen and ( max-width: 950px )
+      max-width: none
+      padding: 0px 20px
 .section
   padding-top: 105px
   @media screen and ( max-width: 550px )
@@ -203,3 +215,55 @@ body
 
 .no-overflow
   overflow-y: hidden !important
+
+.breadcrumbs
+  max-width: 970px
+  width: 100%
+  margin: 0 auto
+  margin-top: 78px
+  @media screen and ( max-width: 1366px )
+    margin-top: 88px
+  &-list
+    @include dfr()
+    justify-content: center
+  &-item
+    position: relative
+    padding-right: 15px
+    &::after
+      content: "/"
+      width: 9px
+      height: 16px
+      display: block
+      color: $gray
+      position: absolute
+      top: 4px
+      right: 0
+      @media screen and ( max-width: 1366px )
+        top: 2px
+    a
+      font-size: 18px
+      line-height: 24px
+      color: $gray
+      border-bottom: 1px solid rgba(103, 103, 103, 0.1)
+      transition: all 0.4s
+      @media screen and ( max-width: 1366px )
+        font-size: 16px
+        line-height: 22px
+      &:hover
+        border-bottom-color: rgba(103, 103, 103, 0)
+
+.page-title
+  max-width: 970px
+  width: 100%
+  margin: 0 auto
+  margin-top: 23px
+  margin-bottom: 67px
+  text-align: center
+  @media screen and ( max-width: 1366px )
+    max-width: 800px
+  @media screen and ( max-width: 950px )
+    max-width: none
+    padding: 0px 20px
+.table-wrapper
+  width: 100%
+  overflow-x: auto
