@@ -6,8 +6,10 @@ import "../sass/style.sass";
 import Cookie from "./modules/cookie";
 import InputMask from "./modules/imask-init";
 import Popup from "./modules/popup";
+import Seo from "./modules/seo";
 import Validation from "./modules/validation";
 
+const seo = new Seo();
 const popup = new Popup();
 const validation = new Validation();
 const imask = new InputMask();
