@@ -36,7 +36,100 @@
         @media screen and ( max-width: 550px )
           font-size: 16px
           line-height: 20px
+  &-title
+    font-size: 60px
+    line-height: 64px
+    color: #000
+    text-align: center
+    margin-bottom: 41px
+    @media screen and ( max-width: 1366px )
+      font-size: 48px
+      line-height: 58px
+    @media screen and ( max-width: 767px )
+      font-size: 36px
+      line-height: 44px
+      margin-bottom: 30px
+    @media screen and ( max-width: 400px )
+      font-size: 28px
+      line-height: 34px
 
+  &-text
+    font-size: 22px
+    line-height: 30px
+    color: #000
+    text-align: center
+    margin-bottom: 50px
+    @media screen and ( max-width: 1366px )
+      font-size: 20px
+      line-height: 28px
+      margin-bottom: 48px
+    @media screen and ( max-width: 550px )
+      font-size: 18px
+      line-height: 26px
+  &-container
+    margin: 0px auto 0px
+    padding: 130px 83px 140px
+    background-color: #fcfcfc
+    position: relative
+    max-width: 1366px
+    @media screen and ( max-width: 1366px )
+      padding: 94px 113px 100px
+      max-width: none
+    @media screen and ( max-height: 870px )
+      padding: 50px 70px
+    @media screen and ( max-width: 950px )
+      padding: 50px 70px
+    @media screen and ( max-width: 767px )
+      padding: 50px 30px
+    @media screen and ( max-width: 400px )
+      padding: 50px 20px
+  &__wrapper
+    margin-right: 48px
+    width: 100%
+    @media screen and ( max-width: 600px )
+      margin-right: 0px
+      margin-bottom: 21px
+    &:last-child
+      margin-right: 0px
+  &__top
+    @include dfr()
+    width: 100%
+    @media screen and ( max-width: 600px )
+      flex-direction: column
+
+  &__bottom
+    @include dfc()
+    align-items: center
+    margin-top: 40px
+  &__btn
+    margin-top: 51px
+  &-page
+    background-color: #fcfcfc
+    margin-top: 60px
+    @media screen and ( max-width: 1366px )
+      margin-top: 50px
+    input
+      font-size: 20px
+      line-height: 22px
+      @media screen and ( max-width: 1366px )
+        font-size: 18px
+        line-height: 22px
+    .label
+      font-size: 20px
+      line-height: 23px
+      @media screen and ( max-width: 1366px )
+        font-size: 18px
+        line-height: 22px
+    .form__wrapper
+      margin-right: 60px
+      @media screen and ( max-width: 1366px )
+        margin-right: 48px
+      &:last-child
+        margin-right: 0px
+    .btn--orange
+      font-size: 20px
+      @media screen and ( max-width: 1366px )
+        font-size: 18px
 .label
   font-size: 18px
   line-height: 22px
