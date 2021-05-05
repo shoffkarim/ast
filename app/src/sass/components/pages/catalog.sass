@@ -1,8 +1,8 @@
 .catalog
-  padding: 0 20px
+  padding: 40px 20px
+  overflow-x: hidden
   @media screen and ( max-width: 1366px )
     padding: 0px
-    overflow: hidden
   @media screen and ( max-width: 1000px )
     padding: 0 20px
   &-list
@@ -112,93 +112,110 @@
     position: absolute
     z-index: 10
     @media screen and ( max-width: 1000px )
-      display: none
+      display: none !important
     &--1
-      bottom: 65px
-      left: 50px
+      bottom: auto !important
+      left: 50px !important
+      top: calc(100% - 65px) !important
       @media screen and ( max-width: 1100px )
-        bottom: -25px
+        bottom: -25px !important
     &--2
-      top: 72px
-      left: 242px
+      top: 72px !important
+      left: 242px !important
       @media screen and ( max-width: 1366px )
-        top: 40px
-        left: -15px
+        top: 40px !important
+        left: -15px !important
     &--3
-      top: -47px
-      left: 510px
+      top: -47px !important
+      left: 510px !important
       @media screen and ( max-width: 1366px )
-        top: -79px
-        left: 253px
+        top: -79px !important
+        left: 253px !important
     &--4
-      top: calc(50% - 103px)
-      left: calc(50% - 50px)
+      top: calc(50% - 103px) !important
+      left: calc(50% - 50px) !important
       @media screen and ( max-width: 1366px )
-        top: calc(50% - 80px)
-        left: calc(50% - 50px)
+        top: calc(50% - 80px) !important
+        left: calc(50% - 50px) !important
     &--5
-      top: -21px
-      right: 292px
+      top: -21px !important
+      right: 292px !important
+      left: auto !important
       @media screen and ( max-width: 1366px )
-        top: -53px
-        right: 34px
+        top: -53px !important
+        right: 34px !important
     &--6
-      bottom: 120px
-      right: 85px
+      bottom: 120px !important
+      right: 85px !important
+      top: auto !important
+      left: auto !important
       @media screen and ( max-width: 1366px )
-        bottom: 41px
-        right: 75px
+        bottom: 41px !important
+        right: 75px !important
     &--7
-      top: calc(50% - 20px)
-      left: 107px
+      top: calc(50% - 20px) !important
+      left: 107px !important
       @media screen and ( max-width: 1366px )
-        top: calc(50% - -98px)
-        left: 62px
+        top: calc(50% - -98px) !important
+        left: 62px !important
     &--8
-      bottom: 26px
-      left: calc(50% - -82px)
+      bottom: 26px !important
+      left: calc(50% - -82px) !important
+      top: auto !important
       @media screen and ( max-width: 1366px )
-        bottom: 78px
-        left: calc(50% - -136px)
+        bottom: 78px !important
+        left: calc(50% - -136px) !important
     &--9
-      top: 10px
-      right: 324px
+      top: 10px !important
+      right: 324px !important
+      left: auto !important
       @media screen and ( max-width: 1366px )
-        top: -17px
-        right: 172px
+        top: -17px !important
+        right: 172px !important
     &--10
-      top: calc(50% - -19px)
-      right: 75px
+      top: calc(50% - -19px) !important
+      right: 75px !important
+      left: auto !important
       @media screen and ( max-width: 1366px )
-        top: calc(50% - -32px)
-        right: -13px
+        top: calc(50% - -32px) !important
+        right: -13px !important
     &--11
-      top: 105px
-      left: 77px
+      top: 105px !important
+      left: 77px !important
       @media screen and ( max-width: 1366px )
-        top: 64px
-        left: 33px
+        top: 64px !important
+        left: 33px !important
     &--12
-      bottom: 110px
-      left: 203px
+      bottom: 110px !important
+      left: 203px !important
+      top: auto !important
       @media screen and ( max-width: 1366px )
-        bottom: 44px
-        left: 78px
+        bottom: 44px !important
+        left: 78px !important
     &--13
-      top: 113px
-      left: calc(50% - 64px)
+      top: 113px !important
+      left: calc(50% - 64px) !important
       @media screen and ( max-width: 1366px )
-        top: 70px
-        left: calc(50% - 64px)
+        top: 70px !important
+        left: calc(50% - 64px) !important
     &--14
-      bottom: -34px
-      right: 231px
+      bottom: -34px !important
+      right: 231px !important
+      top: auto !important
+      left: auto !important
       @media screen and ( max-width: 1366px )
-        bottom: 52px
-        right: 173px
+        bottom: 52px !important
+        right: 173px !important
     &--15
-      top: 91px
-      right: 189px
+      top: 91px !important
+      right: 189px !important
+      left: auto !important
       @media screen and ( max-width: 1366px )
-        top: -34px
-        right: 30px
+        top: -34px !important
+        right: 30px !important
+  .parallax-container
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%

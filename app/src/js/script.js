@@ -5,6 +5,7 @@ import "../sass/style.sass";
 
 import Cookie from "./modules/cookie";
 import InputMask from "./modules/imask-init";
+// import Parallax from "./modules/parallax";
 import Popup from "./modules/popup";
 import Seo from "./modules/seo";
 import Validation from "./modules/validation";
@@ -14,8 +15,24 @@ const popup = new Popup();
 const validation = new Validation();
 const imask = new InputMask();
 const cookie = new Cookie();
+// const parallax = new Parallax();
 
-if (document.documentElement.clientWidth > 767) {
+if (document.querySelector(".js-parallax")) {
+  const parallaxsence = document.querySelectorAll(".js-parallax");
+  // eslint-disable-next-line no-unused-vars
+  parallaxsence.forEach(function (scene) {
+    let parallaxInstance2 = new Parallax(scene, {
+      relativeInput: true,
+      selector: ".js-parallax-item",
+      limitX: true,
+      limitY: true,
+      invertY: false,
+      invertX: false,
+    });
+  });
+}
+
+if (document.documentElement.clientWidth > 767 && document.querySelector(".js-building")) {
   let controller = new ScrollMagic.Controller({
     loglevel: 0,
   });
