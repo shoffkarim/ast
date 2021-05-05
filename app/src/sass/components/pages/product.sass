@@ -24,13 +24,15 @@
         border-bottom-color: rgba(0, 0, 0, 0)
 .product
   margin-top: 62px
+  overflow: hidden
   @media screen and ( max-width: 1366px )
     margin-top: 58px
   @media screen and ( max-width: 767px )
     margin-top: 25px
   &-card
     background-color: #fff
-    margin-top: 96px
+    margin-top: 77px
+    position: relative
     &__container
       max-width: 1200px
       margin: 0 auto
@@ -109,3 +111,55 @@
         object-fit: cover
         display: block
         transition: transform 1s 0s ease
+    &__parallax
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    &-parallax-elem
+      position: absolute
+      z-index: 10
+      @media screen and ( max-width: 1000px )
+        display: none !important
+      &--1
+        bottom: auto !important
+        left: 64px !important
+        top: 58px !important
+        @media screen and ( max-width: 1100px )
+          bottom: -25px !important
+      &--2
+        top: auto !important
+        left: 618px!important
+        bottom: -102px !important
+        @media screen and ( max-width: 1366px )
+          top: 40px !important
+          left: -15px !important
+      &--3
+        top: 173px!important
+        left: calc(50% - -75px)!important
+        @media screen and ( max-width: 1366px )
+          top: -79px !important
+          left: 253px !important
+      &--4
+        top: auto!important
+        left: calc(50% + 357px)!important
+        bottom: 47px
+        @media screen and ( max-width: 1366px )
+          top: calc(50% - 80px) !important
+          left: calc(50% - 50px) !important
+      &--5
+        top: 0px!important
+        right: 467px!important
+        left: auto!important
+        @media screen and ( max-width: 1366px )
+          top: -53px !important
+          right: 34px !important
+      &--6
+        bottom: -224px!important
+        right: 176px!important
+        top: auto !important
+        left: auto !important
+        @media screen and ( max-width: 1366px )
+          bottom: 41px !important
+          right: 75px !important
