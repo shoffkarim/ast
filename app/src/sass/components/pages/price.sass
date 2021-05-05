@@ -1,0 +1,49 @@
+.price
+  width: 100%
+  max-width: 1600px
+  padding: 0px 160px
+  &-tabs
+    width: 100%
+    @include dfr()
+    justify-content: center
+    &__item
+      margin-right: 10px
+      &:last-child
+        margin-right: 0px
+      a
+        background-color: #f2f2f2
+        padding: 9px 20px 10px
+        color: #000
+        font-size: 20px
+        line-height: 26px
+        border-radius: 20px
+        transition: all 0.4s
+        &:hover
+          background-color: $blue
+          color: #fff
+        &.active
+          background-color: $blue
+          color: #fff
+  &-info
+    @include dfc()
+    align-items: center
+    margin-top: 60px
+    &__name
+      font-size: 28px
+      line-height: 32px
+      color: #000
+      margin-bottom: 20px
+    &__address
+      font-size: 20px
+      line-height: 30px
+      color: #000
+      margin-bottom: 20px
+    &__link
+      font-size: 20px
+      line-height: 14px
+      color: $blue
+      border-bottom: 1px solid rgba(9, 58, 158, 0.1)
+      margin-bottom: 80px
+      transition: all 0.4s
+      &:hover
+        border-bottom-color: rgba(9,58,158,0)
