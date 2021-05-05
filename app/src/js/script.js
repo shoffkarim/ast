@@ -22,12 +22,8 @@ if (document.querySelector(".js-parallax")) {
   // eslint-disable-next-line no-unused-vars
   parallaxsence.forEach(function (scene) {
     let parallaxInstance2 = new Parallax(scene, {
-      relativeInput: true,
       selector: ".js-parallax-item",
-      limitX: true,
-      limitY: true,
-      invertY: false,
-      invertX: false,
+      hoverOnly: true
     });
   });
 }
