@@ -1,0 +1,111 @@
+.goods
+  &-list
+    @include dfr()
+    justify-content: center
+    flex-wrap: wrap
+  &-item
+    margin-right: 40px
+    margin-bottom: 15px
+    text-align: center
+    &:last-child
+      margin-right: 0px
+    a
+      font-size: 20px
+      line-height: 26px
+      color: #000
+      display: inline
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+      transition: all 0.4s
+      text-align: center
+      @media screen and ( max-width: 1366px )
+        font-size: 18px
+        line-height: 22px
+      &:hover
+        border-bottom-color: rgba(0, 0, 0, 0)
+.product
+  margin-top: 62px
+  @media screen and ( max-width: 1366px )
+    margin-top: 58px
+  @media screen and ( max-width: 767px )
+    margin-top: 25px
+  &-card
+    background-color: #fff
+    margin-top: 96px
+    &__container
+      max-width: 1200px
+      margin: 0 auto
+      padding-top: 94px
+      padding-bottom: 110px
+      @include dfr()
+      justify-content: space-between
+      @media screen and ( max-width: 1366px )
+        max-width: 960px
+        padding-bottom: 70px
+      @media screen and ( max-width: 1100px )
+        max-width: none
+        width: 100%
+        padding: 94px 20px 70px
+      @media screen and ( max-width: 767px )
+        padding: 50px 20px
+      @media screen and ( max-width: 650px )
+        flex-direction: column
+    &__number
+      font-size: 38px
+      line-height: 42px
+      margin-bottom: 44px
+      padding-right: 20px
+      @media screen and ( max-width: 1366px )
+        font-size: 30px
+        line-height: 36px
+      @media screen and ( max-width: 767px )
+        font-size: 24px
+        line-height: 30px
+
+    &__desc
+      max-width: 660px
+      padding-right: 20px
+      @media screen and ( max-width: 1366px )
+        max-width: 480px
+        padding-right: 20px
+      @media screen and ( max-width: 650px )
+        max-width: none
+        padding: 0px
+      p
+        font-size: 22px
+        line-height: 32px
+        color: #000
+        margin-bottom: 24px
+        @media screen and ( max-width: 1366px )
+          font-size: 20px
+          line-height: 30px
+        @media screen and ( max-width: 767px )
+          font-size: 18px
+          line-height: 22px
+    &__img
+      min-width: 380px
+      min-height: 380px
+      max-width: 380px
+      max-height: 380px
+      overflow: hidden
+      margin-top: 8px
+      @media screen and ( max-width: 1366px )
+        min-width: 310px
+        min-height: 310px
+        max-width: 310px
+        max-height: 310px
+      @media screen and ( max-width: 950px )
+        min-width: 250px
+        min-height: 250px
+        max-width: 250px
+        max-height: 250px
+      @media screen and ( max-width: 550px )
+        margin-top: 15px
+      &:hover
+        img
+          transform: scale(1.05)
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        display: block
+        transition: transform 1s 0s ease
