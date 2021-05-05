@@ -1,7 +1,7 @@
 .price
   width: 100%
-  max-width: 1600px
   padding: 0px 160px
+  margin: 81px auto 140px
   &-tabs
     width: 100%
     @include dfr()
@@ -12,7 +12,7 @@
         margin-right: 0px
       a
         background-color: #f2f2f2
-        padding: 9px 20px 10px
+        padding: 6px 25px 6px
         color: #000
         font-size: 20px
         line-height: 26px
@@ -28,22 +28,71 @@
     @include dfc()
     align-items: center
     margin-top: 60px
+    margin-bottom: 97px
     &__name
       font-size: 28px
       line-height: 32px
       color: #000
-      margin-bottom: 20px
+      margin-bottom: 25px
     &__address
       font-size: 20px
       line-height: 30px
       color: #000
-      margin-bottom: 20px
+      margin-bottom: 32px
     &__link
       font-size: 20px
       line-height: 14px
       color: $blue
       border-bottom: 1px solid rgba(9, 58, 158, 0.1)
-      margin-bottom: 80px
       transition: all 0.4s
       &:hover
         border-bottom-color: rgba(9,58,158,0)
+  &-table
+    width: 100%
+    &__wrapper
+      margin-top: 85px
+      overflow-y: hidden
+    &__head
+      th
+        text-align: left
+        font-size: 20px
+        line-height: 26px
+        color: #acacac
+        padding-left: 24px
+        padding-bottom: 16px
+  &-item
+    border-top: 1px solid #e5e5e5
+    &:last-child
+      border-bottom: 1px solid #e5e5e5
+    &__desc
+      padding-top: 47px
+      padding-left: 24px
+      padding-bottom: 41px
+    &__name
+      font-size: 20px
+      line-height: 26px
+      color: #000
+    &__cost
+      font-size: 20px
+      line-height: 26px
+      color: #000
+      padding-top: 47px
+      padding-left: 24px
+      padding-bottom: 41px
+      &--hidden
+        display: none
+    .characteristics
+      @include dfr()
+      margin-top: 33px
+      &-item
+        margin-right: 58px
+        &:last-child
+          margin-right: 0px
+        &__name
+          font-size: 20px
+          line-height: 26px
+          color: #acacac
+        &__value
+          font-size: 20px
+          line-height: 26px
+          color: #000
