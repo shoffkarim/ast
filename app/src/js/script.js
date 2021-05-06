@@ -4,6 +4,7 @@
 import "../sass/style.sass";
 
 import Cookie from "./modules/cookie";
+import Dropdown from "./modules/dropdown";
 import InputMask from "./modules/imask-init";
 // import Parallax from "./modules/parallax";
 import Popup from "./modules/popup";
@@ -16,6 +17,8 @@ const validation = new Validation();
 const imask = new InputMask();
 const cookie = new Cookie();
 // const parallax = new Parallax();
+
+const dropdown = new Dropdown();
 
 if (document.querySelector(".js-parallax")) {
   const parallaxsence = document.querySelectorAll(".js-parallax");

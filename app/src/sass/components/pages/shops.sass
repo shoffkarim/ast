@@ -66,12 +66,19 @@
       line-height: 32px
       color: #000
   &-dropdown
+    opacity: 1
+    visibility: visible
+    height: auto
+    transition: all 0.4s
     p
       font-size: 20px
       line-height: 30px
       color: #000
       margin-bottom: 24px
-    &--hidden
-      display: none
+    &.dropdown--hidden
+      opacity: 0
+      visibility: hidden
+      height: 0px
+      transition: all 0.4s
   &-btn
     margin-top: 31px
