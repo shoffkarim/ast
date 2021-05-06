@@ -25,6 +25,7 @@
 .product
   margin-top: 62px
   overflow: hidden
+  position: relative
   @media screen and ( max-width: 1366px )
     margin-top: 58px
   @media screen and ( max-width: 767px )
@@ -117,49 +118,49 @@
       left: 0
       width: 100%
       height: 100%
+      z-index: 1
     &-parallax-elem
       position: absolute
       z-index: 10
       @media screen and ( max-width: 1000px )
         display: none !important
       &--1
-        bottom: auto !important
-        left: 64px !important
-        top: 58px !important
+        top: 190px!important
+        left: 50px!important
+        @media screen and ( max-width: 1366px )
+          top: 300px!important
+          left: 0px!important
         @media screen and ( max-width: 1100px )
-          bottom: -25px !important
+          top: 100px !important
       &--2
-        top: auto !important
-        left: 618px!important
-        bottom: -102px !important
+        top: 810px!important
+        left: 620px!important
         @media screen and ( max-width: 1366px )
-          top: 40px !important
-          left: -15px !important
+          top: 830px!important
+          left: 335px!important
       &--3
-        top: 173px!important
-        left: calc(50% - -75px)!important
+        top: 290px!important
+        left: calc(50% + 90px)!important
         @media screen and ( max-width: 1366px )
-          top: -79px !important
-          left: 253px !important
+          top: 295px!important
+          left: calc(50% + 30px)!important
       &--4
-        top: auto!important
-        left: calc(50% + 357px)!important
-        bottom: 47px
+        top: 680px !important
+        left: calc(50% + 355px)!important
         @media screen and ( max-width: 1366px )
-          top: calc(50% - 80px) !important
-          left: calc(50% - 50px) !important
+          top: 655px!important
+          left: calc(50% + 410px)!important
       &--5
-        top: 0px!important
-        right: 467px!important
-        left: auto!important
-        @media screen and ( max-width: 1366px )
-          top: -53px !important
-          right: 34px !important
-      &--6
-        bottom: -224px!important
-        right: 176px!important
-        top: auto !important
+        top: 120px !important
+        right: 400px !important
         left: auto !important
         @media screen and ( max-width: 1366px )
-          bottom: 41px !important
-          right: 75px !important
+          top: 130px!important
+          right: 120px!important
+      &--6
+        top: 920px !important
+        right: 180px!important
+        left: auto!important
+        @media screen and ( max-width: 1366px )
+          top: 1005px!important
+          right: 20px!important
