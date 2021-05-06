@@ -182,7 +182,7 @@
       </div>
       <div class="shops-container">
         <ul class="shops-list">
-          <li class="shops-item js-toggle-container">
+          <li class="shops-item js-toggle-container" data-id="1">
             <p class="shops-name">
               Турковский Зерновой Терминал
             </p>
@@ -213,7 +213,7 @@
               </button>
             </div>
           </li>
-          <li class="shops-item js-toggle-container">
+          <li class="shops-item js-toggle-container" data-id="2">
             <p class="shops-name">
               Кардаильский мукомольный<br>завод
             </p>
@@ -243,7 +243,7 @@
               </button>
             </div>
           </li>
-          <li class="shops-item js-toggle-container">
+          <li class="shops-item js-toggle-container" data-id="3">
             <p class="shops-name">
               Кузнецкий комбинат<br>хлебопродуктов
             </p>
@@ -473,45 +473,35 @@
         controls: []
       })
       const myPlacemark1 = new ymaps.Placemark([51.978495, 43.261499], {
-        // Зададим содержимое заголовка балуна.
-        balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский зерновой<br>терминал</a>',
-        // Зададим содержимое основной части балуна.
-        balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
-        // Зададим содержимое нижней части балуна.
-        balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
-        // Зададим содержимое всплывающей подсказки.
         hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
       }, {
         iconLayout: "default#image",
         iconImageHref: "img/blue-pin.png",
         iconImageSize: [22, 22],
         iconContentOffset: [19, 15],
-        hideIconOnBalloonOpen: false
+        hideIconOnBalloonOpen: false,
+        id: 1
       }, );
       const myPlacemark2 = new ymaps.Placemark(
         [51.245106, 42.476964], {
-          balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский терминал</a>',
-          balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
-          balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
-          hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+          hintContent: '397340, Воронежская область, Поворинский район, село Пески, улица 2-я Советская, д. 1'
         }, {
           iconLayout: "default#image",
           iconImageHref: "img/blue-pin.png",
           iconImageSize: [22, 22],
-          hideIconOnBalloonOpen: false
+          hideIconOnBalloonOpen: false,
+          id: 2
         }
       );
       const myPlacemark3 = new ymaps.Placemark(
         [53.114006, 46.579866], {
-          balloonContentHeader: '<a href="#" class="map-balloon__header">Кузнекц</a>',
-          balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
-          balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
-          hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+          hintContent: '442539, Пензенская область, г. Кузнецк, ул. Республики, д. 25А'
         }, {
           iconLayout: "default#image",
           iconImageHref: "img/blue-pin.png",
           iconImageSize: [22, 22],
-          hideIconOnBalloonOpen: false
+          hideIconOnBalloonOpen: false,
+          id: 3
         }
       );
       // myMap.geoObjects.add(myPlacemark1);
@@ -527,8 +517,16 @@
           })
           .add('mouseleave', function (e) {
             e.get('target').options.set('iconImageHref', "img/blue-pin.png");
+          })
+          .add("click", function (e) {
+            const id = i.options._options.id;
+            const item = document.querySelector(`.shops-item[data-id="${id}"]`)
+            item.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
           });
-      });
+      })
     }
   </script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
