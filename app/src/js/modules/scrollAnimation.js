@@ -5,14 +5,14 @@ class ScrollAnimation {
   }
 
   init() {
-    if (document.querySelector(".js-sticky") && (document.documentElement.clientWidth > 1000)) {
+    if (document.querySelector(".js-sticky") && (document.documentElement.clientWidth > 1200)) {
       const wrap = document.querySelector(".js-sticky");
       const clientHeight = document.documentElement.clientHeight;
       window.addEventListener('scroll', function () {
         classManager(wrap, clientHeight);
       });
       window.addEventListener("resize", function () {
-        if (document.documentElement.clientWidth > 1000) {
+        if (document.documentElement.clientWidth > 1200) {
           classManager(wrap, clientHeight);
         }
       });

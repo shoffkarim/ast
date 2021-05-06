@@ -279,6 +279,12 @@ body
   border-radius: 20px
   padding: 7px 45px 5px 22px
   position: relative
+  @media screen and ( max-width: 1366px )
+    font-size: 18px
+    line-height: 24px
+  @media screen and ( max-width: 550px )
+    font-size: 16px
+    line-height: 22px
   &::before
     content: ""
     width: 11px
@@ -289,6 +295,8 @@ body
     background-image: url(/app/build/img/toggle-arrow.png)
     background-repeat: no-repeat
     background-size: contain
+    @media screen and ( max-width: 550px )
+      top: 15px
   &.btn-show
     &::before
       transform: rotate(180deg)
