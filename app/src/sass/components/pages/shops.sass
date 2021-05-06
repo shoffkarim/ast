@@ -1,13 +1,26 @@
 .shops
   @include dfr()
-  justify-content: space-between
-  padding: 0 160px
+  justify-content: flex-end
   margin-bottom: 140px
+  position: relative
+  &.sticky
+    .shop-container--sticky
+      position: fixed
+      top: 50px
+      left: 0px
+  &.bottom
+    .shop-container--sticky
+      position: absolute
+      top: auto
+      left: 0px
+      bottom: 0px
   &-map
     &__wrapper
       width: 770px
       height: 760px
       margin-top: 9px
+      margin-left: auto
+      margin-right: 30px
   &-item
     border-bottom: 1px solid #e5e5e5
     padding-bottom: 60px
@@ -15,7 +28,10 @@
     &:first-child
       padding-top: 0px
   &-container
-    max-width: 760px
+    width: 50%
+  &-list
+    width: 760px
+    margin-left: 40px
   &-name
     font-size: 48px
     line-height: 52px
