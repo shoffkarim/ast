@@ -271,3 +271,33 @@ body
 .table-wrapper
   width: 100%
   overflow-x: auto
+.btn-toggle
+  font-size: 20px
+  line-height: 26px
+  color: #000
+  border: 1px solid #e5e5e5
+  border-radius: 20px
+  padding: 7px 45px 5px 22px
+  position: relative
+  &::before
+    content: ""
+    width: 11px
+    height: 6px
+    position: absolute
+    top: 18px
+    right: 24px
+    background-image: url(/app/build/img/toggle-arrow.png)
+    background-repeat: no-repeat
+    background-size: contain
+  &.btn-show
+    &::before
+      transform: rotate(180deg)
+    .show
+      display: inline
+    .hide
+      display: none
+  &.btn-hide
+    .show
+      display: none
+    .hide
+      display: inline

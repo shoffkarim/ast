@@ -1,0 +1,77 @@
+.shops
+  @include dfr()
+  justify-content: space-between
+  padding: 0 160px
+  margin-bottom: 140px
+  &-map
+    &__wrapper
+      width: 770px
+      height: 760px
+      margin-top: 9px
+  &-item
+    border-bottom: 1px solid #e5e5e5
+    padding-bottom: 60px
+    padding-top: 52px
+    &:first-child
+      padding-top: 0px
+  &-container
+    max-width: 760px
+  &-name
+    font-size: 48px
+    line-height: 52px
+    margin-bottom: 36px
+  &-address
+    position: relative
+    padding-left: 39px
+    margin-bottom: 33px
+    &::before
+      content: ""
+      display: block
+      width: 20px
+      height: 24px
+      position: absolute
+      top: 2px
+      left: 8px
+      background-image: url(/app/build/img/pin.svg)
+      background-repeat: no-repeat
+      background-size: contain
+    p
+      font-size: 20px
+      line-height: 30px
+      margin-bottom: 12px
+  &-show-point
+    font-size: 18px
+    line-height: 26px
+    color: #fff
+    background-color: $orange
+    padding: 0px 15px
+    border-radius: 12.5px
+  &-number
+    position: relative
+    padding-left: 39px
+    margin-bottom: 28px
+    &::before
+      content: ""
+      display: block
+      width: 20px
+      height: 24px
+      position: absolute
+      top: 4px
+      left: 9px
+      background-image: url(/app/build/img/phone.svg)
+      background-repeat: no-repeat
+      background-size: contain
+    a
+      font-size: 28px
+      line-height: 32px
+      color: #000
+  &-dropdown
+    p
+      font-size: 20px
+      line-height: 30px
+      color: #000
+      margin-bottom: 24px
+    &--hidden
+      display: none
+  &-btn
+    margin-top: 31px
