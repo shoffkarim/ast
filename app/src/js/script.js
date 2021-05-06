@@ -10,6 +10,7 @@ import InputMask from "./modules/imask-init";
 import Popup from "./modules/popup";
 import ScrollAnimation from "./modules/scrollAnimation";
 import Seo from "./modules/seo";
+import ShowPoint from "./modules/showpoint";
 import Validation from "./modules/validation";
 
 const seo = new Seo();
@@ -21,6 +22,7 @@ const cookie = new Cookie();
 
 const dropdown = new Dropdown();
 const scroll = new ScrollAnimation();
+const showpoint = new ShowPoint();
 
 if (document.querySelector(".js-parallax")) {
   const parallaxsence = document.querySelectorAll(".js-parallax");

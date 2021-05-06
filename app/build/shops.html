@@ -191,7 +191,7 @@
                 412070, Саратовская область, Турковский&nbsp;район, рабочий&nbsp;поселок&nbsp;«Турки»,
                 ул.&nbsp;Элеваторная, д.&nbsp;23
               </p>
-              <button class="btn shops-show-point js-show-point">Показать на карте</button>
+              <button class="btn shops-show-point js-show-point" data-id="1">Показать на карте</button>
             </div>
             <div class="shops-number">
               <a href="tel:+74732531765">+7 473 253-17-65</a>
@@ -221,7 +221,7 @@
               <p>
                 397340, Воронежская область, Поворинский район, село Пески, улица 2-я Советская, д. 1
               </p>
-              <button class="btn shops-show-point js-show-point">Показать на карте</button>
+              <button class="btn shops-show-point js-show-point" data-id="2">Показать на карте</button>
             </div>
             <div class="shops-number">
               <a href="tel:+74732531765">+7 473 253-17-65</a>
@@ -251,7 +251,7 @@
               <p>
                 442539, Пензенская область, г. Кузнецк, ул. Республики, д. 25А
               </p>
-              <button class="btn shops-show-point js-show-point">Показать на карте</button>
+              <button class="btn shops-show-point js-show-point" data-id="3">Показать на карте</button>
             </div>
             <div class="shops-number">
               <a href="tel:+74732531765">+7 473 253-17-65</a>
@@ -509,7 +509,7 @@
       // myMap.geoObjects.add(myPlacemark3);
 
       const placemarkArray = [myPlacemark1, myPlacemark2, myPlacemark3];
-      placemarkArray.forEach(function (i) {
+      placemarkArray.forEach(function (i, count) {
         myMap.geoObjects.add(i);
         i.events
           .add('mouseenter', function (e) {
@@ -526,7 +526,15 @@
               block: 'start'
             });
           });
-      })
+      });
+      if (document.querySelector(".js-show-point")) {
+        const btns = document.querySelectorAll(".js-show-point");
+        btns.forEach((btn) => btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          let id = Number(btn.dataset.id);
+          console.log(placemarkArray[id - 1]);
+        }));
+      }
     }
   </script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
