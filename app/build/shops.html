@@ -480,7 +480,8 @@
         iconImageSize: [22, 22],
         iconContentOffset: [19, 15],
         hideIconOnBalloonOpen: false,
-        id: 1
+        id: 1,
+        clicked: false
       }, );
       const myPlacemark2 = new ymaps.Placemark(
         [51.245106, 42.476964], {
@@ -490,7 +491,8 @@
           iconImageHref: "img/blue-pin.png",
           iconImageSize: [22, 22],
           hideIconOnBalloonOpen: false,
-          id: 2
+          id: 2,
+          clicked: false
         }
       );
       const myPlacemark3 = new ymaps.Placemark(
@@ -501,7 +503,8 @@
           iconImageHref: "img/blue-pin.png",
           iconImageSize: [22, 22],
           hideIconOnBalloonOpen: false,
-          id: 3
+          id: 3,
+          clicked: false
         }
       );
       // myMap.geoObjects.add(myPlacemark1);
@@ -515,24 +518,43 @@
           .add('mouseenter', function (e) {
             e.get('target').options.set('iconImageHref', "img/map-pin.png");
           })
-          .add('mouseleave', function (e) {
-            e.get('target').options.set('iconImageHref', "img/blue-pin.png");
-          })
           .add("click", function (e) {
             const id = i.options._options.id;
             const item = document.querySelector(`.shops-item[data-id="${id}"]`)
+            placemarkArray.forEach(function (item){
+              item.options.set('iconImageHref', "img/blue-pin.png");
+              item.options.set('clicked', false);
+            })
+            e.get('target').options.set('iconImageHref', "img/map-pin.png");
+            e.get('target').options.set('clicked', true);
+
             item.scrollIntoView({
               behavior: 'smooth',
               block: 'start'
             });
-          });
+
+          })
+          .add('mouseleave', function (e) {
+            const flag = e.get('target').options.get('clicked');
+            console.log(flag);
+            if(flag == true){
+              e.get('target').options.set('iconImageHref', "img/map-pin.png")
+            } else {
+              e.get('target').options.set('iconImageHref', "img/blue-pin.png");
+            }
+
+          })
       });
       if (document.querySelector(".js-show-point")) {
         const btns = document.querySelectorAll(".js-show-point");
         btns.forEach((btn) => btn.addEventListener("click", function (e) {
           e.preventDefault();
           let id = Number(btn.dataset.id);
-          console.log(placemarkArray[id - 1]);
+          let mark = placemarkArray[id - 1];
+          placemarkArray.forEach(function (item){
+            item.options.set('iconImageHref', "img/blue-pin.png");
+            mark.options.set('iconImageHref', "img/map-pin.png");
+          })
         }));
       }
     }
