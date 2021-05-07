@@ -8,6 +8,15 @@
     padding-bottom: 100px
   @media screen and ( max-width: 767px )
     padding-top: 100px
+  &--page
+    padding-top: 130px
+    padding-bottom: 53px
+    background-color: #fff
+    .partners-list
+      margin-top: 116px
+    + .form-page
+      margin-top: 0px
+
   &-text
     max-width: 950px
     margin: 0 auto
@@ -53,3 +62,64 @@
     @media screen and ( max-width: 1366px )
       margin-top: 19px
 
+.cooperation
+  margin-top: 140px
+  padding-bottom: 140px
+  @media screen and ( max-width: 1366px )
+    margin-top: 100px
+    padding-bottom: 100px
+  @media screen and ( max-width: 550px )
+    padding-bottom: 20px
+  &-container
+    max-width: 1440px
+    margin: 0 auto
+    @media screen and ( max-width: 1500px )
+      max-width: 1140px
+    @media screen and ( max-width: 1200px )
+      max-width: none
+      width: 100%
+      padding: 0 40px
+  &-wrapper
+    @include dfr()
+    justify-content: space-between
+    border-bottom: 1px solid #efefef
+    padding: 50px 0px
+    @media screen and ( max-width: 950px )
+      flex-direction: column
+  &-title
+    width: calc(50% - 35px)
+    @media screen and ( max-width: 950px )
+      width: 100%
+      margin-bottom: 30px
+    p
+      font-size: 48px
+      line-height: 56px
+      @media screen and ( max-width: 1366px )
+        font-size: 38px
+        line-height: 44px
+      @media screen and ( max-width: 767px )
+        font-size: 30px
+        line-height: 36px
+      @media screen and ( max-width: 550px )
+        font-size: 24px
+        line-height: 30px
+  &-text
+    width: calc(50% - 35px)
+    margin-top: 6px
+    @media screen and ( max-width: 1366px )
+      width: calc(50% - 29px)
+      margin-top: 8px
+    @media screen and ( max-width: 950px )
+      width: 100%
+    p
+      font-size: 22px
+      line-height: 32px
+      @media screen and ( max-width: 1366px )
+        font-size: 20px
+        line-height: 30px
+      @media screen and ( max-width: 767px )
+        font-size: 18px
+        line-height: 24px
+      @media screen and ( max-width: 550px )
+        font-size: 16px
+        line-height: 20px

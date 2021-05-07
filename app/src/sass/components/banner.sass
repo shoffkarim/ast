@@ -1,0 +1,60 @@
+.banner
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+  background-position: center
+  &-img
+    height: 500px
+    width: 100%
+    @media screen and ( max-width: 550px )
+      display: none
+  .breadcrumbs
+    margin: 0 auto
+    padding: 209px 0px 0px
+    @media screen and ( max-width: 767px )
+      padding: 150px 0px 0px
+    &-item
+      &::after
+        color: rgba(255,255,255,0.5)
+      a
+        color: rgba(255,255,255,0.5)
+        border-bottom-color: rgba(255,255,255, 0.1)
+        &:hover
+          border-bottom-color: rgba(255,255,255,0)
+  .page
+    &-title
+      color: #fff
+      margin-bottom: 107px
+      @media screen and ( max-width: 1366px )
+        margin-bottom: 95px
+      @media screen and ( max-width: 950px )
+        margin-bottom: 50px
+    &-desc
+      max-width: 960px
+      margin: 0 auto
+      padding-bottom: 131px
+      @media screen and ( max-width: 1366px )
+        max-width: 835px
+        padding-bottom: 90px
+      @media screen and ( max-width: 950px )
+        max-width: 600px
+      @media screen and ( max-width: 767px )
+        padding: 0px 20px 50px
+      p
+        font-size: 30px
+        line-height: 40px
+        color: #fff
+        text-align: center
+        @media screen and ( max-width: 1366px )
+          font-size: 28px
+          line-height: 38px
+        @media screen and ( max-width: 950px )
+          font-size: 24px
+          line-height: 30px
+        @media screen and ( max-width: 767px )
+          font-size: 20px
+          line-height: 24px
+        @media screen and ( max-width: 550px )
+          font-size: 18px
+          line-height: 22px
+
