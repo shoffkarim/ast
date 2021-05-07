@@ -718,38 +718,6 @@
     <div class="link link--orange js-btn-cookie">Принимаю</div>
   </div>
   <!-- /Footer -->
-  <script type="text/javascript">
-    ymaps.ready(ymapsInit);
-
-    function ymapsInit() {
-      var myMap = new ymaps.Map("contacts-map", {
-        center: [51.683580, 39.215064],
-        zoom: 16,
-        controls: []
-      })
-      const myPlacemark1 = new ymaps.Placemark([51.683921, 39.216304], {
-        hintContent: '394043, г. Воронеж, ул. Ленина, д. 73'
-      }, {
-        iconLayout: "default#image",
-        iconImageHref: "img/blue-pin.png",
-        iconImageSize: [22, 22],
-        iconContentOffset: [19, 15],
-        hideIconOnBalloonOpen: false
-      }, );
-
-      const placemarkArray = [myPlacemark1];
-      placemarkArray.forEach(function (i) {
-        myMap.geoObjects.add(i);
-        i.events
-          .add('mouseenter', function (e) {
-            e.get('target').options.set('iconImageHref', "img/map-pin.png");
-          })
-          .add('mouseleave', function (e) {
-            e.get('target').options.set('iconImageHref', "img/blue-pin.png");
-          });
-      });
-    }
-  </script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>

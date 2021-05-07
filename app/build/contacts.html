@@ -398,25 +398,37 @@
   <script type="text/javascript">
     ymaps.ready(ymapsInit);
 
+    let branches = [{ // объект с полями для точек на карте
+        id: 0, // id точки должно совпадать с data-id на кнопке "показать на карте и элементе js-map-point"
+        coords: [51.683580, 39.215064], // координаты точки
+        content: "394043, г. Воронеж, ул. Ленина, д. 73" // значение хинта который появляется при наведении на точку
+      },
+    ];
     function ymapsInit() {
       var myMap = new ymaps.Map("contacts-map", {
         center: [51.683580, 39.215064],
         zoom: 16,
         controls: []
       })
-      const myPlacemark1 = new ymaps.Placemark([51.683921, 39.216304], {
-        hintContent: '394043, г. Воронеж, ул. Ленина, д. 73'
-      }, {
-        iconLayout: "default#image",
-        iconImageHref: "img/blue-pin.png",
-        iconImageSize: [22, 22],
-        iconContentOffset: [19, 15],
-        hideIconOnBalloonOpen: false
-      }, );
-
-      const placemarkArray = [myPlacemark1];
+      const placemarkArray = []
+      branches.forEach(function (item) { // создаем точки
+        const myPlacemark = new ymaps.Placemark(item.coords,
+          {
+            hintContent: item.content
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "img/blue-pin.png",
+            iconImageSize: [22, 22],
+            hideIconOnBalloonOpen: false,
+            id: item.id,
+            clicked: false
+          },
+        );
+        myMap.geoObjects.add(myPlacemark); // помещаем точки на карту
+        placemarkArray.push(myPlacemark); // помещаем точки в массив
+      })
       placemarkArray.forEach(function (i) {
-        myMap.geoObjects.add(i);
         i.events
           .add('mouseenter', function (e) {
             e.get('target').options.set('iconImageHref', "img/map-pin.png");

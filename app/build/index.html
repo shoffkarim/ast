@@ -829,23 +829,51 @@
   </div>
   <!-- /Footer -->
   <script type="text/javascript">
-    const mapWrap = document.querySelector(".js-lazy-map")
-    mapWrap.addEventListener('click', function () {
-      ymaps.ready(ymapsInit);
-      mapWrap.classList.remove("js-lazy-map")
-    });
-    mapWrap.addEventListener('mouseover', function () {
-      ymaps.ready(ymapsInit);
-      mapWrap.classList.remove("js-lazy-map")
-    });
-    mapWrap.addEventListener('touchstart', function () {
-      ymaps.ready(ymapsInit);
-      mapWrap.classList.remove("js-lazy-map")
-    });
-    mapWrap.addEventListener('touchmove', function () {
-      ymaps.ready(ymapsInit);
-      mapWrap.classList.remove("js-lazy-map")
-    });
+    if (document.querySelector(".js-lazy-map")) {
+      const mapWrap = document.querySelector(".js-lazy-map")
+      mapWrap.addEventListener('click', function () {
+        ymaps.ready(ymapsInit);
+        mapWrap.classList.remove("js-lazy-map")
+      });
+      mapWrap.addEventListener('mouseover', function () {
+        ymaps.ready(ymapsInit);
+        mapWrap.classList.remove("js-lazy-map")
+      });
+      mapWrap.addEventListener('touchstart', function () {
+        ymaps.ready(ymapsInit);
+        mapWrap.classList.remove("js-lazy-map")
+      });
+      mapWrap.addEventListener('touchmove', function () {
+        ymaps.ready(ymapsInit);
+        mapWrap.classList.remove("js-lazy-map")
+      });
+    }
+    let branches = [{ // объект с полями для точек на карте
+        id: 0,
+        coords: [51.978495, 43.261499],
+        content: "Рабочий поселок «Турки», улица Элеваторная, дом 23.",
+        contentHeader: '<a href="#" class="map-balloon__header">Турковский зерновой<br>терминал</a>',
+        contentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+        contentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+
+      },
+      {
+        id: 1,
+        coords: [51.245106, 42.476964],
+        content: "Рабочий поселок «Турки», улица Элеваторная, дом 23.",
+        contentHeader: '<a href="#" class="map-balloon__header">Турковский терминал</a>',
+        contentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+        contentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+      },
+      {
+        id: 2,
+        coords: [53.114006, 46.579866],
+        content: "Рабочий поселок «Турки», улица Элеваторная, дом 23.",
+        contentHeader: '<a href="#" class="map-balloon__header">Кузнекц</a>',
+        contentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
+        contentFooter: '<a class="link link--orange" href="">Подробнее</a>',
+      },
+    ]
 
     function ymapsInit() {
       var myMap = new ymaps.Map("map", {
@@ -853,55 +881,25 @@
         zoom: 4,
         controls: []
       })
-      const myPlacemark1 = new ymaps.Placemark([51.978495, 43.261499], {
-        // Зададим содержимое заголовка балуна.
-        balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский зерновой<br>терминал</a>',
-        // Зададим содержимое основной части балуна.
-        balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
-        // Зададим содержимое нижней части балуна.
-        balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
-        // Зададим содержимое всплывающей подсказки.
-        hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
-      }, {
-        iconLayout: "default#image",
-        iconImageHref: "img/blue-pin.png",
-        iconImageSize: [22, 22],
-        iconContentOffset: [19, 15],
-        hideIconOnBalloonOpen: false
-      }, );
-      const myPlacemark2 = new ymaps.Placemark(
-        [51.245106, 42.476964], {
-          balloonContentHeader: '<a href="#" class="map-balloon__header">Турковский терминал</a>',
-          balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
-          balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
-          hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
+      const placemarkArray = []
+      branches.forEach(function (item) { // создаем точки
+        const myPlacemark = new ymaps.Placemark(item.coords, {
+          balloonContentHeader: item.contentHeader,
+          balloonContentBody: item.contentBody,
+          balloonContentFooter: item.contentFooter,
+          hintContent: item.content
         }, {
           iconLayout: "default#image",
           iconImageHref: "img/blue-pin.png",
           iconImageSize: [22, 22],
-          hideIconOnBalloonOpen: false
-        }
-      );
-      const myPlacemark3 = new ymaps.Placemark(
-        [53.114006, 46.579866], {
-          balloonContentHeader: '<a href="#" class="map-balloon__header">Кузнекц</a>',
-          balloonContentBody: '<p class="map-balloon__text">Рабочий поселок «Турки»,<br>улица Элеваторная, дом 23.</p><a class="map-balloon__href" href="tel:+74732531765">+7 473 253-17-65</a>',
-          balloonContentFooter: '<a class="link link--orange" href="">Подробнее</a>',
-          hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
-        }, {
-          iconLayout: "default#image",
-          iconImageHref: "img/blue-pin.png",
-          iconImageSize: [22, 22],
-          hideIconOnBalloonOpen: false
-        }
-      );
-      // myMap.geoObjects.add(myPlacemark1);
-      // myMap.geoObjects.add(myPlacemark2);
-      // myMap.geoObjects.add(myPlacemark3);
-
-      const placemarkArray = [myPlacemark1, myPlacemark2, myPlacemark3];
+          hideIconOnBalloonOpen: false,
+          id: item.id,
+          clicked: false
+        }, );
+        myMap.geoObjects.add(myPlacemark); // помещаем точки на карту
+        placemarkArray.push(myPlacemark); // помещаем точки в массив
+      })
       placemarkArray.forEach(function (i) {
-        myMap.geoObjects.add(i);
         i.events
           .add('mouseenter', function (e) {
             e.get('target').options.set('iconImageHref', "img/map-pin.png");

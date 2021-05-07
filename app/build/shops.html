@@ -466,7 +466,6 @@
       },
     ]
 
-
     function ymapsInit() {
       let myMap = new ymaps.Map("shop-map", {
         center: [56.838011, 60.597465],
@@ -475,19 +474,16 @@
       });
       const placemarkArray = []
       branches.forEach(function (item) { // создаем точки
-        const myPlacemark = new ymaps.Placemark(item.coords,
-          {
-            hintContent: item.content
-          },
-          {
-            iconLayout: "default#image",
-            iconImageHref: "img/blue-pin.png",
-            iconImageSize: [22, 22],
-            hideIconOnBalloonOpen: false,
-            id: item.id,
-            clicked: false
-          },
-        );
+        const myPlacemark = new ymaps.Placemark(item.coords, {
+          hintContent: item.content
+        }, {
+          iconLayout: "default#image",
+          iconImageHref: "img/blue-pin.png",
+          iconImageSize: [22, 22],
+          hideIconOnBalloonOpen: false,
+          id: item.id,
+          clicked: false
+        }, );
         myMap.geoObjects.add(myPlacemark); // помещаем точки на карту
         placemarkArray.push(myPlacemark); // помещаем точки в массив
       })
