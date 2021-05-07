@@ -182,7 +182,7 @@
       </div>
       <div class="shops-container">
         <ul class="shops-list">
-          <li class="shops-item js-toggle-container" data-id="1">
+          <li class="shops-item js-toggle-container js-map-point active" data-id="0">
             <p class="shops-name">
               Турковский Зерновой Терминал
             </p>
@@ -191,7 +191,7 @@
                 412070, Саратовская область, Турковский&nbsp;район, рабочий&nbsp;поселок&nbsp;«Турки»,
                 ул.&nbsp;Элеваторная, д.&nbsp;23
               </p>
-              <button class="btn shops-show-point js-show-point" data-id="1">Показать на карте</button>
+              <button class="btn shops-show-point js-show-point" data-id="0">Показать на карте</button>
             </div>
             <div class="shops-number">
               <a href="tel:+74732531765">+7 473 253-17-65</a>
@@ -213,7 +213,7 @@
               </button>
             </div>
           </li>
-          <li class="shops-item js-toggle-container" data-id="2">
+          <li class="shops-item js-toggle-container js-map-point " data-id="1">
             <p class="shops-name">
               Кардаильский мукомольный<br>завод
             </p>
@@ -221,7 +221,7 @@
               <p>
                 397340, Воронежская область, Поворинский район, село Пески, улица 2-я Советская, д. 1
               </p>
-              <button class="btn shops-show-point js-show-point" data-id="2">Показать на карте</button>
+              <button class="btn shops-show-point js-show-point" data-id="1">Показать на карте</button>
             </div>
             <div class="shops-number">
               <a href="tel:+74732531765">+7 473 253-17-65</a>
@@ -243,7 +243,7 @@
               </button>
             </div>
           </li>
-          <li class="shops-item js-toggle-container" data-id="3">
+          <li class="shops-item js-toggle-container js-map-point" data-id="2">
             <p class="shops-name">
               Кузнецкий комбинат<br>хлебопродуктов
             </p>
@@ -251,7 +251,7 @@
               <p>
                 442539, Пензенская область, г. Кузнецк, ул. Республики, д. 25А
               </p>
-              <button class="btn shops-show-point js-show-point" data-id="3">Показать на карте</button>
+              <button class="btn shops-show-point js-show-point" data-id="2">Показать на карте</button>
             </div>
             <div class="shops-number">
               <a href="tel:+74732531765">+7 473 253-17-65</a>
@@ -447,81 +447,59 @@
   </div>
   <!-- /Footer -->
   <script type="text/javascript">
-    // const mapWrap = document.querySelector(".js-lazy-map")
-    // mapWrap.addEventListener('click', function () {
-    //   ymaps.ready(ymapsInit);
-    //   mapWrap.classList.remove("js-lazy-map")
-    // });
-    // mapWrap.addEventListener('mouseover', function () {
-    //   ymaps.ready(ymapsInit);
-    //   mapWrap.classList.remove("js-lazy-map")
-    // });
-    // mapWrap.addEventListener('touchstart', function () {
-    //   ymaps.ready(ymapsInit);
-    //   mapWrap.classList.remove("js-lazy-map")
-    // });
-    // mapWrap.addEventListener('touchmove', function () {
-    //   ymaps.ready(ymapsInit);
-    //   mapWrap.classList.remove("js-lazy-map")
-    // });
-    ymaps.ready(ymapsInit);
+    ymaps.ready(ymapsInit); // инициализация карты
+
+    let branches = [{ // объект с полями для точек на карте
+        id: 0, // id точки должно совпадать с data-id на кнопке "показать на карте и элементе js-map-point"
+        coords: [51.978495, 43.261499], // координаты точки
+        content: "Рабочий поселок «Турки», улица Элеваторная, дом 23." // значение хинта который появляется при наведении на точку
+      },
+      {
+        id: 1,
+        coords: [51.245106, 42.476964],
+        content: "397340, Воронежская область, Поворинский район, село Пески, улица 2-я Советская, д. 1"
+      },
+      {
+        id: 2,
+        coords: [53.114006, 46.579866],
+        content: "442539, Пензенская область, г. Кузнецк, ул. Республики, д. 25А"
+      },
+    ]
+
 
     function ymapsInit() {
-      var myMap = new ymaps.Map("shop-map", {
+      let myMap = new ymaps.Map("shop-map", {
         center: [56.838011, 60.597465],
         zoom: 4,
         controls: []
+      });
+      const placemarkArray = []
+      branches.forEach(function (item) { // создаем точки
+        const myPlacemark = new ymaps.Placemark(item.coords,
+          {
+            hintContent: item.content
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "img/blue-pin.png",
+            iconImageSize: [22, 22],
+            hideIconOnBalloonOpen: false,
+            id: item.id,
+            clicked: false
+          },
+        );
+        myMap.geoObjects.add(myPlacemark); // помещаем точки на карту
+        placemarkArray.push(myPlacemark); // помещаем точки в массив
       })
-      const myPlacemark1 = new ymaps.Placemark([51.978495, 43.261499], {
-        hintContent: 'Рабочий поселок «Турки», улица Элеваторная, дом 23.'
-      }, {
-        iconLayout: "default#image",
-        iconImageHref: "img/blue-pin.png",
-        iconImageSize: [22, 22],
-        iconContentOffset: [19, 15],
-        hideIconOnBalloonOpen: false,
-        id: 1,
-        clicked: false
-      }, );
-      const myPlacemark2 = new ymaps.Placemark(
-        [51.245106, 42.476964], {
-          hintContent: '397340, Воронежская область, Поворинский район, село Пески, улица 2-я Советская, д. 1'
-        }, {
-          iconLayout: "default#image",
-          iconImageHref: "img/blue-pin.png",
-          iconImageSize: [22, 22],
-          hideIconOnBalloonOpen: false,
-          id: 2,
-          clicked: false
-        }
-      );
-      const myPlacemark3 = new ymaps.Placemark(
-        [53.114006, 46.579866], {
-          hintContent: '442539, Пензенская область, г. Кузнецк, ул. Республики, д. 25А'
-        }, {
-          iconLayout: "default#image",
-          iconImageHref: "img/blue-pin.png",
-          iconImageSize: [22, 22],
-          hideIconOnBalloonOpen: false,
-          id: 3,
-          clicked: false
-        }
-      );
-      // myMap.geoObjects.add(myPlacemark1);
-      // myMap.geoObjects.add(myPlacemark2);
-      // myMap.geoObjects.add(myPlacemark3);
-
-      const placemarkArray = [myPlacemark1, myPlacemark2, myPlacemark3];
       placemarkArray.forEach(function (i, count) {
-        myMap.geoObjects.add(i);
-        i.events
+        i.events // у каждой точки есть свои события
           .add('mouseenter', function (e) {
             e.get('target').options.set('iconImageHref', "img/map-pin.png");
           })
           .add("click", function (e) {
             const id = i.options._options.id;
             const item = document.querySelector(`.shops-item[data-id="${id}"]`)
-            placemarkArray.forEach(function (item){
+            placemarkArray.forEach(function (item) {
               item.options.set('iconImageHref', "img/blue-pin.png");
               item.options.set('clicked', false);
             })
@@ -530,14 +508,13 @@
 
             item.scrollIntoView({
               behavior: 'smooth',
-              block: 'start'
+              block: 'center'
             });
 
           })
           .add('mouseleave', function (e) {
             const flag = e.get('target').options.get('clicked');
-            console.log(flag);
-            if(flag == true){
+            if (flag == true) {
               e.get('target').options.set('iconImageHref', "img/map-pin.png")
             } else {
               e.get('target').options.set('iconImageHref', "img/blue-pin.png");
@@ -545,17 +522,32 @@
 
           })
       });
-      if (document.querySelector(".js-show-point")) {
+      if (document.querySelector(".js-show-point")) { // при клике на кнопку показать еще
         const btns = document.querySelectorAll(".js-show-point");
         btns.forEach((btn) => btn.addEventListener("click", function (e) {
           e.preventDefault();
           let id = Number(btn.dataset.id);
-          let mark = placemarkArray[id - 1];
-          placemarkArray.forEach(function (item){
+          let mark = placemarkArray[id];
+          const map = document.querySelector(".shop-map");
+          placemarkArray.forEach(function (item) {
             item.options.set('iconImageHref', "img/blue-pin.png");
             mark.options.set('iconImageHref', "img/map-pin.png");
-          })
+          });
+          map.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
         }));
+      }
+
+      if (document.querySelector(".js-map-point.active")) { // при загрузке страницы для активного элемента
+        const el = document.querySelector(".js-map-point.active");
+        const btn = el.querySelector(".js-show-point");
+        btn.click();
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
       }
     }
   </script>

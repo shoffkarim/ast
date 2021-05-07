@@ -6,11 +6,9 @@ import "../sass/style.sass";
 import Cookie from "./modules/cookie";
 import Dropdown from "./modules/dropdown";
 import InputMask from "./modules/imask-init";
-// import Parallax from "./modules/parallax";
 import Popup from "./modules/popup";
 import ScrollAnimation from "./modules/scrollAnimation";
 import Seo from "./modules/seo";
-// import ShowPoint from "./modules/showpoint";
 import Validation from "./modules/validation";
 
 const seo = new Seo();
@@ -18,11 +16,8 @@ const popup = new Popup();
 const validation = new Validation();
 const imask = new InputMask();
 const cookie = new Cookie();
-// const parallax = new Parallax();
-
 const dropdown = new Dropdown();
 const scroll = new ScrollAnimation();
-// const showpoint = new ShowPoint();
 
 if (document.querySelector(".js-parallax")) {
   const parallaxsence = document.querySelectorAll(".js-parallax");
