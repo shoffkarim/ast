@@ -1,0 +1,116 @@
+.about
+  &-desc
+    @include dfr()
+    justify-content: space-between
+    max-width: 1440px
+    margin: 0 auto
+    &__text
+      font-size: 30px
+      line-height: 40px
+      color: #fff
+      max-width: 790px
+    &__fact
+      @include dfc()
+      max-width: 390px
+      margin-right: 45px
+    &__number
+      font-size: 72px
+      line-height: 76px
+      color: $orange
+    &__sub
+      font-size: 22px
+      line-height: 32px
+      color: #fff
+  &-button
+    @include dfr()
+    justify-content: center
+    margin-top: 124px
+    padding-bottom: 142px
+
+.about-map
+  padding-top: 130px
+  padding-bottom: 132px
+  &__title
+    font-size: 30px
+    line-height: 40px
+    text-align: center
+    max-width: 800px
+    margin: 0 auto
+    position: relative
+    z-index: 2
+  &__text
+    font-size: 19px
+    line-height: 32px
+    text-align: center
+    max-width: 790px
+    margin: 0 auto
+    position: relative
+    z-index: 2
+  &__container
+    height: 738px
+    position: relative
+  &__wrapper
+    position: absolute
+    width: 1452px
+    height: 756px
+    top: -89px
+    left: calc(50% - 726px)
+    z-index: 1
+.about-facts
+  max-width: 1440px
+  margin: 0 auto
+  padding-top: 130px
+  padding-bottom: 130px
+  &__title
+    font-size: 60px
+    line-height: 64px
+  &__desc
+    @include dfr()
+    justify-content: space-between
+    p
+      font-size: 22px
+      line-height: 32px
+      max-width: 675px
+
+.facts
+  @include dfc()
+  margin-top: 50px
+  margin-bottom: 132px
+  &-item
+    @include dfr()
+    justify-content: space-between
+    border-bottom: 1px solid #f2f2f2
+    padding: 51px 0px
+    &__text
+      font-size: 48px
+      line-height: 52px
+      max-width: 650px
+    &__wrapper
+      @include dfc()
+      width: 435px
+    &__number
+      font-size: 72px
+      line-height: 76px
+      color: $orange
+    &__desc
+      font-size: 22px
+      line-height: 32px
+      max-width: 380px
+
+.about-company
+  padding: 130px 0px
+  &__head
+    max-width: 900px
+    margin: 0 auto
+    p
+      font-size: 30px
+      line-height: 40px
+      text-align: center
+      margin-bottom: 25px
+  &__bottom
+    max-width: 900px
+    margin: 0 auto
+    p
+      font-size: 30px
+      line-height: 40px
+      text-align: center

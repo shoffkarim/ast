@@ -79,3 +79,18 @@ if (document.documentElement.clientWidth > 767 && document.querySelector(".js-bu
       .addTo(controller)
   );
 }
+if (document.documentElement.clientWidth > 767 && document.querySelector(".js-about")) {
+  let controller = new ScrollMagic.Controller({
+    loglevel: 0,
+  });
+  let scenes = [];
+  scenes.push(
+    new ScrollMagic.Scene({
+      triggerElement: ".anim-circle--2",
+      triggerHook: 0.5,
+      offset: -300,
+    })
+      .setClassToggle(".anim-circle--2", "scale")
+      .addTo(controller)
+  );
+}
