@@ -10,6 +10,7 @@ import Popup from "./modules/popup";
 import ScrollAnimation from "./modules/scrollAnimation";
 import Seo from "./modules/seo";
 import Validation from "./modules/validation";
+import FlyingCorn from "./modules/flyingCorn";
 
 const seo = new Seo();
 const popup = new Popup();
@@ -18,6 +19,7 @@ const imask = new InputMask();
 const cookie = new Cookie();
 const dropdown = new Dropdown();
 const scroll = new ScrollAnimation();
+const flyingCorn = new FlyingCorn();
 
 if (document.querySelector(".js-parallax")) {
   const parallaxsence = document.querySelectorAll(".js-parallax");
@@ -25,12 +27,14 @@ if (document.querySelector(".js-parallax")) {
   parallaxsence.forEach(function (scene) {
     let parallaxInstance2 = new Parallax(scene, {
       selector: ".js-parallax-item",
-      hoverOnly: true
+      hoverOnly: true,
     });
   });
 }
 
-if (document.documentElement.clientWidth > 767 && document.querySelector(".js-building")) {
+if (
+  document.documentElement.clientWidth > 767 && document.querySelector(".js-building")
+) {
   let controller = new ScrollMagic.Controller({
     loglevel: 0,
   });
@@ -86,15 +90,17 @@ if (document.documentElement.clientWidth > 767 && document.querySelector(".js-ab
   let scenes = [];
   scenes.push(
     new ScrollMagic.Scene({
-      triggerElement: ".anim-circle--2",
+      triggerElement: ".about-circle",
       triggerHook: 0.5,
       offset: -300,
     })
-      .setClassToggle(".anim-circle--2", "scale")
+      .setClassToggle(".about-circle", "scale")
       .addTo(controller)
   );
 }
-if (document.documentElement.clientWidth > 767 && document.querySelector(".js-about-map")) {
+if (
+  document.documentElement.clientWidth > 767 && document.querySelector(".js-about-map")
+) {
   let controller = new ScrollMagic.Controller({
     loglevel: 0,
   });
