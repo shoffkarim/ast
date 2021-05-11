@@ -49,6 +49,9 @@
   &__container
     height: 738px
     position: relative
+    &.scale
+      .map-pin__circle
+        transform: scale(1)
   &__wrapper
     position: absolute
     width: 1452px
@@ -56,6 +59,43 @@
     top: -89px
     left: calc(50% - 726px)
     z-index: 1
+
+.map-pin
+  position: absolute
+  @include dfr()
+  align-items: center
+
+  &__circle
+    width: 22px
+    height: 22px
+    border-radius: 50%
+    background-color: $blue
+    position: relative
+    z-index: 2
+    cursor: pointer
+    transform: scale(0)
+    transition: all 0.4s
+    &:hover
+      background-color: $orange
+      transition: all 0.4s
+      & + .map-pin__desc
+        opacity: 1
+        visibility: visible
+        transition: all 0.4s
+  &__desc
+    background-color: #fff
+    padding: 10px 20px
+    box-shadow: 3px 4px 20px 0px rgba(0, 0, 0, 0.1)
+    margin-left: 20px
+    opacity: 0
+    visibility: hidden
+    position: relative
+    z-index: 3
+    transition: all 0.4s
+    p
+      font-size: 20px
+      line-height: 26px
+
 .about-facts
   max-width: 1440px
   margin: 0 auto

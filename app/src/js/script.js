@@ -94,3 +94,18 @@ if (document.documentElement.clientWidth > 767 && document.querySelector(".js-ab
       .addTo(controller)
   );
 }
+if (document.documentElement.clientWidth > 767 && document.querySelector(".js-about-map")) {
+  let controller = new ScrollMagic.Controller({
+    loglevel: 0,
+  });
+  let scenes = [];
+  scenes.push(
+    new ScrollMagic.Scene({
+      triggerElement: ".js-about-map",
+      triggerHook: 0.5,
+      offset: 0,
+    })
+      .setClassToggle(".js-about-map", "scale")
+      .addTo(controller)
+  );
+}
