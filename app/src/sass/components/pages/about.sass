@@ -4,28 +4,72 @@
     justify-content: space-between
     max-width: 1440px
     margin: 0 auto
+    @media screen and ( max-width: 1550px )
+      max-width: none
+      width: 100%
+      padding: 10px 110px
+    @media screen and ( max-width: 1300px )
+      padding: 10px 40px
+    @media screen and ( max-width: 1200px )
+      flex-direction: column
+      align-items: center
     &__text
       font-size: 30px
       line-height: 40px
       color: #fff
       max-width: 790px
+      @media screen and ( max-width: 1500px )
+        font-size: 28px
+        line-height: 38px
+        color: #fff
+        max-width: 710px
+      @media screen and ( max-width: 1200px )
+        text-align: center
+      @media screen and ( max-width: 767px )
+        font-size: 22px
+        line-height: 28px
+      @media screen and ( max-width: 550px )
+        font-size: 18px
+        line-height: 22px
     &__fact
       @include dfc()
       max-width: 390px
       margin-right: 45px
+      @media screen and ( max-width: 1500px )
+        max-width: 348px
+        margin-right: 0px
+      @media screen and ( max-width: 1200px )
+        margin-top: 30px
     &__number
       font-size: 72px
       line-height: 76px
       color: $orange
+      @media screen and ( max-width: 1500px )
+        font-size: 60px
+        line-height: 65px
+      @media screen and ( max-width: 550px )
+        font-size: 40px
+        line-height: 50px
+        text-align: center
     &__sub
       font-size: 22px
       line-height: 32px
       color: #fff
+      @media screen and ( max-width: 1366px )
+        font-size: 20px
+        line-height: 28px
+        margin-top: 7px
+      @media screen and ( max-width: 550px )
+        font-size: 16px
+        line-height: 20px
   &-button
     @include dfr()
     justify-content: center
     margin-top: 124px
     padding-bottom: 142px
+    @media screen and ( max-width: 1366px )
+      margin-top: 115px
+      padding-bottom: 102px
   &-canvas
     position: relative
     z-index: 3
@@ -37,10 +81,21 @@
     position: absolute
     top: 0px
     left: calc(50% - 200px)
+    @media screen and ( max-width: 1366px )
+      top: 15px
+      left: calc(50% - 170px)
+    @media screen and ( max-width: 400px )
+      left: calc(50% - 120px)
 
 .about-map
   padding-top: 130px
   padding-bottom: 132px
+  @media screen and ( max-width: 1500px )
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 93px
+    padding-bottom: 88px
+    width: 100%
   &__title
     font-size: 30px
     line-height: 40px
@@ -49,6 +104,13 @@
     margin: 0 auto
     position: relative
     z-index: 2
+    @media screen and ( max-width: 1366px )
+      font-size: 28px
+      line-height: 38px
+      max-width: 750px
+    @media screen and ( max-width: 550px )
+      font-size: 24px
+      line-height: 28px
   &__text
     font-size: 19px
     line-height: 32px
@@ -57,19 +119,45 @@
     margin: 0 auto
     position: relative
     z-index: 2
+    @media screen and ( max-width: 1366px )
+      font-size: 20px
+      line-height: 32px
+      max-width: 680px
+    @media screen and ( max-width: 767px )
+      margin-top: 30px
+    @media screen and ( max-width: 550px )
+      font-size: 18px
+      line-height: 22px
   &__container
     height: 738px
     position: relative
+    @media screen and ( max-width: 1366px )
+      height: 625px
+    @media screen and ( max-width: 767px )
+      display: none
+    @media screen and ( max-width: 1150px )
+      height: 510px
+    @media screen and ( max-width: 1000px )
+      height: 450px
+    @media screen and ( max-width: 900px )
+      height: 350px
     &.scale
       .map-pin__circle
         transform: scale(1)
   &__wrapper
     position: absolute
     width: 1452px
-    height: 756px
+    height: auto
     top: -89px
     left: calc(50% - 726px)
     z-index: 1
+    @media screen and ( max-width: 1500px )
+      width: 100%
+      left: 0
+      top: -58px
+    img
+      @media screen and ( max-width: 1500px )
+        width: 100%
 
 .map-pin
   position: absolute
@@ -86,6 +174,9 @@
     cursor: pointer
     transform: scale(0)
     transition: all 0.4s
+    @media screen and ( max-width: 1100px )
+      width: 15px
+      height: 15px
     &:hover
       background-color: $orange
       transition: all 0.4s
@@ -112,66 +203,164 @@
   margin: 0 auto
   padding-top: 130px
   padding-bottom: 130px
+  @media screen and ( max-width: 1500px )
+    max-width: 1140px
+    padding-top: 91px
+    padding-bottom: 92px
+  @media screen and ( max-width: 1200px )
+    max-width: none
+    width: 100%
+    padding-left: 20px
+    padding-right: 20px
   &__title
     font-size: 60px
     line-height: 64px
+    @media screen and ( max-width: 1366px )
+      font-size: 48px
+      line-height: 54px
+
   &__desc
     @include dfr()
     justify-content: space-between
+    @media screen and ( max-width: 950px )
+      flex-direction: column
     p
       font-size: 22px
       line-height: 32px
       max-width: 675px
+      @media screen and ( max-width: 1366px )
+        font-size: 20px
+        line-height: 30px
+        max-width: 540px
+      @media screen and ( max-width: 950px )
+        max-width: none
+        margin-bottom: 20px
+
 
 .facts
   @include dfc()
   margin-top: 50px
   margin-bottom: 132px
+  @media screen and ( max-width: 1366px )
+    margin-bottom: 92px
   &-item
     @include dfr()
     justify-content: space-between
     border-bottom: 1px solid #f2f2f2
     padding: 51px 0px
+    @media screen and ( max-width: 767px )
+      flex-direction: column
     &__text
       font-size: 48px
       line-height: 52px
       max-width: 650px
+      @media screen and ( max-width: 1366px )
+        font-size: 38px
+        line-height: 44px
+      @media screen and ( max-width: 1100px )
+        font-size: 30px
+        line-height: 38px
+        max-width: 400px
+      @media screen and ( max-width: 767px )
+        max-width: none
+
     &__wrapper
       @include dfc()
       width: 435px
+      @media screen and ( max-width: 1366px )
+        width: 345px
+      @media screen and ( max-width: 950px )
+        width: 300px
+      @media screen and ( max-width: 767px )
+        margin-top: 30px
+        width: 100%
     &__number
       font-size: 72px
       line-height: 76px
       color: $orange
+      @media screen and ( max-width: 1366px )
+        font-size: 60px
+        line-height: 66px
+      @media screen and ( max-width: 1200px )
+        font-size: 50px
+        line-height: 60px
+      @media screen and ( max-width: 950px )
+        font-size: 45px
+        line-height: 55px
+      @media screen and ( max-width: 550px )
+        font-size: 40px
+        line-height: 50px
+        text-align: center
+
     &__desc
       font-size: 22px
       line-height: 32px
       max-width: 380px
+      @media screen and ( max-width: 1366px )
+        font-size: 20px
+        line-height: 28px
+        margin-top: 5px
+      @media screen and ( max-width: 950px )
+        max-width: 300px
+      @media screen and ( max-width: 767px )
+        max-width: none
 
 .about-company
   padding: 130px 0px
   overflow: hidden
+  @media screen and ( max-width: 1366px )
+    padding: 90px 0px
   &__head
     max-width: 900px
     margin: 0 auto
+    @media screen and ( max-width: 1366px )
+      max-width: 875px
+    @media screen and ( max-width: 950px )
+      max-width: none
+      padding: 0 20px
     p
       font-size: 30px
       line-height: 40px
       text-align: center
       margin-bottom: 25px
+      @media screen and ( max-width: 1366px )
+        font-size: 28px
+        line-height: 38px
+      @media screen and ( max-width: 1100px )
+        font-size: 24px
+        line-height: 30px
+      @media screen and ( max-width: 767px )
+        font-size: 20px
+        line-height: 26px
   &__bottom
     max-width: 900px
     margin: 0 auto
+    @media screen and ( max-width: 1366px )
+      max-width: 826px
+    @media screen and ( max-width: 950px )
+      max-width: none
+      padding: 0 20px
     p
       font-size: 30px
       line-height: 40px
       text-align: center
+      @media screen and ( max-width: 1366px )
+        font-size: 28px
+        line-height: 38px
+      @media screen and ( max-width: 1100px )
+        font-size: 24px
+        line-height: 30px
+      @media screen and ( max-width: 767px )
+        font-size: 20px
+        line-height: 26px
 
 .fly
   &-corn
     position: relative
     width: 100%
     height: 450px
+    @media screen and ( max-width: 1366px )
+      height: 395px
   &-elem
     width: 40px
     height: 40px
