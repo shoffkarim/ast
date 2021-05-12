@@ -1,23 +1,90 @@
 /* eslint-disable class-methods-use-this */
-class Parallax {
-  constructor() {
-    this.init();
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+function scrollMagic() {
+  if (
+    document.documentElement.clientWidth > 767 && document.querySelector(".js-building")
+  ) {
+    let controller = new ScrollMagic.Controller({
+      loglevel: 0,
+    });
+    let scenes = [];
+    let buildAnim = new TimelineMax();
+    buildAnim.to(".js-building .auto", 61, {
+      backgroundPosition: "0px -17690px",
+      ease: SteppedEase.config(61),
+    });
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".js-building-control",
+        duration: "100%",
+        triggerHook: 0.5,
+        offset: 200,
+      })
+        .setPin(".js-building")
+        .addTo(controller)
+    );
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".js-building-control",
+        duration: "100%",
+        triggerHook: 0.5,
+        offset: 200,
+      })
+        .setTween(buildAnim)
+        .addTo(controller)
+    );
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".anim-circle--1",
+        triggerHook: 0.5,
+        offset: -300,
+      })
+        .setClassToggle(".anim-circle--1", "scale")
+        .addTo(controller)
+    );
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".anim-circle--2",
+        triggerHook: 0.5,
+        offset: -300,
+      })
+        .setClassToggle(".anim-circle--2", "scale")
+        .addTo(controller)
+    );
   }
-
-  init() {
-    if (document.querySelector(".js-parallax")) {
-      const scene2 = document.querySelector(".js-parallax");
-      // eslint-disable-next-line no-unused-vars
-      let parallaxInstance2 = new Parallax(scene2, {
-        relativeInput: true,
-        selector: ".js-parallax-item",
-        limitX: true,
-        limitY: true,
-        invertY: false,
-        invertX: false,
-      });
-    }
+  if (document.documentElement.clientWidth > 767 && document.querySelector(".js-about")) {
+    let controller = new ScrollMagic.Controller({
+      loglevel: 0,
+    });
+    let scenes = [];
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".about-circle",
+        triggerHook: 0.5,
+        offset: -300,
+      })
+        .setClassToggle(".about-circle", "scale")
+        .addTo(controller)
+    );
+  }
+  if (
+    document.documentElement.clientWidth > 767 && document.querySelector(".js-about-map")
+  ) {
+    let controller = new ScrollMagic.Controller({
+      loglevel: 0,
+    });
+    let scenes = [];
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".js-about-map",
+        triggerHook: 0.5,
+        offset: 0,
+      })
+        .setClassToggle(".js-about-map", "scale")
+        .addTo(controller)
+    );
   }
 }
 
-export default Parallax;
+export default scrollMagic;
