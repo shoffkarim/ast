@@ -8,10 +8,10 @@ class FlyingCorn {
     if (document.querySelector(".fly-corn")) {
       const elems = document.querySelectorAll(".fly-elem");
       const container = document.querySelector(".fly-corn");
-      const height = container.clientHeight;
+      const height = container.clientHeight - 150;
       elems.forEach(function (item) {
-        item.style.bottom = `${getRandomArbitrary(0, height)}px`;
-        item.style.animationDuration = `${getRandomArbitrary(2, 5)}s`;
+        item.style.bottom = `${getRandomArbitrary(150, height)}px`;
+        item.style.animationDuration = `${getRandomArbitrary(3, 6)}s`;
       });
     }
   }
