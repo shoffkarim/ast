@@ -16,6 +16,14 @@
     &-item
       &::after
         color: rgba(255,255,255,0.5)
+      &:last-child
+        &::after
+          display: none
+        a
+          pointer-events: none
+          .underline
+            border-bottom-color: transparent
+
       a
         color: rgba(255,255,255,0.5)
         .underline
