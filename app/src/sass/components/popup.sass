@@ -103,13 +103,16 @@
     color: #000
     text-align: center
     margin-bottom: 43px
+    @media screen and ( max-width: 1366px )
+      font-size: 38px
+      line-height: 42px
     @media screen and ( max-width: 767px )
-      font-size: 36px
-      line-height: 44px
+      font-size: 26px
+      line-height: 35px
       margin-bottom: 30px
-    @media screen and ( max-width: 400px )
-      font-size: 28px
-      line-height: 34px
+    @media screen and ( max-width: 550px )
+      font-size: 20px
+      line-height: 28px
 
   &-text
     font-size: 20px
@@ -117,9 +120,12 @@
     color: #000
     text-align: center
     margin-bottom: 47px
-    @media screen and ( max-width: 550px )
+    @media screen and ( max-width: 767px )
       font-size: 18px
-      line-height: 26px
+      line-height: 24px
+    @media screen and ( max-width: 550px )
+      font-size: 16px
+      line-height: 20px
   &-form
     &__container
       @include dfr()

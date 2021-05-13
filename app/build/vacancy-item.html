@@ -46,6 +46,35 @@
             </li>
             <li class="header-menu__item menu-item">
               <a data-al="" class="menu-item__href">Продукция</a>
+              <ul class="header-submenu">
+                <li class="header-submenu__item">
+                  <a data-al="">Пщеница</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Кукуруза</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Мука</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Горох</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Лён</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Отруби пшеничные гранулированные</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Жом свеловчиный</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Рожь</a>
+                </li>
+                <li class="header-submenu__item">
+                  <a data-al="">Ячмень</a>
+                </li>
+              </ul>
             </li>
             <li class="header-menu__item menu-item">
               <a data-al="" class="menu-item__href">Прайс-лист</a>
@@ -89,31 +118,31 @@
                   <li class="burger-item">
                     <a data-al="">Продукция</a>
                     <ul class="burger-submenu">
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Пщеница</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Кукуруза</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Мука</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Горох</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Лён</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Отруби пшеничные гранулированные</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Жом свеловчиный</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Рожь</a>
                       </li>
-                      <li class="burger-subitem">
+                      <li class="burger-submenu__item">
                         <a data-al="">Ячмень</a>
                       </li>
                     </ul>
@@ -323,52 +352,54 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <a data-al="" class="developer">
-          <span>DEXTRA</span>
-          <span>Разработка<br>сайта</span>
-        </a>
-      </div>
+    </div>
+    <div class="footer-bottom">
+      <a data-al="" class="developer">
+        <span>DEXTRA</span>
+        <span>Разработка<br>сайта</span>
+      </a>
     </div>
   </footer>
 
   <div class="popup popup-callback js-popup" data-popup="callback">
     <div class="popup-overlay"></div>
     <div class="popup-container">
-      <p class="popup-title">Начать сотрудничество</p>
-      <p class="popup-text">Поля со звездочками <span class="star">*</span> &ndash; обязательны для заполнения</p>
-      <form class="popup-form">
-        <div class="popup-form__container">
-          <div class="popup-form__wrapper">
-            <div class="form-block">
-              <label class="label" for="fio">Ваше имя <span class="star">*</span></label>
-              <input type="text" id="fio" class="js-valid">
+      <div class="popup-limiter">
+        <p class="popup-title">Начать сотрудничество</p>
+        <p class="popup-text">Поля со звездочками <span class="star">*</span> &ndash; обязательны для заполнения</p>
+        <form class="popup-form">
+          <div class="popup-form__container">
+            <div class="popup-form__wrapper">
+              <div class="form-block">
+                <label class="label" for="fio">Ваше имя <span class="star">*</span></label>
+                <input type="text" id="fio" class="js-valid">
+              </div>
+              <div class="form-block">
+                <label class="label" for="tel">Номер телефона <span class="star">*</span></label>
+                <input type="tel" id="tel" class="js-valid tel-mask">
+              </div>
+              <div class="form-block">
+                <label class="label" for="email">Электронная почта</label>
+                <input type="email" id="email" class="js-valid">
+              </div>
             </div>
-            <div class="form-block">
-              <label class="label" for="tel">Номер телефона <span class="star">*</span></label>
-              <input type="tel" id="tel" class="js-valid tel-mask">
-            </div>
-            <div class="form-block">
-              <label class="label" for="email">Электронная почта</label>
-              <input type="email" id="email">
+            <div class="popup-form__wrapper">
+              <div class="form-block form-block--textarea">
+                <label for="text" class="label">Текст сообщения</label>
+                <textarea name="textarea" id="text"></textarea>
+              </div>
             </div>
           </div>
-          <div class="popup-form__wrapper">
-            <div class="form-block form-block--textarea">
-              <label for="text" class="label">Текст сообщения</label>
-              <textarea name="textarea" id="text"></textarea>
-            </div>
+          <div class="popup-form__bottom">
+            <label class="fake-checkbox" for="check">
+              <input type="checkbox" class="js-valid" id="check">
+              <span class="fake-checkbox__box"></span>
+              <span>Даю согласие на обработку <a data-al="">персональных данных</a></span>
+            </label>
+            <button class="btn btn--orange popup-form__btn js-submit">Отправить</button>
           </div>
-        </div>
-        <div class="popup-form__bottom">
-          <label class="fake-checkbox" for="check">
-            <input type="checkbox" class="js-valid" id="check">
-            <span class="fake-checkbox__box"></span>
-            <span>Даю согласие на обработку <a data-al="">персональных данных</a></span>
-          </label>
-          <button class="btn btn--orange popup-form__btn js-submit">Отправить</button>
-        </div>
-      </form>
+        </form>
+      </div>
       <div class="popup-close">
         <button>
           <img src="img/close.png" alt="">
@@ -379,10 +410,12 @@
   <div class="popup popup-thanks js-popup " data-popup="thanks">
     <div class="popup-overlay"></div>
     <div class="popup-container">
-      <p class="popup-title">Сообщение отправлено</p>
-      <p class="popup-text">Ваше сообщение отправлено. Мы вскоре свяжемся с вами по указанному номеру.</p>
-      <div class="popup-thanks__btn popup-close">
-        <button class="btn btn--orange popup-thanks__btn">Закрыть</button>
+      <div class="popup-limiter">
+        <p class="popup-title">Сообщение отправлено</p>
+        <p class="popup-text">Ваше сообщение отправлено. Мы вскоре свяжемся с вами по указанному номеру.</p>
+        <div class="popup-thanks__btn popup-close">
+          <button class="btn btn--orange popup-thanks__btn">Закрыть</button>
+        </div>
       </div>
       <div class="popup-close">
         <button>
@@ -394,7 +427,9 @@
   <div class="popup popup-video js-popup " data-popup="video">
     <div class="popup-overlay"></div>
     <div class="popup-container">
-      <iframe src="https://www.youtube.com/embed/vYPYgHwf2KA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/vYPYgHwf2KA" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
       <div class="popup-close">
         <button>
           <img src="img/close-white.png" alt="">
@@ -403,7 +438,7 @@
     </div>
   </div>
   <div class="cookie cookie-open js-cookie">
-    <p class="cookie-text">
+    <p class="cookie-text common-text">
       Для повышения удобства сайта мы используем cookie. Оставаясь на сайте, вы соглашаетесь с <a data-al="">политикой
         их
         применения</a>.
