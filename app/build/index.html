@@ -193,9 +193,10 @@
   <main>
     <section class="back-video back-video--fixed js-video">
       <div class="video-wrapper">
-        <video autoplay muted loop poster="img/poster.jpg">
+        <video autoplay muted loop>
           <source src="video/video.mp4">
         </video>
+        <img class="back-video__img lazyload" data-src="img/poster.jpg">
       </div>
       <div class="back-video__container">
         <h2 class="back-video__tagline">Производим храним&nbsp;и&nbsp;реализуем сельскохозяйственную продукцию</h2>
@@ -549,54 +550,54 @@
         </div>
         <ul class="partners-list">
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/spp.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/healthy-menu.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/FreeChat.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/hrusmile.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/king.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/Chipas-Bar.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/zateinica.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/GreenMilk.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/cheb.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
           <li class="partners-item">
-            <a data-al="" class="partners-item__href">
+            <div class="partners-item__wrapper">
               <img src="img/partners/healthy-menu.png" alt="" class="partners-item__img">
-            </a>
+            </div>
           </li>
         </ul>
         <div class="partners-link">
@@ -888,22 +889,18 @@
   <script>
     if (document.querySelector(".js-lazy-map")) {
       const mapWrap = document.querySelector(".js-lazy-map")
-      mapWrap.addEventListener('click', function () {
+      function activateMap () {
         ymaps.ready(ymapsInit);
         mapWrap.classList.remove("js-lazy-map")
-      });
-      mapWrap.addEventListener('mouseover', function () {
-        ymaps.ready(ymapsInit);
-        mapWrap.classList.remove("js-lazy-map")
-      });
-      mapWrap.addEventListener('touchstart', function () {
-        ymaps.ready(ymapsInit);
-        mapWrap.classList.remove("js-lazy-map")
-      });
-      mapWrap.addEventListener('touchmove', function () {
-        ymaps.ready(ymapsInit);
-        mapWrap.classList.remove("js-lazy-map")
-      });
+        mapWrap.removeEventListener('click', activateMap);
+        mapWrap.removeEventListener('mouseover', activateMap);
+        mapWrap.removeEventListener('touchstart', activateMap);
+        mapWrap.removeEventListener('touchmove', activateMap);
+      }
+      mapWrap.addEventListener('click', activateMap);
+      mapWrap.addEventListener('mouseover', activateMap);
+      mapWrap.addEventListener('touchstart', activateMap);
+      mapWrap.addEventListener('touchmove', activateMap);
     }
     let branches = [{ // объект с полями для точек на карте
         id: 0,
@@ -936,8 +933,9 @@
       var myMap = new ymaps.Map("map", {
         center: [56.838011, 60.597465],
         zoom: 4,
-        controls: []
-      })
+        controls: ["zoomControl"]
+      });
+      myMap.behaviors.disable('scrollZoom');
       const placemarkArray = []
       branches.forEach(function (item) { // создаем точки
         const myPlacemark = new ymaps.Placemark(item.coords, {

@@ -3,6 +3,7 @@
 
 import "../sass/style.sass";
 
+import Lazyload from "./modules/lazyload";
 import Cookie from "./modules/cookie";
 import Dropdown from "./modules/dropdown";
 import InputMask from "./modules/imask-init";
@@ -13,6 +14,7 @@ import Validation from "./modules/validation";
 import FlyingCorn from "./modules/flyingCorn";
 import scrollMagic from "./modules/parallax";
 
+const lazyload = new Lazyload();
 const seo = new Seo();
 const popup = new Popup();
 const validation = new Validation();
