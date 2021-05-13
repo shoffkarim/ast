@@ -31,8 +31,12 @@ class Validation {
               break;
             case "text":
               // eslint-disable-next-line no-case-declarations
-              let regText = new RegExp(/^[а-яА-ЯёЁ0-9]/);
-              if (!regText.test(value)) {
+              let regText = new RegExp(/^[а-яА-ЯёЁ]/);
+              // eslint-disable-next-line no-case-declarations
+              let regTextNumber = new RegExp(/[0-9]/);
+              // eslint-disable-next-line no-case-declarations
+              let regTextSimbol = new RegExp(/[-().^+,*@$%;&?!]/);
+              if (!regText.test(value) || regTextNumber.test(value) || regTextSimbol.test(value)) {
                 j.classList.add("error");
                 j.classList.remove("good");
                 e.preventDefault();
@@ -43,14 +47,16 @@ class Validation {
               break;
             case "email":
               // eslint-disable-next-line no-case-declarations
-              let regEmail = new RegExp(/@/);
-              if (!regEmail.test(value)) {
-                j.classList.add("error");
-                j.classList.remove("good");
-                e.preventDefault();
-              } else {
-                j.classList.add("good");
-                j.classList.remove("error");
+              let regEmail = new RegExp(/^(?!.*@.*@.*$)(?!.*@.*--.*..*$)(?!.*@.*-..*$)(?!.*@.*-$)(.*@.+(..{1,11})?)$/);
+              if (value !== "") {
+                if (!regEmail.test(value)) {
+                  j.classList.add("error");
+                  j.classList.remove("good");
+                  e.preventDefault();
+                } else {
+                  j.classList.add("good");
+                  j.classList.remove("error");
+                }
               }
               break;
             case "checkbox":

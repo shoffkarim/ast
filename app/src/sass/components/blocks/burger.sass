@@ -9,7 +9,7 @@
     outline: none
   span
     width: 30px
-    height: 1px
+    height: 2px
     background-color: #000
     display: block
     &::before, &::after
@@ -17,7 +17,7 @@
       position: absolute
       transition: all .4s
       width: 30px
-      height: 1px
+      height: 2px
       background-color: #000
       display: block
     &::before
@@ -41,6 +41,8 @@
     .popup-close
       top: 60px
       right: 55px
+      @media screen and ( max-width: 767px )
+        right: 25px
     &.popup-open
       opacity: 1
       visibility: visible

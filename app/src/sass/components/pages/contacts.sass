@@ -77,14 +77,16 @@
     color: #fff
     text-align: center
     margin-top: 25px
-    border-bottom: 1px solid rgba(255,255,255,0.1)
-    transition: all 0.4s
     @media screen and ( max-width: 1366px )
       font-size: 24px
       line-height: 30px
     @media screen and ( max-width: 950px )
       font-size: 20px
       line-height: 26px
-
-    &:hover
-      border-bottom-color: rgba(255,255,255,0)
+    .underline
+      border-bottom: 1px solid rgba(255,255,255,0.4)
+      &:hover
+        border-bottom-color: rgba(255,255,255,0)
+      span
+        @media screen and ( max-width: 1366px )
+          top: 6px

@@ -18,9 +18,14 @@
         color: rgba(255,255,255,0.5)
       a
         color: rgba(255,255,255,0.5)
-        border-bottom-color: rgba(255,255,255, 0.1)
+        .underline
+          border-bottom: 1px solid rgba(255,255,255,0.5)
+          transition: all 0.4s
         &:hover
-          border-bottom-color: rgba(255,255,255,0)
+          .underline
+            border-bottom-color: rgba(255,255,255,0)
+            transition: all 0.4s
+
   .page
     &-title
       color: #fff
@@ -57,4 +62,3 @@
         @media screen and ( max-width: 550px )
           font-size: 18px
           line-height: 22px
-

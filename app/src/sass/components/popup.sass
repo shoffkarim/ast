@@ -8,6 +8,7 @@
   left: 0
   z-index: 100
   transition: all 0.4s
+  overflow: hidden
   &-open
     opacity: 1
     visibility: visible
@@ -44,9 +45,9 @@
         margin-top: 0px
         height: 100%
       @media screen and ( max-height: 700px )
-        width: 100%
+        width: calc(100% + 17px)
       @media screen and ( max-width: 950px )
-        width: 100%
+        width: calc(100% + 17px)
         margin: 0px
         height: 100%
   &-video
@@ -87,7 +88,7 @@
       @media screen and ( max-width: 767px )
         width: 500px
       @media screen and ( max-width: 500px )
-        width: 100%
+        width: calc(100% + 17px)
         margin: 0px
         height: 100%
     &__btn
@@ -141,9 +142,16 @@
     position: absolute
     top: 40px
     right: 40px
+    width: 21px
+    height: 21px
+    transform: rotate(0deg)
+    transition: all 0.4s
     @media screen and ( max-width: 767px )
       top: 30px
       right: 30px
+    &:hover
+      transform: rotate(90deg)
+      transition: all 0.4s
 .popup-thanks__btn
   position: relative
   top: auto
