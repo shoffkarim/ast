@@ -48,15 +48,12 @@
       margin-top: 4px
       @media screen and ( max-width: 950px )
         width: 100%
-        margin-bottom: 40px
-        justify-content: space-between
-        flex-direction: row
-        align-items: flex-start
-      @media screen and ( max-width: 550px )
         flex-direction: column
         align-items: center
         justify-items:  flex-start
         margin-top: 30px
+      @media screen and ( max-width: 650px )
+        margin-top: 50px
     &--nav
       width: calc(100% / 3 * 2)
       margin-left: 77px
@@ -66,17 +63,18 @@
         margin-left: 40px
         width: calc(100% / 3 * 2 - 15%)
       @media screen and ( max-width: 950px )
+        width: calc(100% / 3 * 2)
         margin-left: 0px
-      @media screen and ( max-width: 767px )
-        width: 60%
-      @media screen and ( max-width: 550px )
+      @media screen and ( max-width: 650px )
         display: none
 
     &--contacts
       width: calc(100% / 3)
-      @media screen and ( max-width: 767px )
-        width: 40%
-      @media screen and ( max-width: 550px )
+      @media screen and ( max-width: 950px )
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+      @media screen and ( max-width: 650px )
         width: 100%
         display: flex
         flex-direction: column
@@ -115,12 +113,10 @@
       margin-top: 13px
     @media screen and ( max-width: 950px )
       margin-top: 0px
+      max-width: none
     @media screen and ( max-width: 767px )
       font-size: 16px
       line-height: 20px
-      max-width: calc(50% - 10px)
-    @media screen and ( max-width: 550px )
-      max-width: 100%
   &-copyright
     font-size: 20px
     line-height: 26px
@@ -132,18 +128,17 @@
       font-size: 18px
       line-height: 24px
     @media screen and ( max-width: 950px )
-      margin-top: 0px
+      max-width: none
+      margin-top: 30px
     @media screen and ( max-width: 767px )
       font-size: 16px
       line-height: 20px
-      max-width: calc(50% - 10px)
-    @media screen and ( max-width: 550px )
-      max-width: 100%
+    @media screen and ( max-width: 650px )
       margin-top: 20px
   &-nav
     @include dfr()
     justify-content: space-between
-    @media screen and ( max-width: 550px )
+    @media screen and ( max-width: 650px )
       flex-direction: column
       margin-bottom: 30px
     @media screen and ( max-width: 400px )
@@ -171,7 +166,7 @@
   &-sublist
     @include dfc()
     margin-top: 22px
-    @media screen and ( max-width: 550px )
+    @media screen and ( max-width: 650px )
       display: none
   &-subitem
     margin-bottom: 18px
@@ -222,6 +217,10 @@
       @media screen and ( max-width: 1366px )
         font-size: 18px
         line-height: 26px
+      @media screen and ( max-width: 950px )
+        text-align: right
+      @media screen and ( max-width: 650px )
+        text-align: center
   &-email
     margin-top: 26px
     margin-left: 44px
@@ -247,10 +246,10 @@
     z-index: 3
     justify-content: flex-end
     margin-top: 17px
-    padding-bottom: 60px
+    padding: 0px 40px 60px
     @media screen and ( max-width: 1366px )
       margin-top: 5px
-    @media screen and ( max-width: 550px )
+    @media screen and ( max-width: 950px )
       margin-top: 30px
       justify-content: center
 

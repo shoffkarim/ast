@@ -35,6 +35,8 @@
       padding: 50px 30px
     @media screen and ( max-width: 400px )
       padding: 50px 20px
+  &-limiter
+    padding-right: 17px
   &-callback
     .popup-container
       width: 1366px
@@ -141,14 +143,14 @@
   &-close
     position: absolute
     top: 40px
-    right: 40px
+    right: 72px
     width: 21px
     height: 21px
     transform: rotate(0deg)
     transition: all 0.4s
     @media screen and ( max-width: 767px )
       top: 30px
-      right: 30px
+      right: 40px
     &:hover
       transform: rotate(90deg)
       transition: all 0.4s
@@ -200,9 +202,15 @@
       color: #093a9e
       border-bottom: 1px solid rgba(9, 58, 158, 0.15)
       transition: all 0.4s
+      @media screen and ( max-width: 1366px )
+        font-size: 20px
+        line-height: 30px
       @media screen and ( max-width: 767px )
         font-size: 18px
-        line-height: 26px
+        line-height: 24px
+      @media screen and ( max-width: 550px )
+        font-size: 16px
+        line-height: 20px
       &:hover
         border-bottom-color: rgba(9, 58, 158, 0)
   .link--orange
