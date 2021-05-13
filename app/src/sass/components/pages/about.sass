@@ -13,6 +13,8 @@
     @media screen and ( max-width: 1200px )
       flex-direction: column
       align-items: center
+    @media screen and ( max-width: 767px )
+      padding: 10px 20px
     &__text
       font-size: 30px
       line-height: 40px
@@ -385,6 +387,9 @@
     background-image: url(/app/build/img/wheats-sprite.png)
     &:nth-child(2n)
       animation-name: flying, rotatingReverse
+    @media screen and ( max-width: 950px )
+      &:nth-child(5n)
+        display: none
     img
       width: auto
       height: auto
