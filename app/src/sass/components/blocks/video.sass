@@ -89,6 +89,7 @@
     @media screen and ( max-width: 767px )
       font-size: 38px
       line-height: 46px
+      margin-bottom: 30px
     @media screen and ( max-width: 550px )
       font-size: 28px
       line-height: 34px
@@ -98,6 +99,8 @@
     line-height: 164px
     color: $orange
     margin-bottom: 244px
+    display: flex
+    flex-direction: row
     @media screen and ( max-width: 1366px )
       font-size: 128px
       line-height: 140px
@@ -156,3 +159,61 @@
       padding-left: 3px
       position: relative
       max-width: 290px
+
+.animation
+  &-line
+    opacity: 0
+    animation-name: animation-line
+    animation-duration: 0.6s
+    animation-iteration-count: 1
+    animation-timing-function: linear
+    animation-fill-mode: forwards
+    display: block
+    transform: translate(0px, 20px)
+    @media screen and ( max-width: 550px )
+      animation: none
+      opacity: 1
+    &--1
+      animation-delay: 0.6s
+    &--2
+      animation-delay: 0.8s
+    &--3
+      animation-delay: 1s
+    &--4
+      animation-delay: 1.2s
+  &-letter
+    opacity: 0
+    animation-name: animation-line
+    animation-duration: 0.6s
+    animation-iteration-count: 1
+    animation-timing-function: linear
+    animation-fill-mode: forwards
+    @media screen and ( max-width: 550px )
+      animation: none
+      opacity: 1
+    &--1
+      animation-delay: 0.6s
+    &--2
+      animation-delay: 0.8s
+    &--3
+      animation-delay: 1s
+    &--4
+      animation-delay: 1.2s
+    &--5
+      animation-delay: 1.4s
+    &--6
+      animation-delay: 1.6s
+    &--7
+      animation-delay: 1.8s
+    &--8
+      animation-delay: 2s
+    &--9
+      animation-delay: 2.2s
+
+@keyframes animation-line
+  0%
+    opacity: 0
+    transform: translate(0px, 20px)
+  100%
+    opacity: 1
+    transform: translate(0px, 0px)

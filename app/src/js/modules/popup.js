@@ -12,6 +12,7 @@ class Popup {
         const typePopup = btn.dataset.popup;
         const popup = document.querySelector(`.js-popup[data-popup=${typePopup}]`);
         popup.classList.add("popup-open");
+        popup.classList.add("transition");
         document.body.classList.add("no-overflow");
       }));
       const btnsClose = document.querySelectorAll(".popup-close");

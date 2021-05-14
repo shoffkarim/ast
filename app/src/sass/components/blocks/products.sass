@@ -12,6 +12,9 @@
     @include dfc
     @media screen and ( max-width: 1366px )
       margin-top: 52px
+    @media screen and ( max-width: 550px )
+      margin-top: 30px
+      margin-bottom: 30px
   &-item
     width: 100%
     @include dfr
@@ -22,6 +25,9 @@
     @media screen and ( max-width: 1366px )
       padding: 28px 0px
       margin-bottom: 0px
+    @media screen and ( max-width: 550px )
+      padding: 0px
+      margin-bottom: 15px
     &::before, &::after
       content: ""
       width: 100%
@@ -59,6 +65,7 @@
       background-color: transparent
       z-index: 2
       text-shadow: none
+      padding: 0 20px
       @media screen and ( max-width: 1366px )
         font-size: 82px
         line-height: 90px
@@ -70,16 +77,15 @@
         line-height: 60px
         text-align: center
       @media screen and ( max-width: 550px )
-        font-size: 38px
-        line-height: 48px
-      @media screen and ( max-width: 400px )
-        font-size: 28px
-        line-height: 38px
+        font-size: 22px
+        line-height: 28px
+        justify-content: flex-start
     &__hover
       line-height: 102px
       position: relative
       z-index: 1
       font-stretch: 90%
+      text-align: center
       @media screen and ( max-width: 1366px )
         line-height: 93px
       @media screen and ( max-width: 950px )
@@ -87,9 +93,8 @@
       @media screen and ( max-width: 950px )
         line-height: 60px
       @media screen and ( max-width: 550px )
-        line-height: 48px
-      @media screen and ( max-width: 400px )
-        line-height: 38px
+        line-height: 28px
+        text-align: left
       &::after
         content: attr(data-hover)
         position: absolute

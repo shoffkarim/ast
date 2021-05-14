@@ -9,13 +9,39 @@
     background-color: #fff
     @media screen and ( max-width: 1366px )
       padding-top: 102px
+    @media screen and ( max-width: 550px )
+      padding-bottom: 10px
+    .container
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+      align-items: center
+    .link--orange
+      font-size: 19px
+      line-height: 28px
+      padding: 7px 28px 7px
+      border-radius: 28px
+      font-family: 'Jost'
+      display: inline-block
+      margin-bottom: 10px
+      @media screen and ( max-width: 1366px )
+        font-size: 17px
+        line-height: 25px
+        padding: 7px 25px
+      @media screen and ( max-width: 550px )
+        font-size: 16px
+        line-height: 20px
   &-wrapper
     margin-top: 47px
     height: 600px
+    flex-shrink: 1
+    width: 100%
     @media screen and ( max-width: 1366px )
       height: 548px
     @media screen and ( max-width: 550px )
       height: 350px
+      margin-top: 30px
     &.js-lazy-map
       background-image: url(/app/build/img/map.jpg)
       background-repeat: no-repeat
@@ -75,21 +101,7 @@
   @media screen and ( max-width: 550px )
     left: calc(100% - 378px)!important
     top: 30px!important
-  .link--orange
-    font-size: 19px
-    line-height: 28px
-    padding: 7px 28px 7px
-    border-radius: 28px
-    font-family: 'Jost'
-    display: inline-block
-    margin-bottom: 10px
-    @media screen and ( max-width: 1366px )
-      font-size: 17px
-      line-height: 25px
-      padding: 7px 25px
-    @media screen and ( max-width: 550px )
-      font-size: 16px
-      line-height: 20px
+
 .ymaps-2-1-78-balloon-overlay,
 .ymaps-2-1-78-balloon
   top: 0px !important
@@ -109,6 +121,7 @@
     height: auto !important
     background-color: transparent !important
     box-shadow: none !important
+    left: calc(50% - 125px) !important
 .ymaps-2-1-78-balloon__content
   padding: 40px !important
   margin-right: 0px !important
@@ -150,4 +163,4 @@
     margin-bottom: 10px !important
 .ymaps-2-1-78-balloon-panel
   @media screen and ( max-width: 497px )
-    top: -300px !important
+    top: -250px !important

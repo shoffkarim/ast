@@ -62,6 +62,13 @@ body
       display: flex
       flex-direction: column
       align-items: flex-start
+  &-link
+    padding-right: 88px
+    @media screen and ( max-width: 950px )
+      padding-right: 0px
+    @media screen and ( max-width: 550px )
+      order: 1
+      margin-top: 20px
     a
       font-size: 22px
       line-height: 20px
@@ -75,12 +82,18 @@ body
         font-size: 18px
         line-height: 15px
       @media screen and ( max-width: 550px )
-        font-size: 16px
-        line-height: 13px
         margin-top: 10px
       &:hover
         border-bottom: 1px solid rgba(217,217,217,0)
         transition: all 0.4s
+    .underline
+      span
+        top: 6px
+        @media screen and ( max-width: 767px )
+          top: 5px
+        @media screen and ( max-width: 550px )
+          top: 4px
+
 
 .price-link
   background-color: $orange
@@ -110,6 +123,19 @@ body
     margin: 20px auto 0px
   &:hover
     background-color: $orangehover
+  &--top
+    @media screen and ( max-width: 550px )
+      display: none
+  &--bottom
+    display: none
+    @media screen and ( max-width: 550px )
+      display: flex
+  &__wrapper
+    display: none
+    @media screen and ( max-width: 550px )
+      display: flex
+      justify-content: flex-start
+      padding: 0 20px
   a
     font-size: 22px
     line-height: 26px
@@ -144,9 +170,6 @@ body
     @media screen and ( max-width: 767px )
       font-size: 18px
       line-height: 24px
-    @media screen and ( max-width: 550px )
-      font-size: 16px
-      line-height: 20px
 .circle-text
   width: 400px
   height: 400px

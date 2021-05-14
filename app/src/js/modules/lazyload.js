@@ -15,11 +15,21 @@ class Lazyload {
         };
       });
     }
-    if ((document.documentElement.clientWidth < 551) && document.querySelector(".js-video")) {
-      const container = document.querySelector(".js-video");
-      const video = container.querySelector("video");
-      video.remove();
-    }
+    window.addEventListener("resize", function () {
+      videoloading();
+    });
+    window.addEventListener("load", function () {
+      videoloading();
+    });
+  }
+}
+
+function videoloading() {
+  if (document.querySelector(".lazyload-video") && document.documentElement.clientWidth > 550) {
+    const video = document.querySelector(".lazyload-video");
+    const src = video.dataset.src;
+    video.setAttribute("src", `${src}`);
+    video.parentElement.load();
   }
 }
 
