@@ -57,6 +57,7 @@
       height: 650px
       padding: 0
       background-color: transparent
+      margin-top: 70px
       @media screen and ( max-width: 1366px )
         width: 950px
         height: 500px
@@ -74,13 +75,14 @@
         height: 100%
         position: relative
         z-index: 100
-      .popup-close
-        top: -40px
-        right: 0px
-        @media screen and ( max-width: 950px )
-          right: 40px
-        @media screen and ( max-height: 700px )
-          right: 40px
+    .popup-close
+      top: 40px
+      right: 40px
+      z-index: 200
+      @media screen and ( max-width: 950px )
+        right: 40px
+      @media screen and ( max-height: 700px )
+        right: 40px
 
   &-thanks
     .popup-container

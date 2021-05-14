@@ -49,14 +49,17 @@
       @media screen and ( max-width: 1500px )
         font-size: 60px
         line-height: 65px
+      @media screen and ( max-width: 1200px )
+        text-align: center
       @media screen and ( max-width: 550px )
         font-size: 40px
         line-height: 50px
-        text-align: center
     &__sub
       color: #fff
       @media screen and ( max-width: 1366px )
         margin-top: 7px
+      @media screen and ( max-width: 1200px )
+        text-align: center
   &-button
     @include dfr()
     justify-content: center
@@ -157,6 +160,39 @@
   position: absolute
   @include dfr()
   align-items: center
+  &--1
+    .map-pin__circle
+      transition-delay: 0.2s
+  &--2
+    .map-pin__circle
+      transition-delay: 0.4s
+  &--3
+    .map-pin__circle
+      transition-delay: 0.6s
+  &--4
+    .map-pin__circle
+      transition-delay: 0.8s
+  &--5
+    .map-pin__circle
+      transition-delay: 1s
+  &--6
+    .map-pin__circle
+      transition-delay: 1.2s
+  &--7
+    .map-pin__circle
+      transition-delay: 1.4s
+  &--8
+    .map-pin__circle
+      transition-delay: 1.6s
+  &--9
+    .map-pin__circle
+      transition-delay: 1.8s
+  &--10
+    .map-pin__circle
+      transition-delay: 2s
+  &--11
+    .map-pin__circle
+      transition-delay: 2.2s
 
   &__circle
     width: 22px
@@ -301,7 +337,14 @@
         max-width: 300px
       @media screen and ( max-width: 767px )
         max-width: none
-
+  &.anim
+    .facts-item
+      opacity: 0
+      animation-name: animation-line
+      animation-duration: 1.2s
+      animation-iteration-count: 1
+      animation-timing-function: linear
+      animation-fill-mode: forwards
 .about-company
   padding: 130px 0px
   overflow: hidden
@@ -447,3 +490,10 @@
     opacity: 0
   100%
     opacity: 1
+@keyframes facts
+  0%
+    opacity: 0
+    transform: translate(0px, 150px)
+  100%
+    opacity: 1
+    transform: translate(0px, 0px)

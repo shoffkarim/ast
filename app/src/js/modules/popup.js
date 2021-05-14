@@ -15,13 +15,15 @@ class Popup {
         popup.classList.add("transition");
         document.body.classList.add("no-overflow");
       }));
-      const btnsClose = document.querySelectorAll(".popup-close");
-      btnsClose.forEach((btn) => btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        const popup = btn.parentElement.parentElement;
-        popup.classList.remove("popup-open");
-        document.body.classList.remove("no-overflow");
-      }));
+      const popups = document.querySelectorAll(".js-popup");
+      popups.forEach(function (item) {
+        const btnsClose = item.querySelector(".popup-close");
+        btnsClose.addEventListener("click", function (e) {
+          e.preventDefault();
+          item.classList.remove("popup-open");
+          document.body.classList.remove("no-overflow");
+        });
+      });
     }
   }
 }

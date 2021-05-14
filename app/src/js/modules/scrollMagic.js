@@ -85,6 +85,23 @@ function scrollMagic() {
         .addTo(controller)
     );
   }
+  if (
+    document.documentElement.clientWidth > 767 && document.querySelector(".js-facts")
+  ) {
+    let controller = new ScrollMagic.Controller({
+      loglevel: 0,
+    });
+    let scenes = [];
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".js-facts",
+        triggerHook: 0.8,
+        offset: 0,
+      })
+        .setClassToggle(".js-facts", "anim")
+        .addTo(controller)
+    );
+  }
 }
 
 export default scrollMagic;
