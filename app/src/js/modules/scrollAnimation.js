@@ -25,6 +25,20 @@ class ScrollAnimation {
         }
       });
     }
+    if (document.querySelector(".js-facts")) {
+      const list = document.querySelectorAll(".js-facts");
+      const clientHeight = document.documentElement.clientHeight;
+      window.addEventListener('scroll', function () {
+        list.forEach(function (item, count) {
+          if (item.getBoundingClientRect().bottom < clientHeight) {
+            item.classList.add("anim");
+            console.log(item.getBoundingClientRect().bottom, count);
+          } else {
+            item.classList.remove("anim");
+          }
+        });
+      });
+    }
   }
 }
 

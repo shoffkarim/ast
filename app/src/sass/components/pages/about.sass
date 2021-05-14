@@ -283,6 +283,13 @@
     justify-content: space-between
     border-bottom: 1px solid #f2f2f2
     padding: 51px 0px
+    opacity: 0
+    &.anim
+      animation-name: animation-line
+      animation-duration: 1.2s
+      animation-iteration-count: 1
+      animation-timing-function: linear
+      animation-fill-mode: forwards
     @media screen and ( max-width: 767px )
       flex-direction: column
     &__text
@@ -337,14 +344,7 @@
         max-width: 300px
       @media screen and ( max-width: 767px )
         max-width: none
-  &.anim
-    .facts-item
-      opacity: 0
-      animation-name: animation-line
-      animation-duration: 1.2s
-      animation-iteration-count: 1
-      animation-timing-function: linear
-      animation-fill-mode: forwards
+
 .about-company
   padding: 130px 0px
   overflow: hidden
