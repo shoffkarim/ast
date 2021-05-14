@@ -12,7 +12,7 @@ import ScrollAnimation from "./modules/scrollAnimation";
 import Seo from "./modules/seo";
 import Validation from "./modules/validation";
 import FlyingCorn from "./modules/flyingCorn";
-import scrollMagic from "./modules/parallax";
+import scrollMagic from "./modules/scrollMagic";
 
 const lazyload = new Lazyload();
 const seo = new Seo();

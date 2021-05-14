@@ -17,7 +17,7 @@ function scrollMagic() {
     scenes.push(
       new ScrollMagic.Scene({
         triggerElement: ".js-building-control",
-        duration: "100%",
+        duration: "120%",
         triggerHook: 0.5,
         offset: 200,
       })

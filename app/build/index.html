@@ -959,9 +959,31 @@
           .add('mouseenter', function (e) {
             e.get('target').options.set('iconImageHref', "img/map-pin.png");
           })
+          .add("click", function (e) {
+            const id = i.options._options.id;
+            const item = document.querySelector(`.shops-item[data-id="${id}"]`)
+            placemarkArray.forEach(function (item) {
+              item.options.set('iconImageHref', "img/blue-pin.png");
+              item.options.set('clicked', false);
+            })
+            e.get('target').options.set('iconImageHref', "img/map-pin.png");
+            e.get('target').options.set('clicked', true);
+
+          })
           .add('mouseleave', function (e) {
-            e.get('target').options.set('iconImageHref', "img/blue-pin.png");
-          });
+            const flag = e.get('target').options.get('clicked');
+            if (flag == true) {
+              e.get('target').options.set('iconImageHref', "img/map-pin.png")
+            } else {
+              e.get('target').options.set('iconImageHref', "img/blue-pin.png");
+            }
+          })
+          .add("balloonclose", function (e) {
+            placemarkArray.forEach(function (item) {
+              item.options.set('iconImageHref', "img/blue-pin.png");
+              item.options.set('clicked', false);
+            })
+          })
       });
     }
   </script>
