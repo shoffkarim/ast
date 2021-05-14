@@ -1,10 +1,11 @@
 .catalog
   padding: 40px 20px
-  overflow-x: hidden
   @media screen and ( max-width: 1366px )
     padding: 0px
   @media screen and ( max-width: 1000px )
     padding: 0 20px
+  &-main
+    overflow: hidden
   &-list
     margin-bottom: 140px
     @media screen and ( max-width: 1366px )
@@ -28,7 +29,7 @@
       @media screen and ( max-width: 1366px )
         max-width: 960px
       @media screen and ( max-width: 550px )
-        flex-direction: column
+        flex-direction: column-reverse
     &__wrapper
       position: relative
       z-index: 10
@@ -41,17 +42,20 @@
       margin-bottom: 46px
       transition: all 0.4s
       @media screen and ( max-width: 1366px )
-        font-size: 47px
-        line-height: 37px
+        font-size: 48px
+        line-height: 52px
         margin-bottom: 30px
       @media screen and ( max-width: 1000px )
         margin-right: 20px
       @media screen and ( max-width: 767px )
-        font-size: 35px
-        line-height: 28px
+        font-size: 30px
+        line-height: 38px
         margin-bottom: 20px
       @media screen and ( max-width: 550px )
+        font-size: 24px
+        line-height: 30px
         margin-right: 0px
+        margin-top: 15px
       &:hover
         border-bottom-color: rgba(217,217,217,0)
       .underline
@@ -60,7 +64,7 @@
           @media screen and ( max-width: 1366px )
             top: 16px
           @media screen and ( max-width: 767px )
-            top: 11px
+            top: 8px
     &__number
       font-size: 28px
       line-height: 42px
@@ -71,8 +75,8 @@
         line-height: 30px
         margin-bottom: 45px
       @media screen and ( max-width: 767px )
-        font-size: 20px
-        line-height: 26px
+        font-size: 18px
+        line-height: 22px
         margin-bottom: 25px
     &__text
       max-width: 700px
@@ -101,6 +105,7 @@
         max-height: 250px
       @media screen and ( max-width: 550px )
         margin-top: 15px
+        max-width: none
       &:hover
         img
           transform: scale(1.05)

@@ -5,19 +5,24 @@ class ScrollAnimation {
   }
 
   init() {
-    if (document.querySelector(".js-sticky") && (document.documentElement.clientWidth > 1200)) {
-      const wrap = document.querySelector(".js-sticky");
+    if (document.querySelector(".js-sticky")) {
+      const wrap = document.querySelector(".js-container-sticky");
       const clientHeight = document.documentElement.clientHeight;
       window.addEventListener('scroll', function () {
-        classManager(wrap, clientHeight);
-      });
-      window.addEventListener("resize", function () {
         if (document.documentElement.clientWidth > 1200) {
           classManager(wrap, clientHeight);
         }
       });
+      window.addEventListener("resize", function () {
+        if (document.documentElement.clientWidth > 1200) {
+          classManager(wrap, clientHeight);
+          console.log(1);
+        }
+      });
       window.addEventListener("load", function () {
-        classManager(wrap, clientHeight);
+        if (document.documentElement.clientWidth > 1200) {
+          classManager(wrap, clientHeight);
+        }
       });
     }
   }
@@ -25,16 +30,19 @@ class ScrollAnimation {
 
 function classManager(wrap, clientHeight) {
   const wrapTopScroll = wrap.getBoundingClientRect().top < 50;
-  const wrapBottomScroll = wrap.getBoundingClientRect().bottom < clientHeight - 100;
-  if (wrapBottomScroll) {
-    wrap.classList.remove("sticky");
-    wrap.classList.add("bottom");
-  } else if (!wrapBottomScroll && wrapTopScroll) {
-    wrap.classList.add("sticky");
-    wrap.classList.remove("bottom");
+  const container = document.querySelector(".js-sticky");
+  const map = container.querySelector(".js-sticky-map");
+  if (wrap.getBoundingClientRect().bottom < map.getBoundingClientRect().bottom) {
+    container.classList.remove("sticky");
+    container.classList.add("bottom");
+  // eslint-disable-next-line max-len
+  } else if ((wrapTopScroll && wrap.getBoundingClientRect().bottom > map.getBoundingClientRect().bottom) || (wrapTopScroll && wrap.getBoundingClientRect().bottom > clientHeight)) {
+    container.classList.add("sticky");
+    container.classList.remove("bottom");
   } else if (!wrapTopScroll) {
-    wrap.classList.remove("sticky");
-    wrap.classList.remove("bottom");
+    container.classList.remove("sticky");
+    container.classList.remove("bottom");
   }
 }
+
 export default ScrollAnimation;
