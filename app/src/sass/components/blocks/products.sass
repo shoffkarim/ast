@@ -22,6 +22,7 @@
     position: relative
     padding: 30px 0px
     margin-bottom: 3px
+    background-color: $orange
     @media screen and ( max-width: 1366px )
       padding: 28px 0px
       margin-bottom: 0px
@@ -31,21 +32,21 @@
     &::before, &::after
       content: ""
       width: 100%
-      height: 0%
+      height: 50%
       position: absolute
       left: 0
-      background-color: $orange
+      background-color: #fff
       transition: all 0.4s
-      z-index: 1
-      visibility: hidden
-      opacity: 0
+      z-index: 20
+      visibility: visible
+      opacity: 1
     &::after
-      bottom: 50%
+      bottom: 0%
     &::before
-      top: 50%
+      top: 0%
     &:hover
       &::before, &::after
-        height: 50%
+        height: 0
         transition: height 0.4s
         visibility: visible
         opacity: 1
@@ -63,7 +64,7 @@
       line-height: 94px
       color: #000
       background-color: transparent
-      z-index: 2
+      z-index: 22
       text-shadow: none
       padding: 0 20px
       @media screen and ( max-width: 1366px )
@@ -115,8 +116,8 @@
     left: 0
     &__item
       position: absolute
-      z-index: 0
-      opacity: 0
+      z-index: 10
+      opacity: 1
       transition: all 0.4s
       @media screen and ( max-width: 1366px )
         transform: scale(0.75)
@@ -128,7 +129,7 @@
         left: 280px
       &--3
         bottom: -25px
-        left: calc(50% + 145px)
+        left: calc(40% - 145px)
       &--4
         bottom: 0px
         left: calc(50% + 15px)
@@ -141,5 +142,10 @@
       &--7
         top: 35px
         right: 160px
+    &--flour
+      .products-parallax__item--3
+        bottom: -25px
+        left: auto
+        right: 200px
   .section-head
     align-items: flex-start
