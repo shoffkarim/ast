@@ -117,13 +117,17 @@
       @media screen and ( max-width: 1000px )
         display: none !important
       &--1
-        top: 190px!important
-        left: 50px!important
-        @media screen and ( max-width: 1366px )
-          top: 300px!important
-          left: 0px!important
-        @media screen and ( max-width: 1100px )
-          top: 100px !important
+        top: 190px
+        left: 50px
+        animation-name: parallaxFly1
+        animation-iteration-count: infinite
+        animation-duration: 15s
+        animation-timing-function: linear
+        // @media screen and ( max-width: 1366px )
+        //   top: 300px!important
+        //   left: 0px!important
+        // @media screen and ( max-width: 1100px )
+        //   top: 100px !important
       &--2
         top: 810px!important
         left: 620px!important
@@ -156,3 +160,14 @@
         @media screen and ( max-width: 1366px )
           top: 1005px!important
           right: 20px!important
+
+@keyframes parallaxFly1
+  0%
+    top: 190px
+    left: 50px
+  50%
+    top: 100px
+    left: 150px
+  100%
+    top: 190px
+    left: 50px

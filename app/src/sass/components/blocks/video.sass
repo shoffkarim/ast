@@ -58,21 +58,34 @@
     position: relative
     z-index: 1
     max-width: 1200px
-    padding-top: 415px
     padding-left: 155px
     padding-bottom: 130px
     @media screen and ( max-width: 1366px )
-      padding-top: 261px
       padding-left: 110px
       padding-bottom: 90px
     @media screen and ( max-width: 950px )
-      padding-top: 225px
       padding-left: 50px
     @media screen and ( max-width: 767px )
       max-width: none
       width: 100%
       padding-left: 20px
       padding-right: 20px
+  &__first
+    height: 100vh
+    min-height: 700px
+    padding-top: 415px
+    display: flex
+    flex-direction: column
+    margin-bottom: 180px
+    @media screen and ( max-width: 1366px )
+      padding-top: 261px
+      margin-bottom: 90px
+    @media screen and ( max-width: 950px )
+      padding-top: 225px
+      min-height: auto
+    @media screen and ( max-width: 767px )
+      margin-bottom: 50px
+      justify-content: flex-end
     @media screen and ( max-width: 400px )
       padding-top: 180px
   &__tagline
@@ -98,7 +111,6 @@
     font-size: 160px
     line-height: 164px
     color: $orange
-    margin-bottom: 244px
     display: flex
     flex-direction: row
     @media screen and ( max-width: 1366px )
