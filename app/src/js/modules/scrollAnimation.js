@@ -16,7 +16,6 @@ class ScrollAnimation {
       window.addEventListener("resize", function () {
         if (document.documentElement.clientWidth > 1200) {
           classManager(wrap, clientHeight);
-          console.log(1);
         }
       });
       window.addEventListener("load", function () {
@@ -29,10 +28,9 @@ class ScrollAnimation {
       const list = document.querySelectorAll(".js-facts");
       const clientHeight = document.documentElement.clientHeight;
       window.addEventListener('scroll', function () {
-        list.forEach(function (item, count) {
+        list.forEach(function (item) {
           if (item.getBoundingClientRect().bottom < clientHeight) {
             item.classList.add("anim");
-            console.log(item.getBoundingClientRect().bottom, count);
           } else {
             item.classList.remove("anim");
           }

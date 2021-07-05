@@ -82,7 +82,6 @@ class Validation {
                 j.classList.add("good");
                 j.classList.remove("error");
               }
-              console.log(value);
               break;
             default:
               break;
