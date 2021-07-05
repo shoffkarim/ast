@@ -30,10 +30,13 @@
     margin-top: 58px
   @media screen and ( max-width: 767px )
     margin-top: 25px
+  .container, .price
+    position: relative
+    z-index: 2
   &-card
-    background-color: #fff
     margin-top: 77px
     position: relative
+    z-index: 2
     &__container
       max-width: 1200px
       margin: 0 auto
@@ -119,10 +122,10 @@
       &--1
         top: 190px
         left: 50px
-        animation-name: parallaxFly1
-        animation-iteration-count: infinite
-        animation-duration: 15s
-        animation-timing-function: linear
+        // animation-name: parallaxFly1
+        // animation-iteration-count: infinite
+        // animation-duration: 15s
+        // animation-timing-function: linear
         // @media screen and ( max-width: 1366px )
         //   top: 300px!important
         //   left: 0px!important
